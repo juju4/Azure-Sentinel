@@ -5,7 +5,7 @@
       "type": 3,
       "content": {
         "version": "KqlItem/1.0",
-        "query": "CommonSecurityLog​\n| where DeviceVendor == \"Barracuda\"\n| sort by TimeGenerated | summarize count() by DeviceAction ",
+        "query": "CommonSecurityLog\n| where DeviceVendor == \"Barracuda\"\n| sort by TimeGenerated | summarize count() by DeviceAction ",
         "size": 3,
         "exportToExcelOptions": "visible",
         "title": "Action Summary",
@@ -189,5 +189,5 @@
   ],
   "styleSettings": {},
   "fromTemplateId": "sentinel-Barracuda",
-  "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
+  "$schema": "https://raw.githubusercontent.com/microsoft/Application-Insights-Workbooks/master/schema/workbook.json"
 }
