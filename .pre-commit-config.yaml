@@ -48,4 +48,4 @@ repos:
   rev: v2.2.2
   hooks:
     - id: codespell
-      args: [-I, .codespellignore]
+      args: [-I, .codespellignore, --ignore-regex, '\\[fnrstv]']
