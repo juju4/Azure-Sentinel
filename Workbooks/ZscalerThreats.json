@@ -92,11 +92,9 @@
         "exportParameterName": "threatname",
         "exportDefaultValue": "All",
         "exportToExcelOptions": "visible",
-        "title": "Blocked threats",
         "timeContext": {
           "durationMs": 0
         },
-        "timeContextFromParameter": "TimeRange",
         "queryType": 0,
         "resourceType": "microsoft.operationalinsights/workspaces",
         "gridSettings": {
@@ -161,11 +159,9 @@
         "exportParameterName": "urlcat",
         "exportDefaultValue": "All",
         "exportToExcelOptions": "visible",
-        "title": "Blocked URL categories",
         "timeContext": {
           "durationMs": 0
         },
-        "timeContextFromParameter": "TimeRange",
         "queryType": 0,
         "resourceType": "microsoft.operationalinsights/workspaces",
         "gridSettings": {
@@ -234,11 +230,9 @@
         "exportParameterName": "Activity",
         "exportDefaultValue": "All",
         "exportToExcelOptions": "visible",
-        "title": "Transactions blocked IPS",
         "timeContext": {
           "durationMs": 0
         },
-        "timeContextFromParameter": "TimeRange",
         "queryType": 0,
         "resourceType": "microsoft.operationalinsights/workspaces",
         "gridSettings": {
@@ -363,11 +357,9 @@
         "exportParameterName": "SourceUserName",
         "exportDefaultValue": "All",
         "exportToExcelOptions": "visible",
-        "title": "Users accessing malicious destinations",
         "timeContext": {
           "durationMs": 0
         },
-        "timeContextFromParameter": "TimeRange",
         "queryType": 0,
         "resourceType": "microsoft.operationalinsights/workspaces",
         "gridSettings": {

@@ -216,8 +216,7 @@
                     "Parse_JSON": [
                         "Succeeded"
                     ]
-                },
-                "type": "ApiConnection"
+                }
             }
         },
         "contentVersion": "1.0.0.0",

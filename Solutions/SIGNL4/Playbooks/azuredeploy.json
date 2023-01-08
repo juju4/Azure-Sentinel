@@ -97,22 +97,6 @@
                 "state": "Enabled",
                 "definition": {
                     "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-                    "actions": {
-                        "Entities_-_Get_Accounts": {
-                            "inputs": {
-                                "body": "@triggerBody()?['object']?['properties']?['relatedEntities']",
-                                "host": {
-                                    "connection": {
-                                        "name": "@parameters('$connections')['azuresentinel']['connectionId']"
-                                    }
-                                },
-                                "method": "post",
-                                "path": "/entities/account"
-                            },
-                            "runAfter": {},
-                            "type": "ApiConnection"
-                        }
-                    },
                     "contentVersion": "1.0.0.0",
                     "outputs": {},
                     "parameters": {

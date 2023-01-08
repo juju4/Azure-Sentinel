@@ -9,7 +9,17 @@ repos:
     - id: check-added-large-files
       args: ['--maxkb=800']
     - id: check-json
-      exclude: '(invalidFile.json|SkipValidationsTemplates.json|tsconfig.json)$'
+      # should exclude invalid file and
+      # the ones with c++ comments which is not part of standard
+      exclude: |
+        (?x)(
+          invalidFile.json$|
+          SkipValidationsTemplates.json$|
+          tsconfig.json$|
+          ^Solutions/Templates/mainTemplate.json$|
+          ^Solutions/Templates/createUIDefinition.json$|
+          ^Solutions/Templates/Example/EXAMPLE-mainTemplate.json$
+        )
     - id: pretty-format-json
       args:
           - "--autofix"
