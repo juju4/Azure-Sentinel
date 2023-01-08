@@ -64,7 +64,7 @@ When a new Azure Sentinel incident is created, this playbook gets triggered and 
  ![wildfire](./Images/IncidentCommentLight.jpg)
  ![wildfire](./Images/IncidentCommentDark.jpg)
 
-## Adaptive card recieved by SOC
+## Adaptive card received by SOC
  ![Wildfire](./Images/AdaptiveCard2.png)
 
 ## SOC user can change the Configurations of incidents

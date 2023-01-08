@@ -220,7 +220,7 @@
                             "query": "Network_MetaParser\r\n| where EventVendor == '{ReportingDeviceVendors}' or '{ReportingDeviceVendors}' == \"All\"\r\n| where SrcIpAddr != \"\"\r\n| summarize Count = count() by SourceIP = SrcIpAddr\r\n| order by Count",
                             "size": 0,
                             "showAnalytics": true,
-                            "title": "Source IP addreses",
+                            "title": "Source IP addresses",
                             "timeContext": {
                                 "durationMs": 0
                             },
@@ -256,7 +256,7 @@
                             "query": "Network_MetaParser\r\n| where \"All\" == '{SourceIP}' or SrcIpAddr == '{SourceIP}'\r\n| where EventVendor == '{ReportingDeviceVendors}' or '{ReportingDeviceVendors}' == \"All\"\r\n| where SrcIpAddr != \"\"\r\n| summarize Count = count() by DestinationIP = DstIpAddr\r\n| order by Count",
                             "size": 0,
                             "showAnalytics": true,
-                            "title": "Destination IP addreses",
+                            "title": "Destination IP addresses",
                             "timeContext": {
                                 "durationMs": 0
                             },

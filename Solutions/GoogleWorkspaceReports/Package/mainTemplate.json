@@ -1338,8 +1338,8 @@
                             "kind": "Scheduled",
                             "location": "[parameters('workspace-location')]",
                             "properties": {
-                                "description": "Triggers on two-step authentification disabled for a user.",
-                                "displayName": "GWorkspace - Two-step authentification disabled for a user",
+                                "description": "Triggers on two-step authentication disabled for a user.",
+                                "displayName": "GWorkspace - Two-step authentication disabled for a user",
                                 "enabled": false,
                                 "query": "GWorkspaceActivityReports \n| where EventMessage =~ 'TURN_OFF_2_STEP_VERIFICATION'\n| extend AccountCustomEntity = ActorEmail\n",
                                 "queryFrequency": "PT1H",
@@ -3027,7 +3027,7 @@
                                 "tags": [
                                     {
                                         "name": "description",
-                                        "value": "Query searches calendar invites used to deliver spam. This query shows results when user reports a calander invite as spam."
+                                        "value": "Query searches calendar invites used to deliver spam. This query shows results when user reports a calendar invite as spam."
                                     },
                                     {
                                         "name": "tactics",

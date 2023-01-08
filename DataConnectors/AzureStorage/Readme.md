@@ -44,7 +44,7 @@ followed by
 ## Configure
 In the Azure Function Application settings set up a configuration mapping from environment variable to keyvault entry.
 You can find these settings in Platform features -> Configuration -> Application settings -> New application setting.
-You can find the SECRETURI references below in the respective properies of the keyvault entries created earlier.
+You can find the SECRETURI references below in the respective properties of the keyvault entries created earlier.
 * Name = BlobStorageAccountKeys Value = @Microsoft.KeyVault(SecretUri=https://SECRETURI)
 * Name = BlobStorageConnectionString Value = @Microsoft.KeyVault(SecretUri=https://SECRETURI)
 * Name = LogAnalyticsKey Value = @Microsoft.KeyVault(SecretUri=https://SECRETURI)

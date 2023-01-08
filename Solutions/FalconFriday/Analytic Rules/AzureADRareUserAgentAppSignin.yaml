@@ -68,7 +68,7 @@ query: |
       union withsource=tbl_name AADNonInteractiveUserSignInLogs, SigninLogs
       | where TimeGenerated >= ago(start_time)
       | where TimeGenerated < ago(end_time)
-      | where ResultType == 0  // Only look at succesful logins
+      | where ResultType == 0  // Only look at successful logins
       | extend ParsedUserAgent=ExtractBrowserTypeFromUA(UserAgent)
       | extend UserAgentType=tostring(ParsedUserAgent.AgentType)
       | extend UserAgentName=tostring(ParsedUserAgent.AgentName)

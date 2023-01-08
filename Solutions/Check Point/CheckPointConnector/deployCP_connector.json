@@ -18350,7 +18350,7 @@
                         "/show-dynamic-object": {
                             "post": {
                                 "summary": "show-dynamic-object",
-                                "description": "Retieves existing dynamic object",
+                                "description": "Retrieves existing dynamic object",
                                 "operationId": "Show-dynamic-object",
                                 "parameters": [
                                     {
@@ -20991,7 +20991,7 @@
                                             "default": {
                                                 "rule-number": 2,
                                                 "layer": "New Layer 1",
-                                                "comments": "commnet for the first rule",
+                                                "comments": "comment for the first rule",
                                                 "protected-scope": "All_Internet",
                                                 "action": "New Profile 1",
                                                 "install-on": "Policy Targets"

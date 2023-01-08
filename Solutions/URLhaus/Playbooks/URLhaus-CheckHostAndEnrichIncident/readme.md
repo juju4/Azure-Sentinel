@@ -1,6 +1,6 @@
 # URLhaus-CheckHostAndEnrichIncident
  ## Summary
- Once a new sentinal incident is created, this playbook gets triggered and performs the following actions:
+ Once a new sentinel incident is created, this playbook gets triggered and performs the following actions:
  1. [Gets Information](https://urlhaus-api.abuse.ch/#hostinfo) from URLhaus by hosts, provided in the alert custom entities.
  2. Enriches the incident with the obtained info.
 
@@ -10,7 +10,7 @@
 
 ### Deployment instructions
 1. To deploy the Playbook, click the Deploy to Azure button. This will launch the ARM Template deployment wizard.
-2. Fill in the required paramteres:
+2. Fill in the required parameters:
     * Playbook Name: Enter the playbook name here
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Faverbn%2FAzure-Sentinel%2FURLhaus-Connector-and-Playbooks%2FSolutions%2FURLhaus%2FPlaybooks%2FURLhaus-CheckHostAndEnrichIncident%2Fazuredeploy.json) [![Deploy to Azure](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2FURLhaus%2FPlaybooks%2FURLhaus-CheckHostAndEnrichIncident%2Fazuredeploy.json)
