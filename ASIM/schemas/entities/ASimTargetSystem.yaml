@@ -13,13 +13,13 @@ Fields:
 - Name: TargetPortNumber
   Type: int
   Class: Optional
-  Description: 	The IP port from which the connection terminated.
+  Description: The IP port from which the connection terminated.
 
 - Name: TargetHostname
   Type: string
   Class: Optional
   Logical type: Hostname
-  Description: 	The IP port from which the connection terminated.
+  Description: The IP port from which the connection terminated.
 
 - Name: TargetDomain
   Type: string

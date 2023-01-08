@@ -13,13 +13,13 @@ Fields:
 - Name: SrcPortNumber
   Type: int
   Class: Optional
-  Description: 	The IP port from which the connection originated.
+  Description: The IP port from which the connection originated.
 
 - Name: SrcHostname
   Type: string
   Class: Optional
   Logical type: Hostname
-  Description: 	The IP port from which the connection originated.
+  Description: The IP port from which the connection originated.
 
 - Name: SrcDomain
   Type: string
