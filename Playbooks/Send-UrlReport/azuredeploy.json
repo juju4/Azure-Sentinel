@@ -1,10 +1,10 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-        "metadata":{
+    "metadata": {
         "comments": "This playbook will take each URL entity and query VirusTotal for URL  Report.",
         "author": "Yehuda Tognder and Yaniv Shasha"
-        },
+    },
     "parameters": {
         "PlaybookName": {
             "defaultValue": "Send-UrlReport",
@@ -12,9 +12,9 @@
         }
     },
     "variables": {
-	        "AzureLAConnectionName": "[concat('azureloganalyticsdatacollector-', parameters('PlaybookName'))]",
+        "AzureLAConnectionName": "[concat('azureloganalyticsdatacollector-', parameters('PlaybookName'))]",
         "AzureSentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]"
-	},
+    },
     "resources": [
         {
             "type": "Microsoft.Web/connections",

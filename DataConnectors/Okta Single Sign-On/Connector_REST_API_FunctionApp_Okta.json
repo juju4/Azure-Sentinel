@@ -12,11 +12,11 @@
     ],
     "sampleQueries": [
         {
-            "description" : "Top 10 Active Applications",
+            "description": "Top 10 Active Applications",
             "query": "Okta_CL \n| mv-expand todynamic(target_s)  \n| where target_s.type == \"AppInstance\"  \n| summarize count() by tostring(target_s.alternateId)  \n| top 10 by count_"
         },
         {
-            "description" : "Top 10 Client IP Addresses",
+            "description": "Top 10 Client IP Addresses",
             "query": "Okta_CL \n| summarize count() by client_ipAddress_s \n| top 10 by count_"
         }
     ],
@@ -59,7 +59,7 @@
                 "requiredPermissions": {
                     "action": true
                 }
-             }
+            }
         ],
         "customs": [
             {
@@ -92,7 +92,7 @@
         {
             "title": "",
             "description": "**STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function**\n\n>**IMPORTANT:** Before deploying the Okta SSO connector, have the Workspace ID and Workspace Primary Key (can be copied from the following), as well as the Okta SSO API Authorization Token, readily available.",
-            "instructions":[
+            "instructions": [
                 {
                     "parameters": {
                         "fillWith": [

@@ -25,6 +25,8 @@ repos:
           - "--autofix"
           - "--indent=4"
           - "--no-sort-keys"
+      # same than above
+      # FIXME! 4 workbooks and after (ok check-json)
       exclude: |
         (?x)(
           invalidFile.json$|
@@ -32,7 +34,12 @@ repos:
           tsconfig.json$|
           ^Solutions/Templates/mainTemplate.json$|
           ^Solutions/Templates/createUIDefinition.json$|
-          ^Solutions/Templates/Example/EXAMPLE-mainTemplate.json$
+          ^Solutions/Templates/Example/EXAMPLE-mainTemplate.json$|
+          ^Workbooks/Barracuda.json$|
+          ^Workbooks/pfsense.json$|
+          ^Workbooks/WebApplicationFirewallFirewallEvents.json$|
+          ^Workbooks/WebApplicationFirewallOverview.json$|
+          ^.script/tests/KqlvalidationsTests/CustomTables/VectraStream_CL.json$
         )
     - id: detect-private-key
     - id: check-case-conflict

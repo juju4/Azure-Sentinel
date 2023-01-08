@@ -12,7 +12,7 @@
     ],
     "sampleQueries": [
         {
-            "description" : "View how many Configuration entries exist on the table",
+            "description": "View how many Configuration entries exist on the table",
             "query": "ESIExchangeOnlineConfig_CL | summarize by GenerationInstanceID_g, EntryDate_s, ESIEnvironment_s"
         }
     ],

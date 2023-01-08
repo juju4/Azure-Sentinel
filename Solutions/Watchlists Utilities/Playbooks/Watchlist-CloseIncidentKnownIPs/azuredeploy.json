@@ -4,8 +4,11 @@
     "metadata": {
         "title": "Watchlist - close incidents with safe IPs",
         "description": "This playbook leverages Microsoft Sentinel Watchlists in order to close incidents which include IP addresses considered safe.",
-        "prerequisites": ["<a href='https://docs.microsoft.com/azure/sentinel/watchlists?WT.mc_id=Portal-fx#create-a-new-watchlist'>Create a watchlist</a> for safe IPs with ip column named 'ipaddress' (can be changed in 'Run query' step). Watchlist should be located in the same workspace of the incidents."],
-        "mainSteps": ["For each Ip address included in the alert (entities of type IP):",
+        "prerequisites": [
+            "<a href='https://docs.microsoft.com/azure/sentinel/watchlists?WT.mc_id=Portal-fx#create-a-new-watchlist'>Create a watchlist</a> for safe IPs with ip column named 'ipaddress' (can be changed in 'Run query' step). Watchlist should be located in the same workspace of the incidents."
+        ],
+        "mainSteps": [
+            "For each Ip address included in the alert (entities of type IP):",
             "1. Check if IP is included in watchlist.",
             "- If IP is in the watchlist, consider the IP safe, **Add it to Safe IPs array.**",
             "- If IP is not in the watchlist, meaning that we are not sure it is safe, **Add it to not Safe IPs array.**",
@@ -21,8 +24,12 @@
             "<img src='https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Watchlists%20Utilities/Playbooks/Watchlist-CloseIncidentKnownIPs/images/commentLight.png'/>"
         ],
         "lastUpdateTime": "2022-07-22T10:00:00.000Z",
-        "entities": ["Ip"],
-        "tags": ["Triage"],
+        "entities": [
+            "Ip"
+        ],
+        "tags": [
+            "Triage"
+        ],
         "support": {
             "tier": "community"
         },
@@ -30,13 +37,13 @@
             "name": "Lior Tamir"
         },
         "releaseNotes": [
-        {
-            "version": "1.0.0",
-            "title": "Watchlist - close incidents with safe IPs ",
-            "notes": [
-            "Initial version"
-            ]
-        }
+            {
+                "version": "1.0.0",
+                "title": "Watchlist - close incidents with safe IPs ",
+                "notes": [
+                    "Initial version"
+                ]
+            }
         ]
     },
     "parameters": {
@@ -45,19 +52,19 @@
             "type": "string",
             "metadata": {
                 "description": "Name of the playbook (Logic Apps resource) which will be created"
-              }
+            }
         },
         "WatchlistName": {
             "type": "string",
             "metadata": {
                 "description": "Name of watchlist that stores safe IP addresses. Should have a column 'ipaddress' which the ips are under."
-              }
+            }
         }
     },
     "variables": {
-	"AzureSentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]",
-    "AzureMonitorLogsConnectionName": "[concat('azuremonitorlogs-', parameters('PlaybookName'))]"
-	},
+        "AzureSentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]",
+        "AzureMonitorLogsConnectionName": "[concat('azuremonitorlogs-', parameters('PlaybookName'))]"
+    },
     "resources": [
         {
             "type": "Microsoft.Web/connections",
