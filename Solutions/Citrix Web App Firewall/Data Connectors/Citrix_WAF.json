@@ -26,7 +26,7 @@
 		{
 			"description" : "Citrix Waf logs for Bufferoverflow",
 			"query": "\nCommonSecurityLog\n| where DeviceVendor == \"Citrix\"\n| where DeviceProduct == \"NetScaler\"\n| where Activity == \"APPFW_STARTURL\"\n"
-		}	
+		}
     ],
     "dataTypes": [
         {
@@ -44,7 +44,7 @@
     ],
     "availability": {
         "status": 1,
-	"isPreview": false 
+	"isPreview": false
     },
     "permissions": {
         "resourceProvider": [

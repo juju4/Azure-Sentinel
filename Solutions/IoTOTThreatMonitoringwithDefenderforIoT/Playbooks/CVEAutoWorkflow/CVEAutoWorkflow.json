@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
      "metadata": {
-        "title": "AD4IoT-CVEAutoWorkflow", 
+        "title": "AD4IoT-CVEAutoWorkflow",
         "description": "The playbook automates the SOC workflow by automatically enriching incident comments with the CVEs of the involved devices based on Defender for IoT data. An automated triage is performed if the CVE is critical, and the asset owner is automatically notified by email.",
         "prerequisites": ["None"],
         "lastUpdateTime": "2022-08-29T00:00:00.000Z",
-        "entities": [], 
-        "tags": [], 
+        "entities": [],
+        "tags": [],
         "support": {
-            "tier": "microsoft" 
+            "tier": "microsoft"
         },
         "author": {
             "name": "Amit Cohen"

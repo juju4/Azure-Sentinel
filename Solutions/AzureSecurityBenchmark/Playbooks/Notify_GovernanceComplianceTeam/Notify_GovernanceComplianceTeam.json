@@ -35,7 +35,7 @@
         "TeamsgroupId":  {
             "defaultValue":  "GovernanceComplianceTeam",
             "type":  "string"}
-        
+
     },
     "resources":  [
         {

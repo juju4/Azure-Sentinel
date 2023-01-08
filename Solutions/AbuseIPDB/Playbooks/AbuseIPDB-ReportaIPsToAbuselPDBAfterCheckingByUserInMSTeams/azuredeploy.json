@@ -4,7 +4,7 @@
    "metadata": {
     "title": " AbuseIPDB Report a IPs To AbuselPDB After Checking By User In MSTeams",
     "description": "When a new sentinel incident is created, this playbook gets triggered and performs the following actions:\n 1. Sends an adaptive card to the Teams channel where the analyst can choose an action to be taken.",
-   
+
     "prerequisites": [
       "1. Prior to the deployment of this playbook, AbuseIPDB Connector needs to be deployed under the same subscription.",
       "2. Obtain AbuseIPDB API credentials.",
@@ -84,7 +84,7 @@
          "properties":{
             "displayName":"[variables('AzureSentinelConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuresentinel')]"
@@ -99,7 +99,7 @@
          "properties":{
             "displayName":"[variables('MSTeamsConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/teams')]"
@@ -115,7 +115,7 @@
          "properties":{
             "displayName":"[variables('AbuseIPDBConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/customApis/', parameters('customApis_AbuseIPDBAPI_name'))]"
@@ -148,7 +148,7 @@
                         "path":"/entities/ip"
                      },
                      "runAfter":{
-                        
+
                      },
                      "type":"ApiConnection"
                   },
@@ -172,7 +172,7 @@
                                     }
                                  },
                                  "runAfter":{
-                                    
+
                                  },
                                  "type":"ApiConnection"
                               }
@@ -373,7 +373,7 @@
                               "version":"1.0"
                            },
                            "runAfter":{
-                              
+
                            },
                            "type":"Compose"
                         },
@@ -459,12 +459,12 @@
                },
                "contentVersion":"1.0.0.0",
                "outputs":{
-                  
+
                },
                "parameters":{
                   "$connections":{
                      "defaultValue":{
-                        
+
                      },
                      "type":"Object"
                   }

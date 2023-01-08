@@ -2,16 +2,16 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "title": "Response on Okta user from Teams", 
+        "title": "Response on Okta user from Teams",
         "description": "This playbooks sends an adaptive card to the SOC Teams channel with information about the Okta user and incident details. The SOC is allowed to take action such suspend, reset password, expire password, add to group. An informative comment will be posted to the incident.",
         "prerequisites": ["1. Okta Custom Connector needs to be deployed prior to the deployment of this playbook under the same resource group.",
           "2. Generate an API key. [Learn how](https://developer.okta.com/docs/guides/create-an-api-token/overview/)"],
         "prerequisitesDeployTemplateFile": "../../OktaCustomConnector/azuredeploy.json",
-        "lastUpdateTime": "2021-07-28T00:00:00.000Z", 
-        "entities": ["Account"], 
-        "tags": ["Remediation"], 
+        "lastUpdateTime": "2021-07-28T00:00:00.000Z",
+        "entities": ["Account"],
+        "tags": ["Remediation"],
         "support": {
-            "tier": "community" 
+            "tier": "community"
         },
         "author": {
             "name": "Accenture"
@@ -32,7 +32,7 @@
         "description": "Email alias of the SOC team"
       }
     },
-    
+
 	  "Teams GroupId": {
       "defaultValue": "TeamgroupId",
       "type": "String",
@@ -129,7 +129,7 @@
                             "type": "Object"
                         }
                     },
-                  
+
                     "triggers": {
                         "When_Azure_Sentinel_incident_creation_rule_was_triggered_(Private_Preview_only)": {
                             "type": "ApiConnectionWebhook",

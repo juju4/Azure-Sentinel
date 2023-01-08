@@ -21,7 +21,7 @@
 
     },
     "resources": [
-       
+
         {
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
@@ -211,16 +211,14 @@
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/service-now')]"
                             }
                         }
-                            
+
                         }
-                }   
+                }
             }
-       
-        
+
+
         }
 
     ]
 
 }
-
-

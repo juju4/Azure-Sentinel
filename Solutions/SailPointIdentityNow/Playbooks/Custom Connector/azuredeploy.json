@@ -5996,7 +5996,7 @@
 								}
 							}
 						}
-					},		
+					},
 					"\/v3\/certifications\/{id}\/decision-summary": {
 						"get": {
 							"summary": "Summary of Certification Decisions",
@@ -6949,7 +6949,7 @@
 											},
 											"messages": {
 												"type": "array",
-												"items": { 
+												"items": {
 													"type": "object",
 													"properties": {
 														"locale": {
@@ -11870,7 +11870,7 @@
 								}
 							}
 						}
-					}	
+					}
 				},
 				"definitions": {},
 				"parameters": {},

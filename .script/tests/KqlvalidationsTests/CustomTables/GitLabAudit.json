@@ -40,15 +40,15 @@
     {
       "Name": "AddAction",
       "Type": "String"
-    },    
+    },
     {
       "Name": "DelAction",
       "Type": "String"
-    },    
+    },
     {
       "Name": "RemoveAction",
       "Type": "String"
-    },    
+    },
     {
       "Name": "TargetID",
       "Type": "String"
@@ -72,7 +72,7 @@
     {
       "Name": "CustomMessage",
       "Type": "String"
-    },    
+    },
     {
       "Name": "AuthenticationType",
       "Type": "String"
@@ -84,10 +84,10 @@
     {
       "Name": "TargetVisibility",
       "Type": "String"
-    },    
+    },
     {
       "Name": "ChangeType",
       "Type": "String"
-    },    
+    },
   ]
 }

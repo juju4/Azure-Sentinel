@@ -14,22 +14,22 @@
         {
             "description" : "All Imported Events from WireX",
             "query":"CommonSecurityLog | where DeviceVendor == \"WireX\"\n"
-        }, 
-   
+        },
+
         {
             "description" : "Imported DNS Events from WireX",
-            "query":"CommonSecurityLog| where DeviceVendor == \"WireX\"\n and ApplicationProtocol == \"DNS\"\n" 
+            "query":"CommonSecurityLog| where DeviceVendor == \"WireX\"\n and ApplicationProtocol == \"DNS\"\n"
         },
-    
+
         {
             "description" : "Imported DNS Events from WireX",
-            "query":"CommonSecurityLog| where DeviceVendor == \"WireX\"\n and ApplicationProtocol == \"HTTP\"\n" 
+            "query":"CommonSecurityLog| where DeviceVendor == \"WireX\"\n and ApplicationProtocol == \"HTTP\"\n"
         },
-    
+
         {
             "description" : "Imported DNS Events from WireX",
             "query":"CommonSecurityLog| where DeviceVendor == \"WireX\"\n and ApplicationProtocol == \"TDS\"\n"
-        } 
+        }
     ],
     "dataTypes": [
         {

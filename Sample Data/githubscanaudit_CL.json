@@ -653,7 +653,7 @@
         "type": "User",
         "site_admin": false
       }
-    },   
+    },
     {
       "action": "reopened",
       "alert": {
@@ -3627,4 +3627,3 @@
     }
 
   ]
-

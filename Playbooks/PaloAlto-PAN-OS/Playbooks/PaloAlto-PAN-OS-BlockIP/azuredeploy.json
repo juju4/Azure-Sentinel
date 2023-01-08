@@ -2,7 +2,7 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "metadata": {
-    "title": "Block IP - Palo Alto PAN-OS", 
+    "title": "Block IP - Palo Alto PAN-OS",
     "description": "This playbook allows blocking/allowing of IPs in PAN-OS, using a address object group. The address object group itself should be attached to a pre-defined security policy rule.",
     "mainSteps": ["1.For each IP in the incident, check if IP is already a member of a security policy rule or of the predefined object group.",
          "2. If it isn't, an adaptive card is sent to a Teams channel with information about the incident and giving the option to block/unblock the IP by adding/removing it to/from the address object group."],
@@ -10,11 +10,11 @@
         "2. Generate an API key.[Refer this link on how to generate the API Key](https://paloaltolactest.trafficmanager.net/restapi-doc/#tag/key-generation)",
         "3. Address group should be created for PAN-OS, and supply as a deployment parameter."],
     "prerequisitesDeployTemplateFile": "../../PaloAltoCustomConnector/azuredeploy.json",
-    "lastUpdateTime": "2021-07-28T00:00:00.000Z", 
-    "entities": ["Ip"], 
-    "tags": ["Remediation", "Response from teams"], 
+    "lastUpdateTime": "2021-07-28T00:00:00.000Z",
+    "entities": ["Ip"],
+    "tags": ["Remediation", "Response from teams"],
     "support": {
-        "tier": "community" 
+        "tier": "community"
     },
     "author": {
         "name": "Accenture"
@@ -68,7 +68,7 @@
       "apiVersion": "2016-06-01",
       "name": "[variables('PaloAltoConnectorConnectionName')]",
       "location": "[resourceGroup().location]",
-	  
+
       "properties": {
         "customParameterValues": {},
         "api": {

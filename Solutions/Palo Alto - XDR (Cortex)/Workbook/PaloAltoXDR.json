@@ -111,8 +111,8 @@
       "content": {
         "version": "KqlItem/1.0",
         "query": "CommonSecurityLog \r\n| where DeviceVendor == \"Palo Alto Networks\" and DeviceProduct == \"Cortex XDR\" \r\n| summarize count() by Activity",
-        
-        
+
+
         "size": 0,
         "title": "Attack Activity View",
         "timeContext": {
@@ -646,7 +646,7 @@
       "name": "query - 3"
     }
   ],
-  
+
   "styleSettings": {},
   "fromTemplateId": "sentinel-PaloAltoXDR",
   "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"

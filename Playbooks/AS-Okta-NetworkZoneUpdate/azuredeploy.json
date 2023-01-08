@@ -2,12 +2,12 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "metadata": {
-        "title": "AS-Okta-NetworkZoneUpdate", 
+        "title": "AS-Okta-NetworkZoneUpdate",
         "description": "This playbook is intended to be run from a Microsoft Sentinel Incident. It will add the IP address from Microsoft Sentinel Incidents to an Okta Network Zone of your choosing.",
         "prerequisites": "1. An Okta admin account is needed, along with an API token. 2. The id of an Okta network zone is also needed. 3. A Microsoft Azure key vault containing the Okta API token must also be set up. Support for the set up and configuration of each of these items can be found here: https://github.com/Accelerynt-Security/AS-Okta-NetworkZoneUpdate",
         "lastUpdateTime": "2022-09-29T18:18:05Z",
-        "entities": ["IP"], 
-        "tags": ["Microsoft Sentinel", "Incident", "Okta", "Network Zone"], 
+        "entities": ["IP"],
+        "tags": ["Microsoft Sentinel", "Incident", "Okta", "Network Zone"],
         "support": {
             "tier": "developer"
         },

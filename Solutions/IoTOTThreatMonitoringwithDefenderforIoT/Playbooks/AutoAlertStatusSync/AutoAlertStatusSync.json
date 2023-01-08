@@ -2,11 +2,11 @@
 	"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
 	"contentVersion": "1.0.0.0",
 	"metadata": {
-		"title": "AD4IoT-AutoAlertStatusSync", 
+		"title": "AD4IoT-AutoAlertStatusSync",
 		"description": "This playbook updates alert statuses in Defender for IoT whenever a related alert in Microsoft Sentinel has a Status update.",
 		"prerequisites": ["None"],
-		"lastUpdateTime": "2022-08-05T00:00:00.000Z", 
-		"entities": [], 
+		"lastUpdateTime": "2022-08-05T00:00:00.000Z",
+		"entities": [],
 		"tags": [],
 		"support": {
 			"tier": "community"

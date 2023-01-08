@@ -608,7 +608,7 @@
                                 "constraints": {
                                     "allowedValues": "[map(steps('azurefunctions').playbook4KV.resourceGroupsList.value, (item) => parse(concat('{\"label\":\"', item.name, '\",\"value\":\"', concat(item.name, '/', item.location), '\"}')))]",
                                     "required": true
-                                },								
+                                },
                                 "visible": "[if(equals(steps('azurefunctions').playbook4KV.playbook4-NewOrExistingKV,'existing'),false,true)]"
                             },
                             {
@@ -715,7 +715,7 @@
 					}
 				]
 			}
-		],        
+		],
 		"outputs": {
             "workspace-location": "[resourceGroup().location]",
             "location": "[location()]",

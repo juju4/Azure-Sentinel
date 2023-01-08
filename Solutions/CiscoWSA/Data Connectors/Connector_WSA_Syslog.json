@@ -153,7 +153,7 @@
                 {
                     "title": "3. Check logs in Microsoft Sentinel",
                     "description": "Open Log Analytics to check if the logs are received using the Syslog schema.\n\n>**NOTE:** It may take up to 15 minutes before new logs will appear in Syslog table.",
-                    "instructions": []    
+                    "instructions": []
                 }
     ]
 }

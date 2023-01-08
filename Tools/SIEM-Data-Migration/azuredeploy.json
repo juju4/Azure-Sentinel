@@ -228,7 +228,7 @@
                 "id": "[variables('subnetId')]"
               }
             }
-          }  
+          }
         ],
         "networkSecurityGroup": {
             "id": "[resourceId('Microsoft.Network/networkSecurityGroups','networkSecurityGroup1')]"

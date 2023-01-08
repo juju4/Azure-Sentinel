@@ -124,7 +124,7 @@
                     "dependsOn": [
                         "[concat('Microsoft.Web/sites/', variables('FunctionName'))]",
                         "[resourceId('Microsoft.KeyVault/vaults/', variables('KeyVaultName'))]",
-                        "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('EnterpriseName'))]",            
+                        "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('EnterpriseName'))]",
                         "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('ApiKey'))]"
                     ],
                     "properties": {
@@ -163,7 +163,7 @@
                   "tenantId": "[subscription().tenantId]",
                   "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('FunctionName')),'2019-08-01', 'full').identity.principalId]",
                   "permissions": {
-                    "keys" : ["get", "list", "create", "delete"], 
+                    "keys" : ["get", "list", "create", "delete"],
                     "secrets": [ "get", "list", "set", "delete"]
 
                   }

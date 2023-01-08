@@ -488,6 +488,6 @@
         {
             "Name": "Url",
             "Type": "String"
-        }        
+        }
     ]
 }

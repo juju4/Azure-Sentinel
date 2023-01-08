@@ -42,7 +42,7 @@
         "serviceAPIName": "[toLower(concat(parameters('baseName'), '/api'))]",
         "mgmtapi_sku": "basic"
     },
-    
+
     "resources": [
         {
             "type": "Microsoft.Web/connections",
@@ -134,7 +134,7 @@
                     "header": {
                         "x-functions-key": [
                             "aaa"
-                        ] 
+                        ]
                     }
                 }
             }

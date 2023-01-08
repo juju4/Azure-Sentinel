@@ -33,7 +33,7 @@
         "sentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]",
         "azuremonitorlogsConnectionName": "[concat('azuremon-', parameters('PlaybookName'))]",
         "TeamsConnectionName": "[concat('teams-', parameters('PlaybookName'))]"
-     
+
     },
     "resources":  [
       {
@@ -90,17 +90,17 @@
                 }
             }
         },
-        
+
         {
             "type": "Microsoft.Logic/workflows",
             "apiVersion": "2017-07-01",
             "name": "[parameters('PlaybookName')]",
             "location": "[resourceGroup().location]",
-          
+
             "tags": {
                 "LogicAppsCategory": "security"
             },
-            
+
             "dependsOn":[
                 "[resourceId('Microsoft.Web/connections',variables('sentinelConnectionName'))]",
                 "[resourceId('Microsoft.Web/connections',variables('o365ConnectionName'))]",
@@ -250,7 +250,7 @@
                                         "connectionId": "[resourceId('Microsoft.Web/connections', variables('TeamsConnectionName'))]",
                                         "connectionName": "[variables('TeamsConnectionName')]",
                                         "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/teams')]"
-                                    
+
                         }
                     }
                 }

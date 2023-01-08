@@ -16,9 +16,9 @@ Fields:
   Logical type: Enumerated
   List of values: AppType
   Follows: ActingAppName
-  Description: The type of the application which the event applies to. 
+  Description: The type of the application which the event applies to.
 
-- Name: HttpUserAgent	
+- Name: HttpUserAgent
   Type: string
   Class: Optional
-  Description: When the activity is performed over HTTP or HTTPS, the HTTP user-agent header of the request. 
+  Description: When the activity is performed over HTTP or HTTPS, the HTTP user-agent header of the request.

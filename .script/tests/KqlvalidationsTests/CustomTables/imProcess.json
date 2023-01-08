@@ -1,10 +1,10 @@
 {
     "Name": "imProcess",
     "Properties": [
-        {"Name": "TimeGenerated", "Type": "datetime"}, 
+        {"Name": "TimeGenerated", "Type": "datetime"},
         {"Name": "_ResourceId", "Type": "string"},
         {"Name": "Type", "Type": "string"},
-    
+
         {"Name": "EventType", "Type": "string"},
         {"Name": "EventProduct", "Type": "string"},
         {"Name": "EventProductVersion", "Type": "string"},
@@ -18,14 +18,14 @@
         {"Name": "EventEndTime", "Type": "datetime"},
         {"Name": "EventReportUrl", "Type": "string"},
         {"Name": "AdditionalFields", "Type": "dynamic"},
-    
+
         {"Name": "DvcId", "Type": "string"},
         {"Name": "DvcHostname", "Type": "string"},
         {"Name": "DvcIpAddr", "Type": "string"},
         {"Name": "DvcOs", "Type": "string"},
         {"Name": "DvcOsVersion", "Type": "string"},
         {"Name": "DvcMacAddr", "Type": "string"},
-    
+
         {"Name": "TargetUsername", "Type": "string"},
         {"Name": "TargetUsernameType", "Type": "string"},
         {"Name": "TargetUserId", "Type": "string"},
@@ -49,7 +49,7 @@
         {"Name": "TargetProcessGuid", "Type": "string"},
         {"Name": "TargetProcessIntegrityLevel", "Type": "string"},
         {"Name": "TargetProcessTokenElevation", "Type": "string"},
-        
+
         {"Name": "ActorUsername", "Type": "string"},
         {"Name": "ActorUsernameType", "Type": "string"},
         {"Name": "ActorUserId", "Type": "string"},
@@ -88,7 +88,7 @@
         {"Name": "ParentProcessSHA512", "Type": "string"},
         {"Name": "ParentProcessIMPHASH", "Type": "string"},
         {"Name": "ParentProcessCreationTime", "Type": "datetime"},
-        
+
         {"Name": "Dvc", "Type": "string"},
         {"Name": "User", "Type": "string"},
         {"Name": "Process", "Type": "string"},

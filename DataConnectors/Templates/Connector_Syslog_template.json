@@ -51,11 +51,11 @@
     },
     "instructionSteps": [
         {
-            "title": "", 
+            "title": "",
             "description": ">This data connector depends on a parser based on a Kusto Function to work as expected [**enter the Kusto Function alias**](Link to Kusto Function on Azure Sentinel GitHub) which is deployed with the Azure Sentinel Solution.",
-            "instructions": [ 
-            ]    
-        }, 
+            "instructions": [
+            ]
+        },
         {
             "title": "1. Install and onboard the agent for Linux",
             "description": "Typically, you should install the agent on a different computer from the one on which the logs are generated.\n\n>  Syslog logs are collected only from **Linux** agents.",

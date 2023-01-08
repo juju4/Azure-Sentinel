@@ -40,7 +40,7 @@
     ],
     "availability": {
         "status": 1,
-        "isPreview": false 
+        "isPreview": false
     },
     "permissions": {
         "resourceProvider": [

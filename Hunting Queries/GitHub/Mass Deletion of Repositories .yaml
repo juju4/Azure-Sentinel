@@ -31,5 +31,3 @@ query: |
   ) on Dummy
   | project-away Dummy
   | where CountInRunTime > LearningThreshold
-
-

@@ -59,11 +59,11 @@
         ]
     },
     "instructionSteps": [
-        { 
-            "title": "", 
+        {
+            "title": "",
             "description": ">**NOTE:** This data connector is mainly configured on the SIGNL4 side. You can find a description video here: [**Integrate SIGNL4 with Microsoft Sentinel**](https://www.signl4.com/blog/portfolio_item/azure-sentinel-mobile-alert-notification-duty-schedule-escalation/).",
-            "instructions": [ 
-            ]    
+            "instructions": [
+            ]
         },
         {
             "title": "",
@@ -83,8 +83,8 @@
             "instructions": [
             ]
         },
-		{ 
-            "title": "Configuring the SIGNL4 connector app", 
+		{
+            "title": "Configuring the SIGNL4 connector app",
             "description":"Finally, enter the IDs, that the script has outputted in the connector configuration:\n - Azure Tenant ID\n - Azure Subscription ID\n - Client ID (of the enterprise application)\n - Client Secret (of the enterprise application)\n Once the app is enabled, it will start reading your Azure Graph Security API alerts.\n\n>**NOTE:** It will initially only read the alerts that have occurred within the last 24 hours.",
             "instructions":[
                 {

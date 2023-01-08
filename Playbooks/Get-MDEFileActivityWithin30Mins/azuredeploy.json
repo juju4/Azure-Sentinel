@@ -74,7 +74,7 @@
                     "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azureloganalyticsdatacollector')]"
                 },
                 "parameterValues":{
-                    "username":"[parameters('WorkspaceID')]", 
+                    "username":"[parameters('WorkspaceID')]",
                     "password":"[parameters('WorkspaceKey')]"
                 },
                 "customParameterValues": {}

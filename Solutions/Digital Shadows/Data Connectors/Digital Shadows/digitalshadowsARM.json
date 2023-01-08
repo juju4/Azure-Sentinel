@@ -38,7 +38,7 @@
             }
         }
     },
-	"variables": 
+	"variables":
 		{
             "ConnectorName": "[concat('ds', uniqueString(resourceGroup().id))]",
 			"FunctionName1": "[concat('include', uniqueString(resourceGroup().id))]",

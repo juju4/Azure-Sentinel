@@ -7,14 +7,14 @@
         "office365ConnectionName":  "[concat('office365-', parameters('PlaybookName'))]"
     },
     "metadata": {
-        "title": "Notify_GovernanceComplianceTeam", 
+        "title": "Notify_GovernanceComplianceTeam",
         "description": "This playbook will create the Azure DevOps task filled with the Microsoft Sentinel incident details.",
         "prerequisites": ["None"],
-        "lastUpdateTime": "2022-08-06T00:00:00.000Z", 
-        "entities": [], 
-        "tags": ["Sync"], 
+        "lastUpdateTime": "2022-08-06T00:00:00.000Z",
+        "entities": [],
+        "tags": ["Sync"],
         "support": {
-            "tier": "Community" 
+            "tier": "Community"
         },
         "author": {
             "name": "Nicholas DiCola"
@@ -42,7 +42,7 @@
         "TeamsgroupId":  {
             "defaultValue":  "GovernanceComplianceTeam",
             "type":  "string"}
-        
+
     },
     "resources":  [
         {
@@ -221,5 +221,5 @@
             "apiVersion":  "2016-06-01",
             "location":  "[resourceGroup().location]"
         }
-    ]    
+    ]
 }

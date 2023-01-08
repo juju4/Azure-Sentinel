@@ -109,7 +109,7 @@
             },
             "type": "InstructionStepsGroup"
         }]
-    }, 
+    },
     {
         "title": "2. Configure the logs to be collected",
         "description": "Configure the custom log directory to be collected",
@@ -126,7 +126,7 @@
     {
         "title": "3. Check logs in Microsoft Sentinel",
         "description": "Open Log Analytics to check if the logs are received using the JBossLogs_CL Custom log table.\n\n>**NOTE:** It may take up to 30 minutes before new logs will appear in JBossLogs_CL table.",
-        "instructions": []    
+        "instructions": []
     }
 ]
 }

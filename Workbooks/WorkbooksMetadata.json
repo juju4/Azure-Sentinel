@@ -2155,7 +2155,7 @@
     "description": "Have a holistic overview of your automation health, gain insights about failures, correlate Microsoft Sentinel health with Logic Apps diagnostics logs and deep dive automation details per incident",
     "dataTypesDependencies": ["SentinelHealth"],
     "dataConnectorsDependencies": [],
-    "previewImagesFileNames": [ "AutomationHealthBlack.png", "AutomationHealthWhite.png" ], 
+    "previewImagesFileNames": [ "AutomationHealthBlack.png", "AutomationHealthWhite.png" ],
     "version": "1.0.0",
     "title": "Automation health",
     "templateRelativePath": "AutomationHealth.json",
@@ -2212,7 +2212,7 @@
 				"Storage"
             ]
         }
-	},	
+	},
 	{
 		"workbookKey": "AzureSensitiveOperationsReview",
 		"logoFileName": "",
@@ -2240,7 +2240,7 @@
                 "Platform"
             ]
         }
-    },   
+    },
     {
       "workbookKey": "MicrosoftSentinelCostEUR",
       "logoFileName": "Azure_Sentinel.svg",
@@ -2266,5 +2266,5 @@
       "templateRelativePath": "LogAnalyticsQueryAnalysis.json",
       "subtitle": "",
       "provider": "Microsoft Sentinel Community"
-    } 
+    }
  ]

@@ -110,7 +110,7 @@
                 "[resourceId('Microsoft.Web/connections', variables('AzureExcelonlinebusinessConnectionName'))]",
                 "[resourceId('Microsoft.Web/connections', variables('AzureOffice365ConnectionName'))]",
                 "[resourceId('Microsoft.Web/connections', variables('AzureOfficeTeamsConnectionName'))]",
-                "[resourceId('Microsoft.Web/connections', variables('AzureOfficeWdatpConnectionName'))]"           
+                "[resourceId('Microsoft.Web/connections', variables('AzureOfficeWdatpConnectionName'))]"
             ],
             "properties": {
                 "state": "Enabled",

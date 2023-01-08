@@ -7,7 +7,7 @@
               "minLength": 1,
               "maxLength": 60,
               "type": "string"
-          },  
+          },
           "WorkspaceID": {
               "type": "string",
               "defaultValue": "<workspaceID>"
@@ -44,7 +44,7 @@
                   "ApplicationId": "[variables('FunctionName')]"
               }
           },
-          
+
           {
               "type": "Microsoft.Storage/storageAccounts",
               "apiVersion": "2019-06-01",
@@ -182,7 +182,7 @@
                           "TimeStampField": "[variables('timeStampField')]",
                           "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/ZeroNetworks/Data%20Connectors/SegmentFunctionConnector/AzureFunction_ZeroNetworks_Segment_Audit.zip"
-                      } 
+                      }
                   }
               ]
           },
@@ -224,4 +224,3 @@
           }
       ]
   }
-  

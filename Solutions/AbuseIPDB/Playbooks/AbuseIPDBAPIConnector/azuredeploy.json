@@ -11,7 +11,7 @@
     }
    },
    "variables":{
-     
+
    },
    "resources":[
       {
@@ -56,10 +56,10 @@
                   "https"
                ],
                "consumes":[
-                  
+
                ],
                "produces":[
-                  
+
                ],
                "paths":{
                   "/check":{
@@ -118,7 +118,7 @@
                                           "hostnames":{
                                              "type":"array",
                                              "items":{
-                                                
+
                                              },
                                              "description":"hostnames"
                                           },
@@ -483,13 +483,13 @@
                   }
                },
                "definitions":{
-                  
+
                },
                "parameters":{
-                  
+
                },
                "responses":{
-                  
+
                },
                "securityDefinitions":{
                   "API Key":{
@@ -501,12 +501,12 @@
                "security":[
                   {
                      "API Key":[
-                        
+
                      ]
                   }
                ],
                "tags":[
-                  
+
                ]
             }
          }

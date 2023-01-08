@@ -57,10 +57,10 @@
             "Name" : "details_attributeChanges_s",
             "Type":"Dynamic"
         },
-        {    
+        {
             "Name" : "type_s",
             "Type":"String"
-        },    
+        },
         {
             "Name" : "id_s",
             "Type":"String"

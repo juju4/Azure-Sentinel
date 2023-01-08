@@ -69,20 +69,20 @@ ParserQuery: |
     , TargetUrl:string
     , TargetPortNumber:int
     , _ResourceId:string
-    , LogonMethod: string	
-    , LogonProtocol: string	
-    , ActorUserIdType: string	 
-    , ActorUsernameType: string	 
-    , TargetUserIdType: string	
-    , TargetUsernameType: string	
-    , User: string	
-    , SrcDvcHostnameType: string	
-   	, LogonTarget: string	 
-  	, TargetDvcHostnameType: string	
-    , TargetDvc: string	
-    , Dvc: string	
+    , LogonMethod: string
+    , LogonProtocol: string
+    , ActorUserIdType: string
+    , ActorUsernameType: string
+    , TargetUserIdType: string
+    , TargetUsernameType: string
+    , User: string
+    , SrcDvcHostnameType: string
+   	, LogonTarget: string
+  	, TargetDvcHostnameType: string
+    , TargetDvc: string
+    , Dvc: string
     , DvcId: string
-    , DvcIpAddr: string	
+    , DvcIpAddr: string
     , DvcHostname: string
     , AdditionalFields:dynamic
     )[]

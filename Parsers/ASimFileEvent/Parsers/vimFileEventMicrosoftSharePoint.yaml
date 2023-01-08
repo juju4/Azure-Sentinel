@@ -35,7 +35,7 @@ ParserQuery: |
     | lookup usertypes on UserType
     | extend
           EventCount=int(1)
-        , EventStartTime= TimeGenerated 
+        , EventStartTime= TimeGenerated
         , EventEndTime= TimeGenerated
         , EventType=Operation
         , EventResult=case(ResultStatus =='Succeeded', 'Success'
@@ -43,25 +43,25 @@ ParserQuery: |
                             , 'Partial')
         , EventProduct='SharePoint 365'
         , EventVendor='Microsoft'
-        , EventSchemaVersion='0.1.0' 
+        , EventSchemaVersion='0.1.0'
         , ActorUsernameType='upn'
         , ActorUserIdType='Puid' //(PUID) for events performed by users in SharePoint, OneDrive
         /// If operation is copied/moved than SourceFile us the "Previous file". (what about FileRenamed?)
         , TargetFilePath =iff(Operation in ('FileCopied', 'FileMoved')
                                 , DestinationFileName
-                                , strcat(Site_Url, '/', SourceRelativeUrl,'/',SourceFileName)) 
-        ,  TargetFilename=iff(Operation in ('FileCopied', 'FileMoved'), DestinationFileName, SourceFileName) 
-     // , SensitivityLabel:string // ? 
+                                , strcat(Site_Url, '/', SourceRelativeUrl,'/',SourceFileName))
+        ,  TargetFilename=iff(Operation in ('FileCopied', 'FileMoved'), DestinationFileName, SourceFileName)
+     // , SensitivityLabel:string // ?
        , SrcFileName=iff(Operation in ('FileCopied', 'FileMoved'), SourceFileName,'')
        , SrcFilePath=iff(Operation in ('FileCopied', 'FileMoved'), strcat(Site_Url, '/', SourceRelativeUrl),'')
      ////  Not in scheam??  , TargetAppName='SharePoint'
      | project-rename ActorOriginalUserType =UserType
-            , ActorUsername=UserId 
+            , ActorUsername=UserId
             , ActorUserId=UserKey
             , HttpUserAgent=UserAgent
             , SrcIpAddr =ClientIP
      // Aliases
-     | extend 
+     | extend
         User=ActorUsername
         , FilePath=TargetFilename
    };

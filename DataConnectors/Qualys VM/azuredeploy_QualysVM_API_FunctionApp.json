@@ -7,7 +7,7 @@
               "minLength": 1,
               "maxLength": 11,
               "type": "string"
-          },  
+          },
           "WorkspaceID": {
               "type": "string",
               "defaultValue": "<workspaceID>"
@@ -54,7 +54,7 @@
                   "ApplicationId": "[variables('FunctionName')]"
               }
           },
-          
+
           {
               "type": "Microsoft.Storage/storageAccounts",
               "apiVersion": "2019-06-01",
@@ -192,7 +192,7 @@
                           "timeInterval": "[parameters('TimeInterval')]",
                           "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinelqualysvmazurefunctionzip"
-                                   } 
+                                   }
                   }
               ]
           },
@@ -234,4 +234,3 @@
           }
       ]
   }
-  

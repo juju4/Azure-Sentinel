@@ -2,13 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
        "metadata": {
-        "title": "RecordedFutureIdentity-lookup-and-save-user", 
+        "title": "RecordedFutureIdentity-lookup-and-save-user",
         "description": "This playbook gets compromise identity details from Recorded Future Identity Intelligence and saves the data for further review and analysis.",
-        "lastUpdateTime": "2022-09-09T00:00:00.000Z", 
-        "entities": [], 
-        "tags": ["Identity protection"], 
+        "lastUpdateTime": "2022-09-09T00:00:00.000Z",
+        "entities": [],
+        "tags": ["Identity protection"],
         "support": {
-            "tier": "developer" 
+            "tier": "developer"
         },
         "author": {
             "name": "Dmytro Branitskyi, Recorded Future (support@recordedfuture.com)"

@@ -25,7 +25,7 @@
                 "description": "Enter the name for Cisco Meraki custom connector without spaces"
             },
             "minLength": 3
-        },      
+        },
         "ApiKey": {
         "type": "securestring",
         "defaultValue": "",

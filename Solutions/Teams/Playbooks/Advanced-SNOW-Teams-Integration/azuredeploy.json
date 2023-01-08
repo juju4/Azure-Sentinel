@@ -66,14 +66,14 @@
 			}
 		}
 	},
-	"variables": {		
+	"variables": {
 		"AzureSentinelConnectionName": "[concat(parameters('PlaybookName'),'-sentinel')]",
 		"SNOWConnectionName": "[concat(parameters('PlaybookName'),'-snow')]",
 		"ARMConnectionName": "[concat(parameters('PlaybookName'),'-arm')]",
-		"TeamsConnectionName": "[concat(parameters('PlaybookName'),'-teams')]",		
+		"TeamsConnectionName": "[concat(parameters('PlaybookName'),'-teams')]",
 		"VirusTotalConnectionName": "[concat(parameters('PlaybookName'),'-virusTotal')]"
 	},
-	"resources": [		
+	"resources": [
 		{
 			"type": "Microsoft.Web/connections",
 			"apiVersion": "2016-06-01",
@@ -128,7 +128,7 @@
 					"id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/service-now')]"
 				}
 			}
-		},		
+		},
 		{
 			"type": "Microsoft.Web/connections",
 			"apiVersion": "2018-07-01-preview",
@@ -800,8 +800,8 @@
 				"[resourceId('Microsoft.Web/connections', variables('AzureSentinelConnectionName'))]",
 				"[resourceId('Microsoft.Web/connections', variables('ARMConnectionName'))]"
 			],
-			"properties": {				
-				"state": "Disabled",				
+			"properties": {
+				"state": "Disabled",
 				"definition": {
 					"$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
 					"contentVersion": "1.0.0.0",
@@ -1035,7 +1035,7 @@
 						}
 					}
 				}
-			
+
 			}
 		},
 		{
@@ -1156,12 +1156,12 @@
 				},
 				"parameters": {
 					"$connections": {
-						"value": {							
+						"value": {
 							"virustotal": {
 								"id": "[concat('/subscriptions/', subscription().subscriptionId,'/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/virustotal')]",
 								"connectionName": "[variables('VirusTotalConnectionName')]",
 								"connectionId": "[resourceId('Microsoft.Web/connections', variables('VirusTotalConnectionName'))]"
-							}							
+							}
 						}
 					}
 				}

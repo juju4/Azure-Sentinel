@@ -25,7 +25,7 @@
             "type": "string"
         }
     },
-    "variables": { 
+    "variables": {
         "AzureSentinelConnectionName": "[concat('azuresentinel-', replace(parameters('PlaybookName'),' ',''))]"
     },
     "resources": [

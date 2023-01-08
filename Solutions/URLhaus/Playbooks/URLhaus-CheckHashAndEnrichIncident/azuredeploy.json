@@ -2,7 +2,7 @@
    "$schema":"https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
    "contentVersion":"1.0.0.0",
       "metadata":{
-        "title": "URLhaus-CheckHashAndEnrichIncident", 
+        "title": "URLhaus-CheckHashAndEnrichIncident",
         "description": "Once a new Microsoft Sentinel incident is created, this playbook gets triggered and performs the following actions:\n 1. [Gets Information](https://urlhaus-api.abuse.ch/#payloadinfo) from URLhaus by hashes, provided in the alert custom entities. \n 2. Enriches the incident with the obtained info.",
         "prerequisites": [
             "1. URLhausAPI Custom Connector has to be deployed prior to the deployment of this playbook under the same subscription."
@@ -22,9 +22,9 @@
             "1.  In Microsoft Sentinel, analytical rules should be configured to trigger an incident.",
             "2.  Configure the automation rules to trigger the playbook."
         ],
-        "lastUpdateTime": "2022-08-11T12:00:00.000Z", 
+        "lastUpdateTime": "2022-08-11T12:00:00.000Z",
         "entities": [],
-        "tags": ["Incident management"], 
+        "tags": ["Incident management"],
         "support": {
             "tier": "microsoft"
         },
@@ -65,7 +65,7 @@
          "properties":{
             "displayName":"[variables('AzureSentinelConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuresentinel')]"
@@ -81,7 +81,7 @@
          "properties":{
             "displayName":"[variables('URLhausAPIConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/customApis/', parameters('customApis_URLhaus'))]"
@@ -105,7 +105,7 @@
                "parameters":{
                   "$connections":{
                      "defaultValue":{
-                        
+
                      },
                      "type":"Object"
                   }
@@ -161,7 +161,7 @@
                         },
                         "Create_HTML_table":{
                            "runAfter":{
-                              
+
                            },
                            "type":"Table",
                            "inputs":{
@@ -197,7 +197,7 @@
                            "actions":{
                               "Append_to_array_variable(md5_hash)":{
                                  "runAfter":{
-                                    
+
                                  },
                                  "type":"AppendToArrayVariable",
                                  "inputs":{
@@ -239,7 +239,7 @@
                         },
                         "Query_payload_information(md5_hash)":{
                            "runAfter":{
-                              
+
                            },
                            "type":"ApiConnection",
                            "inputs":{
@@ -278,7 +278,7 @@
                            "actions":{
                               "Append_to_array_variable(sha256_hash)":{
                                  "runAfter":{
-                                    
+
                                  },
                                  "type":"AppendToArrayVariable",
                                  "inputs":{
@@ -320,7 +320,7 @@
                         },
                         "Query_payload_information(sha256_hash)":{
                            "runAfter":{
-                              
+
                            },
                            "type":"ApiConnection",
                            "inputs":{
@@ -354,7 +354,7 @@
                   },
                   "Entities_-_Get_FileHashes":{
                      "runAfter":{
-                        
+
                      },
                      "type":"ApiConnection",
                      "inputs":{
@@ -386,7 +386,7 @@
                   }
                },
                "outputs":{
-                  
+
                }
             },
             "parameters":{

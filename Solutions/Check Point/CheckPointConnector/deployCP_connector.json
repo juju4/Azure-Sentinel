@@ -51,7 +51,7 @@
         "interface-uuid2": "97aeb460-9aea-11d5-bd16-0090272ccb30",
         "task" : "2eec70e5-78a8-4bdb-9a76-cfb5601d0bcb"
       },
-    
+
     "resources": [
         {
             "type": "Microsoft.Web/connections",
@@ -143,7 +143,7 @@
                     "header": {
                         "x-functions-key": [
                             "aaa"
-                        ] 
+                        ]
                     }
                 }
             }

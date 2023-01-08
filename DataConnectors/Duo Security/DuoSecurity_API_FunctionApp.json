@@ -135,11 +135,11 @@
         },
         {
             "title": "",
-            "description": "**STEP 1 - Configuration steps for the Duo Security Admin API**\n\n1. Log into the Duo Admin Panel with an administrator account, select **Application**. \n2. Click on the **Protect an Application** button and locate the entry for **Admin API**.  Click **Protect** \n3. Copy you **integration key**, **secret key** and **api hostname**. \n4. Check the box to **Grat read log** permissions." 
+            "description": "**STEP 1 - Configuration steps for the Duo Security Admin API**\n\n1. Log into the Duo Admin Panel with an administrator account, select **Application**. \n2. Click on the **Protect an Application** button and locate the entry for **Admin API**.  Click **Protect** \n3. Copy you **integration key**, **secret key** and **api hostname**. \n4. Check the box to **Grat read log** permissions."
         },
         {
             "title": "",
-            "description": "**STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function**\n\n>**IMPORTANT:** Before deploying the Duo Security connector, have the Workspace ID and Workspace Primary Key (can be copied from the following), as well as the Duo Security integration key, secret key and api host, readily available.", 
+            "description": "**STEP 2 - Choose ONE from the following two deployment options to deploy the connector and the associated Azure Function**\n\n>**IMPORTANT:** Before deploying the Duo Security connector, have the Workspace ID and Workspace Primary Key (can be copied from the following), as well as the Duo Security integration key, secret key and api host, readily available.",
             "instructions":[
                 {
                     "parameters": {

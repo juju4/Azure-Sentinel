@@ -7,7 +7,7 @@
               "minLength": 1,
               "maxLength": 11,
               "type": "string"
-          },  
+          },
           "WorkspaceID": {
               "type": "string",
               "defaultValue": "<workspaceID>"
@@ -28,7 +28,7 @@
               "type": "string",
               "defaultValue": "https://tap-api-v2.proofpoint.com/v2/siem/all?format=json&sinceSeconds=300"
           }
-  
+
       },
       "variables": {
            "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
@@ -182,7 +182,7 @@
                           "uri": "[parameters('Uri')]",
                           "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinelproofpointtapazurefunctionzip"
-                                   } 
+                                   }
                   }
               ]
           },
@@ -224,4 +224,3 @@
           }
       ]
   }
-  

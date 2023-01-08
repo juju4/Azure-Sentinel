@@ -1,14 +1,14 @@
 {
     "$schema":  "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
-    "contentVersion":  "1.0.0.0", 
+    "contentVersion":  "1.0.0.0",
     "metadata": {
-        "title": "Notify_GovernanceComplianceTeam", 
+        "title": "Notify_GovernanceComplianceTeam",
         "description": "This playbook will create the Azure DevOps task filled with the Microsoft Sentinel incident details.",
-        "lastUpdateTime": "2022-08-05T00:00:00.000Z", 
-        "entities": [], 
-        "tags": ["Sync"], 
+        "lastUpdateTime": "2022-08-05T00:00:00.000Z",
+        "entities": [],
+        "tags": ["Sync"],
         "support": {
-            "tier": "Community" 
+            "tier": "Community"
         },
         "author": {
             "name": "Nicholas DiCola"
@@ -22,7 +22,7 @@
           ]
         }
         ]
-    },  
+    },
     "variables":  {
         "teamsConnectionName":  "[concat('teams-', parameters('PlaybookName'))]",
         "azuresentinelConnectionName":  "[concat('azuresentinel-', parameters('PlaybookName'))]",
@@ -41,7 +41,7 @@
         "TeamsgroupId":  {
             "defaultValue":  "GovernanceComplianceTeam",
             "type":  "string"}
-        
+
     },
     "resources":  [
         {

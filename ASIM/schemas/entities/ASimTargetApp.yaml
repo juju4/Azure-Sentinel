@@ -16,9 +16,9 @@ Fields:
   Logical type: Enumerated
   List of values: AppType
   Follows: TargetAppName
-  Description: The type of the application which the event applies to. 
+  Description: The type of the application which the event applies to.
 
-- Name: TargetUrl	
+- Name: TargetUrl
   Type: string
   Class: Optional
-  Description: A URL associated with the target application. 
+  Description: A URL associated with the target application.

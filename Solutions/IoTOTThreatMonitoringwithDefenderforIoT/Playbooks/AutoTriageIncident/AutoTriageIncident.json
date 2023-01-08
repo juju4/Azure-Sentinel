@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
      "metadata": {
-        "title": "AD4IoT-AutoTriageIncident", 
+        "title": "AD4IoT-AutoTriageIncident",
         "description": "SOC and OT engineers can stream their workflows using the playbook, which automatically updates the incident severity based on the devices involved in the incident and their importance.",
         "prerequisites": ["None"],
         "lastUpdateTime": "2022-08-14T00:00:00.000Z",
-        "entities": [], 
-        "tags": [], 
+        "entities": [],
+        "tags": [],
         "support": {
-            "tier": "microsoft" 
+            "tier": "microsoft"
         },
         "author": {
             "name": "Amit Cohen"

@@ -5,7 +5,7 @@
           "FunctionName": {
               "defaultValue": "OktaSSO",
               "type": "string"
-          },  
+          },
           "WorkspaceID": {
               "type": "string",
               "defaultValue": "<workspaceID>"
@@ -177,7 +177,7 @@
                           "timeInterval": "[parameters('TimeInterval')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentineloktafunctionzip"
 
-                                   } 
+                                   }
                   }
               ]
           },
@@ -232,4 +232,3 @@
           }
       ]
   }
-  

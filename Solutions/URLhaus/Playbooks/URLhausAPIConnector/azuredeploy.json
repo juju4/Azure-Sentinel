@@ -9,7 +9,7 @@
         "description": "Name of the URLhaus Connector"
       }
 	}
-      
+
    },
    "variables":{
 
@@ -22,7 +22,7 @@
          "location":"[resourceGroup().location]",
          "properties":{
             "connectionParameters":{
-               
+
             },
             "brandColor":"#FFFFFF",
             "description":"Connector for URLhaus API",
@@ -45,10 +45,10 @@
                   "https"
                ],
                "consumes":[
-                  
+
                ],
                "produces":[
-                  
+
                ],
                "paths":{
                   "/urls/recent/limit/{limit}":{
@@ -851,22 +851,22 @@
                   }
                },
                "definitions":{
-                  
+
                },
                "parameters":{
-                  
+
                },
                "responses":{
-                  
+
                },
                "securityDefinitions":{
-                  
+
                },
                "security":[
-                  
+
                ],
                "tags":[
-                  
+
                ]
             }
          }

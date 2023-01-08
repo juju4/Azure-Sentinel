@@ -50,12 +50,12 @@
         }]
     },
     "instructionSteps": [
-        { 
-            "title": "", 
+        {
+            "title": "",
             "description": ">This data connector depends on a parser based on a Kusto Function to work as expected. [Follow the steps](https://aka.ms/sentinel-arubaclearpass-parser) to use the Kusto function alias, **ArubaClearPass**",
-            "instructions": [ 
-            ]    
-        }, 
+            "instructions": [
+            ]
+        },
         {
         "title": "1. Linux Syslog agent configuration",
         "description": "Install and configure the Linux agent to collect your Common Event Format (CEF) Syslog messages and forward them to Azure Sentinel.> Notice that the data from all regions will be stored in the selected workspace",

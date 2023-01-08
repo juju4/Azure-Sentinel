@@ -87,15 +87,15 @@ done
 echo 'Microsoft Azure Sentinel SAP Continuous Threat Monitoring.
 SAP ABAP Logs Connector -  Preview
 
-Copyright (c) Microsoft Corporation. 
-You may use this preview software internally and only in accordance with the Azure preview terms, located at https://azure.microsoft.com/support/legal/preview-supplemental-terms/  
+Copyright (c) Microsoft Corporation.
+You may use this preview software internally and only in accordance with the Azure preview terms, located at https://azure.microsoft.com/support/legal/preview-supplemental-terms/
 
 Microsoft reserves all other rights
 ****
 
 -----Update All MS SAPcon instances----
 This process will download the latest version of Sentinel SAP Connector, Updates current image and containers. A currently running version of the instance will be stopped and automatically start after the process.
-In order to process you will need the following prerequisites: 
+In order to process you will need the following prerequisites:
 '
 # Parameter validation
 if [ -n "$SDKFILELOC" ] && [ ! -f "$SDKFILELOC" ]; then

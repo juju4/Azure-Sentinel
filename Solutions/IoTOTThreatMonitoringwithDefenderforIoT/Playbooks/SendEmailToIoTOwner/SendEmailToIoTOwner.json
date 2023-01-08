@@ -2,14 +2,14 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
        "metadata": {
-        "title": "AD4IoT-SendEmailtoIoTOwner", 
+        "title": "AD4IoT-SendEmailtoIoTOwner",
         "description": "The playbooks automate the SOC workflow by automatically emailing the incident details to the right IoT/OT device owner (based on Defender for IoT dafinition) and allowing him to respond by email. The incident is automatically updated based on the email response from the device owner",
         "prerequisites": ["None"],
         "lastUpdateTime": "2022-08-14T00:00:00.000Z",
-        "entities": [], 
-        "tags": [], 
+        "entities": [],
+        "tags": [],
         "support": {
-            "tier": "microsoft" 
+            "tier": "microsoft"
         },
         "author": {
             "name": "Amit Cohen"

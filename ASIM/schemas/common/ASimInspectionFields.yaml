@@ -67,7 +67,7 @@ Fields:
   Description: The last time the relevant IoC was identified as a threat.
 
 - Name: ThreatField
-  Class: Optional	
+  Class: Optional
   Type: string
   Logical type: Enumerated
   Description: The field for which a threat was identified.

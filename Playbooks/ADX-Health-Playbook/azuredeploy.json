@@ -50,7 +50,7 @@
         }
     },
     "variables": {
-      
+
         "o365ConnectionName": "[concat('o365-', parameters('PlaybookName'))]",
         "kustoConnectionName": "[concat('kusto', parameters('PlaybookName'))]",
         "azuremonitorlogsConnectionName": "[concat('azuremon-', parameters('PlaybookName'))]"
@@ -136,7 +136,7 @@
                             "defaultValue": "[parameters('endTime')]",
                             "type": "String"
                         },
-                        
+
                         "startTime": {
                             "defaultValue": "[parameters('startTime')]",
                             "type": "String"

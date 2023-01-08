@@ -35,7 +35,7 @@
             "properties": {
                 "linkedResourceId": "[concat('/subscriptions/', parameters('subscriptionId'), '/providers/microsoft.insights/eventtypes/management')]"
             }
-        }        
+        }
     ],
     "outputs": {}
 }

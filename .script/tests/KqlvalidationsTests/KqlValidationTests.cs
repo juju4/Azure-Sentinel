@@ -40,7 +40,7 @@ namespace Kqlvalidations.Tests
             {
                 return;
             }
-            
+
             var queryStr =  (string) res["query"];
             ValidateKql(id, queryStr);
         }
@@ -52,7 +52,7 @@ namespace Kqlvalidations.Tests
         {
             var res = ReadAndDeserializeYaml(encodedFilePath);
             var id = (string) res["id"];
-        
+
             //Templates that are in the skipped templates should not pass the validation (if they pass, why skip?)
             if (ShouldSkipTemplateValidation(id) && res.ContainsKey("query"))
             {
@@ -60,9 +60,9 @@ namespace Kqlvalidations.Tests
                 var validationRes = _queryValidator.ValidateSyntax(queryStr);
                 Assert.False(validationRes.IsValid, $"Template Id:{id} is valid but it is in the skipped validation templates. Please remove it from the templates that are skipped since it is valid.");
             }
-        
+
         }
-        
+
         // // We pass File name to test because in the result file we want to show an informative name for the test
         // [Theory]
         // [ClassData(typeof(InsightsYamlFilesTestData))]
@@ -70,7 +70,7 @@ namespace Kqlvalidations.Tests
         // {
         //     var res = ReadAndDeserializeYaml(encodedFilePath);
         //     var queryStr =  (string) res["BaseQuery"];
-        //     
+        //
         //     ValidateKql(fileProp.FileName, queryStr);
         // }
 
@@ -86,7 +86,7 @@ namespace Kqlvalidations.Tests
             {
                 return;
             }
-            
+
             var queryStr =  (string) res["query"];
             ValidateKql(id, queryStr);
         }
@@ -97,7 +97,7 @@ namespace Kqlvalidations.Tests
         {
             var res = ReadAndDeserializeYaml(encodedFilePath);
             var id = (string) res["Id"];
-        
+
             //Templates that are in the skipped templates should not pass the validation (if they pass, why skip?)
             if (ShouldSkipTemplateValidation(id) && res.ContainsKey("query"))
             {
@@ -105,7 +105,7 @@ namespace Kqlvalidations.Tests
                 var validationRes = _queryValidator.ValidateSyntax(queryStr);
                 Assert.False(validationRes.IsValid, $"Template Id:{id} is valid but it is in the skipped validation templates. Please remove it from the templates that are skipped since it is valid.");
             }
-        
+
         }
 
         // We pass File name to test because in the result file we want to show an informative name for the test
@@ -122,7 +122,7 @@ namespace Kqlvalidations.Tests
             {
                 return;
             }
-            
+
             var queryStr = queryParamsAsLetStatements + (string)yaml["ParserQuery"];
             var parserName = (string)yaml["ParserName"];
             ValidateKql(parserName, queryStr);
@@ -174,7 +174,7 @@ namespace Kqlvalidations.Tests
 
         private Dictionary<object, object> ReadAndDeserializeYaml(string encodedFilePath)
         {
-        
+
             var yaml = File.ReadAllText(Utils.DecodeBase64(encodedFilePath));
             var deserializer = new DeserializerBuilder().Build();
             return deserializer.Deserialize<dynamic>(yaml);
@@ -234,4 +234,3 @@ namespace Kqlvalidations.Tests
     }
 
 }
-

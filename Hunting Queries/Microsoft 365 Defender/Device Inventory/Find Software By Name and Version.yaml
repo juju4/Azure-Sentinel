@@ -9,13 +9,13 @@ requiredDataConnectors:
 tactics:
 - Initial Access
 - Execution
-relevantTechniques: 
+relevantTechniques:
 -	Exploitation for Client Execution
 query: |
   //
   let SearchSoftwareName = "chrome";
   let SoftwareKnownVersion = "10";
-  DeviceTvmSoftwareInventory 
+  DeviceTvmSoftwareInventory
   // to surface software that the version is not discovered for, remove SoftwareVersion filtering
   | where SoftwareName == SearchSoftwareName
   | where SoftwareVersion startswith SoftwareKnownVersion

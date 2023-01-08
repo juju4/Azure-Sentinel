@@ -7,7 +7,7 @@
     "Data Connectors/TrendMicroXDR.json"
   ],
   "Workbooks": [
-  "Workbooks/TrendMicroXDROverview.json" 
+  "Workbooks/TrendMicroXDROverview.json"
   ],
 "Analytic Rules": [
 "Analytic Rules/Create Incident for XDR Alerts"

@@ -8,7 +8,7 @@
   ],
   "Workbooks": [
   "Workbooks/AIVectraDetectWorkbook.json"
-  ], 
+  ],
   "Analytic Rules": [
    "Analytic Rules/VectraDetect-Account-by-Severity.yaml",
 	 "Analytic Rules/VectraDetect-HighSeverityDetection-by-Tactics.yaml",

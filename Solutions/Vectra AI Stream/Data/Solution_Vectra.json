@@ -24,7 +24,7 @@
     "Vectra AI Stream/Hunting Queries/VectraSuspiciousNbOfSubDomains.yaml",
     "Vectra AI Stream/Hunting Queries/VectraUnsecuredCredsGPP.yaml"
   ],
-  
+
   "Metadata": "SolutionMetadata.json",
   "BasePath": "C:\\GitHub\\Azure-Sentinel\\Solutions",
   "Version": "2.0.1",

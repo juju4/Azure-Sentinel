@@ -22,7 +22,7 @@
             "defaultValue":  "PaloAltoXDR",
             "type":  "string"
         },
-        
+
          "Teams GroupId": {
              "defaultValue": "TeamgroupId",
              "type": "String",
@@ -38,8 +38,8 @@
                          }
     }
    },
-    
-    
+
+
     "variables":  {
         "AzuremonitorlogsConnectionName":  "[concat('Azuremonitorlogs-', parameters('PlaybookName'))]",
         "MicrosoftSentinelConnectionName":  "[concat('MicrosoftSentinel-', parameters('PlaybookName'))]",

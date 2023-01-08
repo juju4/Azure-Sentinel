@@ -66,7 +66,7 @@
          "properties":{
             "displayName":"[variables('AbuseIPDBConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/Microsoft.Web/customApis/', parameters('customApis_AbuseIPDBAPI_name'))]"
@@ -82,7 +82,7 @@
          "properties":{
             "displayName":"[variables('ThreatIntelligenceConnectionName')]",
             "customParameterValues":{
-               
+
             },
             "api":{
                "id":"[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/microsoftgraphsecurity')]"
@@ -118,7 +118,7 @@
                         }
                      },
                      "runAfter":{
-                        
+
                      },
                      "type":"ApiConnection"
                   },
@@ -225,7 +225,7 @@
                               "value":"@take(variables('Results_Array'), 100)"
                            },
                            "runAfter":{
-                              
+
                            },
                            "type":"SetVariable"
                         },
@@ -265,12 +265,12 @@
                },
                "contentVersion":"1.0.0.0",
                "outputs":{
-                  
+
                },
                "parameters":{
                   "$connections":{
                      "defaultValue":{
-                        
+
                      },
                      "type":"Object"
                   }

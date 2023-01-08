@@ -24,7 +24,7 @@
         ]
     },
     "parameters": {
-        "PlaybookName": { 
+        "PlaybookName": {
             "defaultValue": "updatetrigger-notifyOwner",
             "type": "String",
             "metadata": {

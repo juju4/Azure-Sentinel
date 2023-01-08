@@ -8,12 +8,12 @@
   ],
   "Workbooks": [
   "Workbooks/TrendMicroDeepSecurityAttackActivity.json",
-  "Workbooks/TrendMicroDeepSecurityOverview.json"  
+  "Workbooks/TrendMicroDeepSecurityOverview.json"
   ],
  "Parsers": [
     "Parsers/TrendMicroDeepSecurity"
   ],
-  
+
   "BasePath": "C:\\GitHub\\Azure-Sentinel\\Solutions\\Trend Micro Deep Security",
   "Version": "2.0.1",
   "Metadata": "SolutionMetadata.json",

@@ -20,7 +20,7 @@
     {
       "Name": "DstAppName_s",
       "Type": "String"
-    },    
+    },
     {
       "Name": "NetworkDirection_s",
       "Type": "String"

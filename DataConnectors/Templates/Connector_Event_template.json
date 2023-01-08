@@ -61,10 +61,10 @@
     },
     "instructionSteps": [
         {
-            "title": "", 
+            "title": "",
             "description": ">This data connector depends on a parser based on a Kusto Function to work as expected. [Follow these steps](Link to Kusto Function on Azure Sentinel GitHub) to create the Kusto Functions alias, **enter the Kusto Function alias**",
-            "instructions": [ 
-            ]    
+            "instructions": [
+            ]
         },
         {
             "title": "1. Configure <enter the name of connector server> to send Windows event logs to your Azure Sentinel Workspace",
@@ -111,7 +111,7 @@
         {
             "title": "",
             "description": "> You should now be able to receive logs in the *Windows event log* table, log data can be parsed using the **<enter the Kusto Function alias>** function, used by all query samples, workbooks and analytic templates."
-        }            
+        }
     ],
     "metadata": {
         "id": "Unique Identifier (GUID) used to identify dependencies and content from solutions or community.",

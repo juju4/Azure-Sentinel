@@ -29,7 +29,6 @@
             "rawContent": "AppName,permissions,HighRisk\r\npurview-spn-user099,Mail.ReadWrite,Yes\r\nEntApp01,User.Read,No\r\nMyApp,Mail.ReadWrite,Yes\r\nMail-forward,User.Read,No\r\nsharepointupload,Tasks.Read.Shared,Yes\r\n"
         },
         "apiVersion": "2021-03-01-preview"
-        }       
+        }
     ]
 }
-

@@ -27,15 +27,15 @@
             "type":  "string",
          "metadata": {
           "description": "Name of the Playbook (default:EclecticIQ-CreateObservable ), You can change the name of this playbook if you want"
-        }           
+        }
         },
 		"CustomConnectorName":  {
             "defaultValue":  "EclecticIQCustomConnector",
             "type":  "string",
         "metadata": {
           "description": "Name of the custom connector, if you want to change the default name, make sure to use the same when you were installing EclecticIQ custom connector"
-        }            
-        }              
+        }
+        }
     },
     "variables":  {
         "EclecticIQcustomconnectorConnectionName":  "[concat('EclecticIQCustomConnector-', parameters('PlaybookName'))]",

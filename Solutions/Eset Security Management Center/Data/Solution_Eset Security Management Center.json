@@ -8,7 +8,7 @@
   ],
   "Workbooks": [
   "Workbooks/esetSMCWorkbook.json"
-  ], 
+  ],
   "Analytic Rules": [
    "Analytic Rules/eset-sites-blocked.yaml",
 	"Analytic Rules/eset-threats.yaml"

@@ -278,7 +278,7 @@
                           "CarbonBlackLogTypes": "[string(parameters('CarbonBlackLogTypes'))]",
                           "EventPrefixFolderName": "[string(parameters('EventPrefixFolderName'))]",
                           "AlertPrefixFolderName": "[string(parameters('AlertPrefixFolderName'))]"
-                        } 
+                        }
                   }
               ]
           },

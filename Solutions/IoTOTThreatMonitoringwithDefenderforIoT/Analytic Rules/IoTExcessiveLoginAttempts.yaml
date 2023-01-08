@@ -19,8 +19,8 @@ relevantTechniques:
 query: |
   SecurityAlert
   | where ProductName == "Azure Security Center for IoT"
-  | where AlertName == "Excessive Login Attempts" 
-  or AlertName == "Excessive SMB login attempts" 
+  | where AlertName == "Excessive Login Attempts"
+  or AlertName == "Excessive SMB login attempts"
   or AlertName == "Password Guessing Attempt Detected"
   or AlertName == "Excessive Number of Sessions"
   | where TimeGenerated <= ProcessingEndTime + 60m

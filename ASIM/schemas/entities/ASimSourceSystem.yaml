@@ -52,7 +52,7 @@ Fields:
 - Name: SrcDvcIdType
   Type: string
   Class: Conditional
-  Description: The type of SrcDvcId. 
+  Description: The type of SrcDvcId.
   Logical type: Enumerated
   List of values: DvcIdType
   Follows: SrcDvcId
@@ -72,7 +72,7 @@ Fields:
   Class: Optional
   Logical type: Enumerated
   List of values: DeviceType
-  Description: The type of the source device. 
+  Description: The type of the source device.
 
 - Name: SrcGeoCountry
   Type: string

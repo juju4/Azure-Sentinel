@@ -2,7 +2,7 @@
   "Name": "http_proxy_oab_CL",
   "Properties": [
     {
-      "Name": "TenantId", 
+      "Name": "TenantId",
       "Type": "String"
     },
     {
@@ -14,47 +14,47 @@
       "Type": "String"
     },
     {
-      "Name": "ManagementGroupName", 
+      "Name": "ManagementGroupName",
       "Type": "String"
     },
     {
-      "Name": "TimeGenerated", 
+      "Name": "TimeGenerated",
       "Type": "DateTime"
     },
     {
-      "Name": "Computer", 
+      "Name": "Computer",
       "Type": "String"
     },
     {
-      "Name": "RawData", 
+      "Name": "RawData",
       "Type": "String"
     },
     {
-      "Name": "_Fields_Timestamp_t", 
+      "Name": "_Fields_Timestamp_t",
       "Type": "DateTime"
     },
     {
-      "Name": "RecordType_s", 
+      "Name": "RecordType_s",
       "Type": "String"
     },
     {
-      "Name": "ContextId_g", 
+      "Name": "ContextId_g",
       "Type": "String"
     },
     {
-      "Name": "OabGuid_g", 
+      "Name": "OabGuid_g",
       "Type": "String"
     },
     {
-      "Name": "Message", 
+      "Name": "Message",
       "Type": "String"
     },
     {
-      "Name": "Type", 
+      "Name": "Type",
       "Type": "String"
     },
     {
-      "Name": "_ResourceId", 
+      "Name": "_ResourceId",
       "Type": "String"
     }
   ]

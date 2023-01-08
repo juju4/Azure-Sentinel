@@ -71,7 +71,7 @@
             "properties": {
                 "displayName": "[variables('AzureCommunicationServiceConnectionName')]",
                 "customParameterValues": {
-                    
+
                 },
                 "api": {
                     "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azurecommunicationservicessms')]"

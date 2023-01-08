@@ -183,9 +183,9 @@
         "size": 4,
         "title": "Traffic Overview",
         "noDataMessage": "You do not have DDOS enabled",
-				  
-						 
-		  
+
+
+
         "timeContextFromParameter": "TimeRange",
         "queryType": 0,
         "resourceType": "microsoft.operationalinsights/workspaces",
@@ -1326,4 +1326,3 @@
   "fromTemplateId": "sentinel-AzDDoSStandardWorkbook",
   "$schema": "https://github.com/Microsoft/Application-Insights-Workbooks/blob/master/schema/workbook.json"
 }
- 

@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
 
   "parameters": {
-    
+
     "AzureFirewall_CustomConnector_Name": {
       "defaultValue": "AzureFirewallConnector",
       "type": "string",

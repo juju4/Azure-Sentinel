@@ -776,7 +776,7 @@
                 "parameters": {
                     "IntelligenceCloudSharingConsent": {
                         "value": "[parameters('IntelligenceCloudSharingConsent')]",
-                        "type": "string"                    
+                        "type": "string"
                         },
                     "$connections": {
                         "value": {

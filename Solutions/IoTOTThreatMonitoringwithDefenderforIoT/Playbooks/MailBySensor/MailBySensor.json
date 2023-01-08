@@ -2,14 +2,14 @@
    "$schema":"https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
    "contentVersion":"1.0.0.0",
    "metadata": {
-        "title": "AD4IoT-MailByProductionLine", 
+        "title": "AD4IoT-MailByProductionLine",
         "description": "The following playbook will send mail to notify specific stake holders. One example can be in the case of specific security team per product line or per physical location. This playbook requires a watchlist which maps between the sensors name and the mail addresses of the alerts stockholders. For more information, see [AD4IoT-MailbyProductionLine](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/AD4IoT-MailbyProductionLine)",
         "prerequisites": ["None"],
         "lastUpdateTime": "2022-08-05T00:00:00.000Z",
-        "entities": [], 
-        "tags": [], 
+        "entities": [],
+        "tags": [],
         "support": {
-            "tier": "microsoft" 
+            "tier": "microsoft"
         },
         "author": {
             "name": "TJ Banasik"
@@ -266,7 +266,7 @@
                }
             }
     }
-        
+
       }
        }
        ]

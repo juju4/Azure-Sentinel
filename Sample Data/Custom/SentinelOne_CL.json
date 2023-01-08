@@ -869,11 +869,11 @@
       "activeDirectory":{
          "computerDistinguishedName":"CN=SRV-WIN-110,OU=WIN,OU=Tier1 Servers,OU=Tier1,DC=cloud,DC=company,DC=com",
          "computerMemberOf":[
-            
+
          ],
          "lastUserDistinguishedName":"CN=SSSS,OU=GSuite,OU=Users,OU=Tier2,DC=cloud,DC=company,DC=com",
          "lastUserMemberOf":[
-            
+
          ]
       },
       "activeThreats":0,
@@ -881,7 +881,7 @@
       "allowRemoteShell":false,
       "appsVulnerabilityStatus":"up_to_date",
       "cloudProviders":{
-         
+
       },
       "computerName":"srv-win-110",
       "consoleMigrationStatus":"N/A",
@@ -932,7 +932,7 @@
                "10.11.14.161"
             ],
             "inet6":[
-               
+
             ],
             "name":"Ethernet0",
             "physical":"00:50:56:b4:de:04"
@@ -963,7 +963,7 @@
       "totalMemory":8191,
       "updatedAt":"2021-03-30T11:28:53.434284Z",
       "userActionsNeeded":[
-         
+
       ],
       "uuid":"2241fd63d6534e3aa971ccb36d718f09",
       "event_name":"Agents."

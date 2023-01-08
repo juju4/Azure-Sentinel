@@ -29,6 +29,6 @@
               "rawContent": "SourceType,Source\r\nContosoDns,contoso_machine1"
           },
           "apiVersion": "2021-03-01-preview"
-          }       
+          }
       ]
-  }  
+  }

@@ -9,7 +9,7 @@
 		"AADManagedIdentitySignInLogs",
 		"AADNonInteractiveUserSignInLogs",
 		"AADProvisioningLogs",
-		"AADServicePrincipalSignInLogs", 
+		"AADServicePrincipalSignInLogs",
 		"ABSBotRequests",
 		"ACSBillingUsage",
 		"ACSSMSIncomingOperations",

@@ -15,7 +15,7 @@
             "type": "int",
             "metadata": {
                 "description": "The maximum number of events (evidence) that you want to send to Event Hub"
-            }        
+            }
         }
     },
     "variables": {

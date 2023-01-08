@@ -32,9 +32,9 @@
         }
     },
     "variables": {
-        "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",		
-		"StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",    
-		"KeyVaultName": "[concat(substring(variables('FunctionName'), 0, 20), 'kv')]",    
+        "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
+		"StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",
+		"KeyVaultName": "[concat(substring(variables('FunctionName'), 0, 20), 'kv')]",
 		"LogAnalyticsWorkspaceKey": "LogAnalyticsWorkspaceKey",
 		"AWSRoleArn":"AWSRoleArn",
 		"StorageSuffix":"[environment().suffixes.storage]",
@@ -144,7 +144,7 @@
                 "siteConfig": {
                     "linuxFxVersion": "python|3.8"
                 }
-            },           
+            },
             "resources": [
                 {
                     "apiVersion": "2018-11-01",
@@ -153,17 +153,17 @@
                     "dependsOn": [
                         "[concat('Microsoft.Web/sites/', variables('FunctionName'))]",
 						"[resourceId('Microsoft.KeyVault/vaults/', variables('KeyVaultName'))]",
-						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('AWSRoleArn'))]",            
+						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('AWSRoleArn'))]",
 						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('LogAnalyticsWorkspaceKey'))]"
                     ],
                     "properties": {
                         "FUNCTIONS_EXTENSION_VERSION": "~3",
                         "FUNCTIONS_WORKER_RUNTIME": "python",
                         "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.insights/components', variables('FunctionName')), '2015-05-01').InstrumentationKey]",
-                        "APPLICATIONINSIGHTS_CONNECTION_STRING": "[reference(resourceId('microsoft.insights/components', variables('FunctionName')), '2015-05-01').ConnectionString]",                        
+                        "APPLICATIONINSIGHTS_CONNECTION_STRING": "[reference(resourceId('microsoft.insights/components', variables('FunctionName')), '2015-05-01').ConnectionString]",
 						"AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('StorageAccountName')), '2019-06-01').keys[0].value, ';EndpointSuffix=',toLower(variables('StorageSuffix')))]",
                         "WorkspaceID": "[parameters('WorkspaceID')]",
-                        "WorkspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('LogAnalyticsWorkspaceKey')).secretUriWithVersion, ')')]",                        
+                        "WorkspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('LogAnalyticsWorkspaceKey')).secretUriWithVersion, ')')]",
                         "AWSRoleSessionName": "[parameters('AWSRoleSessionName')]",
                         "AWSRoleArn": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('AWSRoleArn')).secretUriWithVersion, ')')]",
                         "AWSRegionName": "[parameters('AWSRegionName')]",
@@ -171,7 +171,7 @@
 						"Schedule":"*/10 * * * *",
 						"FreshEventTimeStamp":"10",
 						"SecurityHubFilters":"{'SeverityLabel': [{'Value': 'HIGH', 'Comparison': 'EQUALS'},{'Value': 'CRITICAL', 'Comparison': 'EQUALS'},],'RecordState': [{'Value': 'ACTIVE', 'Comparison': 'EQUALS'}]}",
-						"LAURI": "[variables('LogAnaltyicsUri')]",											 
+						"LAURI": "[variables('LogAnaltyicsUri')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-AWS-SecurityHubFindings-functionapp",
                         "ClientID":"",
                         "SCM_DO_BUILD_DURING_DEPLOYMENT": "true",
@@ -242,7 +242,7 @@
 			  }
 			}
 		  ]
-		},        
+		},
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
             "apiVersion": "2019-06-01",

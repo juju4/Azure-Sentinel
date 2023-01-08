@@ -40,7 +40,7 @@
     {
       "Name": "Summary",
       "Type": "String"
-    },	
+    },
 	{
       "Name": "Organization",
       "Type": "String"

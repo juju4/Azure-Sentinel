@@ -32,7 +32,7 @@
           "denial_of_service":false,
           "description":"The server supports one or more weak key exchange algorithms. It is highly adviseable to remove weak key exchange algorithm support from SSH configuration files on hosts to prevent them from being used to establish connections.",
           "exploits":[
-             
+
           ],
           "id":"ssh-weak-kex-algorithms",
           "links":[
@@ -43,7 +43,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-04-07T00:00:00Z",
           "pci_cvss_score":4.3,
@@ -92,7 +92,7 @@
           "denial_of_service":false,
           "description":"This DNS server is susceptible to DNS cache snooping, whereby an attacker can make non-recursive queries to a DNS server, looking for records potentially already resolved by this DNS server for other clients. Depending on the response, an attacker can use this information to potentially launch other attacks.",
           "exploits":[
-             
+
           ],
           "id":"dns-allows-cache-snooping",
           "links":[
@@ -103,7 +103,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2016-04-08T00:00:00Z",
           "pci_cvss_score":5.0,
@@ -152,7 +152,7 @@
           "denial_of_service":false,
           "description":"This DNS server is susceptible to DNS cache snooping, whereby an attacker can make non-recursive queries to a DNS server, looking for records potentially already resolved by this DNS server for other clients. Depending on the response, an attacker can use this information to potentially launch other attacks.",
           "exploits":[
-             
+
           ],
           "id":"dns-allows-cache-snooping",
           "links":[
@@ -163,7 +163,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2016-04-08T00:00:00Z",
           "pci_cvss_score":5.0,
@@ -212,7 +212,7 @@
           "denial_of_service":false,
           "description":"A Domain Name Server (DNS) amplification attack is a popular form of distributed denial of service (DDoS) that relies on the use of publically accessible open DNS servers to overwhelm a victim system with DNS response traffic. \n\n A Domain Name Server (DNS) Amplification attack is a popular form of Distributed Denial of Service (DDoS), in which attackers use publically accessible open DNS servers to flood a target system with DNS response traffic. The primary technique consists of an attacker sending a DNS name lookup request to an open DNS server with the source address spoofed to be the target's address. When the DNS server sends the DNS record response, it is sent instead to the target. Attackers will typically submit a request for as much zone information as possible to maximize the amplification effect. In most attacks of this type observed by US-CERT, the spoofed queries sent by the attacker are of the type, \"ANY\" which returns all known information about a DNS zone in a single request. Because the size of the response is considerably larger than the request, the attacker is able to increase the amount of traffic directed at the victim. By leveraging a botnet to produce a large number of spoofed DNS queries, an attacker can create an immense amount of traffic with little effort. Additionally, because the responses are legitimate data coming from valid servers, it is extremely difficult to prevent these types of attacks. While the attacks are difficult to stop, network operators can apply several possible mitigation strategies. \n\n While the most common form of this attack that US-CERT has observed involves DNS servers configured to allow unrestricted recursive resolution for any client on the Internet, attacks can also involve authoritative name servers that do not provide recursive resolution. The attack method is similar to open recursive resolvers, but is more difficult to mitigate since even a server configured with best practices can still be used in an attack. In the case of authoritative servers, mitigation should focus on using Response Rate Limiting to restrict the amount of traffic.",
           "exploits":[
-             
+
           ],
           "id":"dns-amplification",
           "links":[
@@ -228,7 +228,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2018-03-21T00:00:00Z",
           "pci_cvss_score":0.0,
@@ -277,7 +277,7 @@
           "denial_of_service":true,
           "description":"Allowing nameservers to process recursive queries coming from any system may, in certain situations, help attackers conduct denial of service or cache poisoning attacks.",
           "exploits":[
-             
+
           ],
           "id":"dns-processes-recursive-queries",
           "links":[
@@ -288,7 +288,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2012-10-23T00:00:00Z",
           "pci_cvss_score":5.0,
@@ -337,7 +337,7 @@
           "denial_of_service":true,
           "description":"Allowing nameservers to process recursive queries coming from any system may, in certain situations, help attackers conduct denial of service or cache poisoning attacks.",
           "exploits":[
-             
+
           ],
           "id":"dns-processes-recursive-queries",
           "links":[
@@ -348,7 +348,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2012-10-23T00:00:00Z",
           "pci_cvss_score":5.0,
@@ -397,7 +397,7 @@
           "denial_of_service":false,
           "description":"The remote host responded to an ICMP timestamp request. The ICMP timestamp response contains the remote host's date and time. This information could theoretically be used against some systems to exploit weak time-based random number generators in other services.\n\nIn addition, the versions of some operating systems can be accurately fingerprinted by analyzing their responses to invalid ICMP timestamp requests.",
           "exploits":[
-             
+
           ],
           "id":"generic-icmp-timestamp",
           "links":[
@@ -423,7 +423,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2019-06-11T00:00:00Z",
           "pci_cvss_score":0.0,
@@ -472,7 +472,7 @@
           "denial_of_service":false,
           "description":"The remote host responded with a TCP timestamp. The TCP timestamp response can be used to approximate the remote host's uptime, potentially aiding in further attacks. Additionally, some operating systems can be fingerprinted based on the behavior of their TCP timestamps.",
           "exploits":[
-             
+
           ],
           "id":"generic-tcp-timestamp",
           "links":[
@@ -493,7 +493,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2018-03-21T00:00:00Z",
           "pci_cvss_score":0.0,
@@ -542,7 +542,7 @@
           "denial_of_service":false,
           "description":"Since 3DES (Triple Data Encryption Standard) only provides an effective security of 112 bits, it is considered close to end of life by some agencies. ECRYPT II (from 2012) recommends for generic application independent long-term protection of at least 128 bits security. The same recommendation has also been reported by BSI Germany (from 2015) and ANSSI France (from 2014), 128 bit is the recommended symmetric size and should be mandatory after 2020. While NIST (from 2012) still considers 3DES being appropriate to use until the end of 2030.",
           "exploits":[
-             
+
           ],
           "id":"ssh-3des-ciphers",
           "links":[
@@ -558,7 +558,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-03-31T00:00:00Z",
           "pci_cvss_score":0.0,
@@ -607,7 +607,7 @@
           "denial_of_service":false,
           "description":"SSH contains a vulnerability in the way certain types of errors are handled. Attacks leveraging this vulnerabilty would lead to the loss of the SSH session. According to CPNI Vulnerability Advisory SSH: \n\n If exploited, this attack can potentially allow an attacker to recover up to 32 bits of plaintext from an arbitrary block of ciphertext from a connection secured using the SSH protocol in the standard configuration. If OpenSSH is used in the standard configuration, then the attacker's success probability for recovering 32 bits of plaintext is 2^{-18}. A variant of the attack against OpenSSH in the standard configuration can verifiably recover 14 bits of plaintext with probability 2^{-14}. The success probability of the attack for other implementations of SSH is not known.",
           "exploits":[
-             
+
           ],
           "id":"ssh-cbc-ciphers",
           "links":[
@@ -618,7 +618,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-03-31T00:00:00Z",
           "pci_cvss_score":2.6,
@@ -667,7 +667,7 @@
           "denial_of_service":false,
           "description":"The prime modulus offered when diffie-hellman-group1-sha1 is used only has a size of 1024 bits. This size is considered weak and within theoretical range of the so-called Logjam attack.",
           "exploits":[
-             
+
           ],
           "id":"ssh-cve-2015-4000",
           "links":[
@@ -683,7 +683,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-07-13T00:00:00Z",
           "pci_cvss_score":4.3,
@@ -732,7 +732,7 @@
           "denial_of_service":false,
           "description":"Legacy block ciphers having a block size of 64 bits are vulnerable to a practical collision attack when used in CBC mode. The security of a block cipher is often reduced to the key size k: the best attack should be the exhaustive search of the key, with complexity 2 to the power of k. However, the block size n is also an important security parameter, defining the amount of data that can be encrypted under the same key. This is particularly important when using common modes of operation: we require block ciphers to be secure with up to 2 to the power of n queries, but most modes of operation (e.g. CBC, CTR, GCM, OCB, etc.) are unsafe with more than 2 to the power of half n blocks of message (the birthday bound). With a modern block cipher with 128-bit blocks such as AES, the birthday bound corresponds to 256 exabytes. However, for a block cipher with 64-bit blocks, the birthday bound corresponds to only 32 GB, which is easily reached in practice. Once a collision between two cipher blocks occurs it is possible to use the collision to extract the plain text data.",
           "exploits":[
-             
+
           ],
           "id":"ssh-cve-2016-2183-sweet32",
           "links":[
@@ -748,7 +748,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-04-01T00:00:00Z",
           "pci_cvss_score":5.0,
@@ -797,7 +797,7 @@
           "denial_of_service":false,
           "description":"The server supports one or more weak key exchange algorithms. It is highly adviseable to remove weak key exchange algorithm support from SSH configuration files on hosts to prevent them from being used to establish connections.",
           "exploits":[
-             
+
           ],
           "id":"ssh-weak-kex-algorithms",
           "links":[
@@ -808,7 +808,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-04-07T00:00:00Z",
           "pci_cvss_score":4.3,
@@ -857,7 +857,7 @@
           "denial_of_service":false,
           "description":"The SSH server supports cryptographically weak Hash-based message authentication codes (HMACs) including MD5 or 96-bit Hash-based algorithms.",
           "exploits":[
-             
+
           ],
           "id":"ssh-weak-message-authentication-code-algorithms",
           "links":[
@@ -868,7 +868,7 @@
              }
           ],
           "malware_kits":[
-             
+
           ],
           "modified":"2020-03-31T00:00:00Z",
           "pci_cvss_score":4.0,

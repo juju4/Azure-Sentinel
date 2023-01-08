@@ -14,19 +14,19 @@
             "type": "string",
              "metadata": {
                 "description": "example.hx.spiderfoot.net"
-            } 
+            }
         },
         "SpiderfootAPIKey": {
             "type": "securestring",
              "metadata": {
                 "description": "Enter your Spiderfoot API key"
-            } 
+            }
         },
         "RecipientEmail": {
             "type": "string",
              "metadata": {
                 "description": "username@example.com"
-            } 
+            }
         }
     },
     "variables": {
@@ -172,7 +172,7 @@
                             "inputs": {
                                 "method": "GET",
                                 "uri": "https://@{variables('SpiderfootURL')}/api?func=scanstart&apikey=@{variables('SpiderfootAPIKey')}&name=ScanFromSentinel@{formatDateTime(utcNow(), 'MMddyyyy')}&target=@{variables('Scan Targets')}&options=iterate_names=0,correlations=1&modules=sfp_haveibeenpwned"
-                                
+
                             }
                         },
                         "Initialize_variable-_Scan_Status": {

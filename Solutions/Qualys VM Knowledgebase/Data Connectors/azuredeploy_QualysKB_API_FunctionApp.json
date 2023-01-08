@@ -7,7 +7,7 @@
               "minLength": 1,
               "maxLength": 11,
               "defaultValue": "QualysKB"
-          }, 
+          },
           "WorkspaceID": {
               "type": "string",
               "minLength": 36,
@@ -60,7 +60,7 @@
                   "ApplicationId": "[variables('FunctionName')]"
               }
           },
-          
+
           {
               "type": "Microsoft.Storage/storageAccounts",
               "apiVersion": "2019-06-01",
@@ -200,7 +200,7 @@
                           "filterParameters": "[parameters('OptionalFilterParameters')]",
                           "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
                           "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-qualyskb-functioncode"
-                                   } 
+                                   }
                   }
               ]
           },
@@ -242,4 +242,3 @@
           }
       ]
   }
-  

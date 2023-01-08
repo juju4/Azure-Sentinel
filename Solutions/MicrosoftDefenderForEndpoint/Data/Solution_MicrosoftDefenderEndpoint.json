@@ -21,7 +21,7 @@
     "Playbooks/Isolate-MDEMachine/Isolate-MDEMachine-alert-trigger/azuredeploy.json",
     "Playbooks/Isolate-MDEMachine/Isolate-MDEMachine-incident-trigger/azuredeploy.json",
     "Playbooks/Restrict-MDEAppExecution/Restrict-MDEAppExecution-alert-trigger/azuredeploy.json",
-    "Playbooks/Restrict-MDEAppExecution/Restrict-MDEAppExecution-incident-trigger/azuredeploy.json",    
+    "Playbooks/Restrict-MDEAppExecution/Restrict-MDEAppExecution-incident-trigger/azuredeploy.json",
     "Playbooks/Restrict-MDEDomain/Restrict-MDEDomain-alert-trigger/azuredeploy.json",
     "Playbooks/Restrict-MDEDomain/Restrict-MDEDomain-incident-trigger/azuredeploy.json",
     "Playbooks/Restrict-MDEFileHash/Restrict-MDEFileHash-alert-trigger/azuredeploy.json",

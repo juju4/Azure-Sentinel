@@ -82,7 +82,7 @@
 						"Threatx_Key_name": {
                             "type": "string",
                             "defaultValue": "[parameters('Threatx Key name')]"
-                        }						
+                        }
                     },
                     "triggers": {
                         "Microsoft_Sentinel_incident": {

@@ -155,7 +155,7 @@
                         "TrendMicroCASToken": "[parameters('TrendMicroCASToken')]",
                         "TrendMicroCASServiceURL": "[parameters('TrendMicroCASServiceURL')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-TrendMicroCAS-functionapp"
-                        
+
                     }
                 }
             ]

@@ -15,7 +15,7 @@
         "entities": [ "Ip" ],
         "tags": [ "Remediation", "Response from teams" ],
         "support": {
-            "tier": "community" 
+            "tier": "community"
         },
         "author": {
             "name": "Wortell"

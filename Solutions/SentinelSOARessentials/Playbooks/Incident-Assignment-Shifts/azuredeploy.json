@@ -2,7 +2,7 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "2.2.0.0",
     "metadata":{
-        "title": "Incident Assignment Shifts", 
+        "title": "Incident Assignment Shifts",
         "description": "This playbook will assign an Incident to an owner based on the Shifts schedule in Microsoft Teams. When an incident is assigned, the incident owner will be notified via email. Incidents are assigned to users based on the following criteria:<br> *Only users who have started their shifts during the time the Logic App runs will be considered. *Users who still have at least 1 hours left before going off shift (can be configured in playbook) *User with the least incidents assigned on the current Shift will be assigned incident first. <br> Refer to [Automate Incident Assignment with Shifts for Teams](https://techcommunity.microsoft.com/t5/azure-sentinel/automate-incident-assignment-with-shifts-for-teams/ba-p/2297549) for more details.",
         "prerequisites": ["1. Have [Shifts](https://support.microsoft.com/office/get-started-in-shifts-5f3e30d8-1821-4904-be26-c3cd25a497d6) schedule setup in Microsoft Teams.",
          "2. Have user account with Owner role in Microsoft Teams",
@@ -26,9 +26,9 @@
             "- Find the **List all shifts** connector, click on the **X** sign next to Team field for the drop-down list to appear.",
             "- Select the Teams channel with your Shifts schedule from the drop-down list.",
             "- Save the Logic App once you have completed the above steps." ],
-        "lastUpdateTime": "2022-08-05T00:00:00.000Z", 
-        "entities": [], 
-        "tags": ["Incident management"], 
+        "lastUpdateTime": "2022-08-05T00:00:00.000Z",
+        "entities": [],
+        "tags": ["Incident management"],
         "support": {
             "tier": "community"
         },
@@ -51,7 +51,7 @@
         "EmailAddress": {
             "defaultValue": "Your email address",
             "type": "string"
-        }  
+        }
     },
     "variables": {
         "AzureMonitorLogs": "[concat('azuremonitorlogs-', parameters('PlaybookName'))]",
@@ -65,7 +65,7 @@
             "type": "Microsoft.Web/connections",
             "apiVersion": "2016-06-01",
             "name": "[variables('AzureMonitorLogs')]",
-            "location": "[resourceGroup().location]",             
+            "location": "[resourceGroup().location]",
             "properties": {
                         "displayName": "[parameters('EmailAddress')]",
                         "customParameterValues": {},
@@ -122,12 +122,12 @@
 		"hidden-SentinelTemplateName": "IncidentAssignmentShifts",
 		"hidden-SentinelTemplateVersion": "1.0"
 		},
-            "dependsOn": [                
+            "dependsOn": [
                 "[resourceId('Microsoft.Web/connections', variables('AzureMonitorLogs'))]",
                 "[resourceId('Microsoft.Web/connections', variables('AzureSentinel'))]",
                 "[resourceId('Microsoft.Web/connections', variables('office365'))]",
                 "[resourceId('Microsoft.Web/connections', variables('Shifts'))]"
-            ],            
+            ],
             "properties": {
                 "state": "Enabled",
                 "definition": {
@@ -607,25 +607,25 @@
                                 "connectionId":  "[resourceId('Microsoft.Web/connections', variables('AzureMonitorLogs'))]",
                                 "connectionName": "[variables('AzureMonitorLogs')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuremonitorlogs')]"
-                                    
+
                             },
                             "azuresentinel": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', variables('AzureSentinel'))]",
                                 "connectionName": "[variables('AzureSentinel')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azuresentinel')]"
-                               
+
                             },
-                            "office365": { 
+                            "office365": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', variables('office365'))]",
                                 "connectionName": "[variables('office365')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/office365')]"
-                                    
+
                             },
                             "shifts": {
                                 "connectionId": "[resourceId('Microsoft.Web/connections', variables('Shifts'))]",
                                 "connectionName": "[variables('Shifts')]",
                                 "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/shifts')]"
-                                
+
                             }
                         }
                     }

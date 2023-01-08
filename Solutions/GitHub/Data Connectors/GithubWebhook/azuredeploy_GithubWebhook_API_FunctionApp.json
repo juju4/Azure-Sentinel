@@ -4,7 +4,7 @@
     "parameters": {
         "FunctionName": {
             "defaultValue": "fngithubwebhook",
-            "minLength": 1,           
+            "minLength": 1,
             "type": "string"
         },
         "WorkspaceID": {
@@ -14,7 +14,7 @@
         "WorkspaceKey": {
             "type": "securestring",
             "defaultValue": "<workspaceKey>"
-        }       
+        }
     },
     "variables": {
         "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",

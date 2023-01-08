@@ -99,7 +99,7 @@
             "metadata": {
                 "description": "The friendly name for the scheduled alert rule"
             }
-        }, 
+        },
         "ruleId": {
             "type": "string",
             "defaultValue": "[newGuid()]",

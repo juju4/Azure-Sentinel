@@ -52,7 +52,7 @@ Fields:
 - Name: TargetDvcIdType
   Type: string
   Class: Conditional
-  Description: The type of TargetDvcId. 
+  Description: The type of TargetDvcId.
   Logical type: Enumerated
   List of values: DvcIdType
   Follows: TargetDvcId

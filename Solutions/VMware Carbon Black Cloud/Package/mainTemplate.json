@@ -919,7 +919,7 @@
             "operationId-DeviceActions": "DeviceActions",
             "_operationId-DeviceActions": "[[variables('operationId-DeviceActions')]",
             "operationId-ProcessSearchSuggestionsByQuery": "ProcessSearchSuggestionsByQuery",
-            "_operationId-ProcessSearchSuggestionsByQuery": "[[variables('operationId-ProcessSearchSuggestionsByQuery')]",            
+            "_operationId-ProcessSearchSuggestionsByQuery": "[[variables('operationId-ProcessSearchSuggestionsByQuery')]",
             "operationId-DismissAnAlert": "DismissAnAlert",
             "_operationId-DismissAnAlert": "[[variables('operationId-DismissAnAlert')]",
             "operationId-AddNoteToAnAlert": "AddNoteToAnAlert",

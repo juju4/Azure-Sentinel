@@ -143,7 +143,7 @@
                         "Compose_tenant_ID": {
                             "runAfter": {},
                             "type": "Compose",
-                            "inputs": "[variables('TenantId')]" 
+                            "inputs": "[variables('TenantId')]"
                         },
                         "HTTP_PUT_to_Dynamic_Summaries_API":  {
                             "runAfter":  {
@@ -163,7 +163,7 @@
                                 "method":  "PUT",
                                 "uri":  "[variables('DynamicSummariesAPIUri')]"
                             }
-                        },                        
+                        },
                         "Run_query_and_list_results":  {
                             "runAfter":  {
                                 "Compose_summary_description":  [

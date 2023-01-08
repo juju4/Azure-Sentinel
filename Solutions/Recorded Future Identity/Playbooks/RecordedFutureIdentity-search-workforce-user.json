@@ -2,13 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
        "metadata": {
-        "title": "RecordedFutureIdentity-search-workforce-user", 
+        "title": "RecordedFutureIdentity-search-workforce-user",
         "description": "This playbook searches the Recorded Future Identity Intelligence Module for compromised workforce users.\n\nThis playbook depends on:\n- RecordedFutureIdentity-add-AAD-security-group-user\n- RecordedFutureIdentity-confirm-AAD-risky-user\n- RecordedFutureIdentity-lookup-and-save-user\n\n Those playbooks need to be installed **manually** before installing current playbook.",
-        "lastUpdateTime": "2022-09-14T00:00:00.000Z", 
-        "entities": [], 
-        "tags": ["Identity protection"], 
+        "lastUpdateTime": "2022-09-14T00:00:00.000Z",
+        "entities": [],
+        "tags": ["Identity protection"],
         "support": {
-            "tier": "developer" 
+            "tier": "developer"
         },
         "author": {
             "name": "Dmytro Branitskyi, Recorded Future (support@recordedfuture.com)"

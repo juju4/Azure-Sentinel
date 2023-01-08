@@ -33,7 +33,7 @@
        },
        "RecurrenceInterval": {
            "defaultValue": 7,
-           "type": "int" 
+           "type": "int"
        }
    },
    "variables": {

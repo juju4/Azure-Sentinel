@@ -1,10 +1,10 @@
 id: ae10c588-7ff7-486c-9920-ab8b0bdb6ede
 name: Mercury - Domain, Hash and IP IOCs - August 2022
-description: | 
+description: |
   'Identifies a match across various data feeds for domains, hashes and IP IOC related to Mercury
    Reference:  https://www.microsoft.com/security/blog/2022/08/25/mercury-leveraging-log4j-2-vulnerabilities-in-unpatched-systems-to-target-israeli-organizations/'
-severity: High 
-requiredDataConnectors: 
+severity: High
+requiredDataConnectors:
   - connectorId: DNS
     dataTypes:
       - DnsEvents
@@ -15,20 +15,20 @@ requiredDataConnectors:
     dataTypes:
       - CommonSecurityLog
   - connectorId: CiscoASA
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: PaloAltoNetworks
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: Fortinet
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: CheckPoint
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: CEF
-    dataTypes: 
-      - CommonSecurityLog               
+    dataTypes:
+      - CommonSecurityLog
   - connectorId: MicrosoftThreatProtection
     dataTypes:
       - DeviceNetworkEvents
@@ -38,16 +38,16 @@ requiredDataConnectors:
     dataTypes:
       - OfficeActivity
   - connectorId: AzureFirewall
-    dataTypes: 
+    dataTypes:
       - AzureDiagnostics
   - connectorId: WindowsFirewall
     dataTypes:
-      - WindowsFirewall      
-queryFrequency: 12h 
-queryPeriod: 12h 
-triggerOperator: gt 
-triggerThreshold: 0 
-tactics: 
+      - WindowsFirewall
+queryFrequency: 12h
+queryPeriod: 12h
+triggerOperator: gt
+triggerThreshold: 0
+tactics:
   - CommandAndControl
 relevantTechniques:
   - T1071
@@ -55,7 +55,7 @@ tags:
   - Mercury
   - Schema: ASIMFileEvent
     SchemaVersion: 0.1.0
-query:  |  
+query:  |
   let iocs = externaldata(DateAdded:string,IoC:string,Type:string,TLP:string) [@"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/Mercury_August2022.csv"] with (format="csv", ignoreFirstRecord=True);
   let sha256Hashes = (iocs | where Type =~ "sha256" | project IoC);
   let IPList = (iocs | where Type =~ "ip"| project IoC);
@@ -64,23 +64,23 @@ query:  |
   (union isfuzzy=true
   (CommonSecurityLog
   | where SourceIP in (IPList) or DestinationIP in (IPList) or DestinationHostName has_any (domains) or RequestURL has_any (domains) or Message has_any (IPList)
-  | parse Message with * '(' DNSName ')' * 
+  | parse Message with * '(' DNSName ')' *
   | project TimeGenerated, SourceIP, DestinationIP, Message, SourceUserID, RequestURL, DNSName, Type
   | extend MessageIP = extract(IPRegex, 0, Message), RequestIP = extract(IPRegex, 0, RequestURL)
   | extend IPMatch = case(SourceIP in (IPList), "SourceIP", DestinationIP in (IPList), "DestinationIP", MessageIP in (IPList), "Message", RequestURL has_any (domains), "RequestUrl", "NoMatch")
   | extend timestamp = TimeGenerated, IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, IPMatch == "Message", MessageIP, "NoMatch"), AccountCustomEntity = SourceUserID
   ),
   (DnsEvents
-  | where IPAddresses in (IPList) or Name in~ (domains)  
+  | where IPAddresses in (IPList) or Name in~ (domains)
   | project TimeGenerated, Computer, IPAddresses, Name, ClientIP, Type
-  | extend DestinationIPAddress = IPAddresses, DNSName = Name, Computer 
+  | extend DestinationIPAddress = IPAddresses, DNSName = Name, Computer
   | extend timestamp = TimeGenerated, IPCustomEntity = DestinationIPAddress, HostCustomEntity = Computer
   ),
   (VMConnection
   | where SourceIp in (IPList) or DestinationIp in (IPList) or RemoteDnsCanonicalNames has_any (domains)
   | parse RemoteDnsCanonicalNames with * '["' DNSName '"]' *
   | project TimeGenerated, Computer, Direction, ProcessName, SourceIp, DestinationIp, DestinationPort, RemoteDnsQuestions, DNSName,BytesSent, BytesReceived, RemoteCountry, Type
-  | extend IPMatch = case( SourceIp in (IPList), "SourceIP", DestinationIp in (IPList), "DestinationIP", "None") 
+  | extend IPMatch = case( SourceIp in (IPList), "SourceIP", DestinationIp in (IPList), "DestinationIP", "None")
   | extend timestamp = TimeGenerated, IPCustomEntity = case(IPMatch == "SourceIP", SourceIp, IPMatch == "DestinationIP", DestinationIp, "NoMatch"), File = ProcessName, HostCustomEntity = Computer
   ),
   (Event
@@ -93,9 +93,9 @@ query:  |
   | project TimeGenerated, SourceIP, DestinationIP, Image, UserName, Computer, Type
   | extend IPMatch = case( SourceIP in (IPList), "SourceIP", DestinationIP in (IPList), "DestinationIP", "None")
   | extend timestamp = TimeGenerated, File = tostring(split(Image, '\\', -1)[-1]), IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, "None"), HostCustomEntity = Computer, AccountCustomEntity = UserName
-  ), 
+  ),
   (OfficeActivity
-  | where ClientIP in (IPList) 
+  | where ClientIP in (IPList)
   | project TimeGenerated, UserAgent, Operation, RecordType, UserId, ClientIP, Type
   | extend timestamp = TimeGenerated, IPCustomEntity = ClientIP, AccountCustomEntity = UserId
   ),
@@ -105,19 +105,19 @@ query:  |
   | extend timestamp = TimeGenerated, IPCustomEntity = RemoteIP, FileHashCustomEntity = InitiatingProcessSHA256,  HostCustomEntity = Computer, AccountCustomEntity = InitiatingProcessAccountName
   ),
   (WindowsFirewall
-  | where SourceIP in (IPList) or DestinationIP in (IPList) 
+  | where SourceIP in (IPList) or DestinationIP in (IPList)
   | project TimeGenerated, Computer, CommunicationDirection, SourceIP, DestinationIP, SourcePort, DestinationPort, Type
   | extend IPMatch = case( SourceIP in (IPList), "SourceIP", DestinationIP in (IPList), "DestinationIP", "None")
   | extend timestamp = TimeGenerated, HostCustomEntity = Computer, IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, "None")
   ),
-  (AzureDiagnostics 
+  (AzureDiagnostics
   | where ResourceType == "AZUREFIREWALLS"
   | where Category == "AzureFirewallApplicationRule"
   | parse msg_s with Protocol 'request from ' SourceHost ':' SourcePort 'to ' DestinationHost ':' DestinationPort '. Action:' Action
-  | where DestinationHost has_any (domains)  
-  | extend DNSName = DestinationHost 
+  | where DestinationHost has_any (domains)
+  | extend DNSName = DestinationHost
   | extend IPCustomEntity = SourceHost
-  ), 
+  ),
   (CommonSecurityLog
   | where FileHash in (sha256Hashes)
   | project TimeGenerated, Message, SourceUserID, FileHash, Type
@@ -148,7 +148,7 @@ query:  |
   | extend Hashes = extract_all(@"(?P<key>\w+)=(?P<value>[a-zA-Z0-9]+)", dynamic(["key","value"]), Hashes)
   | extend Hashes = column_ifexists("Hashes", dynamic(["", ""])), CommandLine = column_ifexists("CommandLine", "")
   | mv-expand Hashes
-  | where Hashes[0] =~ "SHA256" and Hashes[1] has_any (sha256Hashes) 
+  | where Hashes[0] =~ "SHA256" and Hashes[1] has_any (sha256Hashes)
   | project TimeGenerated, EventDetail, UserName, Computer, Type, Source, Hashes, CommandLine, Image
   | extend Type = strcat(Type, ": ", Source)
   | extend timestamp = TimeGenerated, HostCustomEntity = Computer , AccountCustomEntity = UserName, FileHashCustomEntity = tostring(Hashes[1]), AlgorithmCustomEntity = tostring(Hashes[0])

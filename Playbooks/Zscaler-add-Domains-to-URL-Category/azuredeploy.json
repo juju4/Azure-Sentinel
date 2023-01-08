@@ -826,7 +826,7 @@
                                                 ]
                                             },
                                             "type": "InitializeVariable"
-                                        },     
+                                        },
                                         "Initialize_variable-_Description": {
                                             "inputs": {
                                                 "variables": [
@@ -1018,7 +1018,7 @@
                                                 ]
                                             },
                                             "type": "Http"
-                                        }        
+                                        }
                                     },
                                     "outputs": {}
                                 },

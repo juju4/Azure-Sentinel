@@ -8,11 +8,11 @@
       {
         "Name": "score_d",
         "Type": "Double"
-      }, 
+      },
       {
         "Name": "breachTime_s",
         "Type": "String"
-      }, 
+      },
       {
         "Name": "modelName_s",
         "Type": "String"
@@ -50,7 +50,7 @@
         "Type": "String"
       },
       {
-        "Name": "destPort_s", 
+        "Name": "destPort_s",
         "Type": "String"
       },
       {
@@ -72,7 +72,7 @@
       {
         "Name": "endTime_s",
         "Type": "String"
-      }, 
+      },
       {
         "Name": "title_s",
         "Type": "String"
@@ -96,11 +96,11 @@
       {
         "Name": "groupScore_d",
         "Type": "String"
-      }, 
+      },
       {
         "Name": "groupCategory_s",
         "Type": "String"
-      },  
+      },
       {
         "Name": "bestDeviceName_s",
         "Type": "String"
@@ -311,4 +311,3 @@
       }
     ]
   }
-

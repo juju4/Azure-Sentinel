@@ -19,9 +19,9 @@ relevantTechniques:
 query: |
   SecurityAlert
   | where ProductName == "Azure Security Center for IoT"
-  | where AlertName == "Field Device Discovered Unexpectedly" 
-  or AlertName == "New Asset Detected" 
-  or AlertName == "Abnormal usage of MAC Addresses" 
+  | where AlertName == "Field Device Discovered Unexpectedly"
+  or AlertName == "New Asset Detected"
+  or AlertName == "Abnormal usage of MAC Addresses"
   or AlertName == "New LLDP Device Configuration"
   | where TimeGenerated <= ProcessingEndTime + 60m
   | extend DeviceId = tostring(parse_json(ExtendedProperties).DeviceId)

@@ -30,7 +30,7 @@
             "type":  "string",
         "metadata": {
           "description": "Name of the custom connector, if you want to change the default name, make sure to use the same in all OpenCTI automation playbooks as well"
-        }            
+        }
         },
         "Miner DB Node": {
             "type": "string",

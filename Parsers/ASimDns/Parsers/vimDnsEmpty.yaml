@@ -22,18 +22,18 @@ ParserQuery: |
   , _ResourceId:string
   , Type:string
   // *************************************************************  Event and Dvc Fields
-  //  ----------------- Mandatory: 
+  //  ----------------- Mandatory:
   , EventCount:int
   , EventStartTime:datetime
   , EventType:string
   , EventResult:string
-  , EventResultDetails:string 
+  , EventResultDetails:string
   , EventProduct:string
   , EventVendor:string
-  , EventSchema: string  
+  , EventSchema: string
   , EventSchemaVersion:string
   , Dvc:string
-  // ----------------- Optional 
+  // ----------------- Optional
   , EventMessage:string
   , EventSeverity:string
   , EventOriginalUid:string
@@ -100,10 +100,10 @@ ParserQuery: |
   , DnsQueryClassName:string
   , DnsResponseCode:int
   , DnsResponseName:string
-  , DnsResponseCodeName:string 
-  , DnsFlags:string 
+  , DnsResponseCodeName:string
+  , DnsFlags:string
   , NetworkProtocol:string
-  , UrlCategory:string 
+  , UrlCategory:string
   , ThreatCategory:string
   , DnsNetworkDuration: int
   , Duration: int
@@ -117,8 +117,8 @@ ParserQuery: |
   , DnsSessionId:string
   , SessionId: string
   // ****************************************************** Aliases
-  , EventEndTime:datetime 
-  , DomainCategory:string   
+  , EventEndTime:datetime
+  , DomainCategory:string
   , IpAddr:string
   , Domain:string
   , TransactionIdHex:string
@@ -129,4 +129,4 @@ ParserQuery: |
   , DvcDomainType:string
   , NetworkProtocolVersion:string
   )[];
-  EmptyNewDnsEvents 
+  EmptyNewDnsEvents

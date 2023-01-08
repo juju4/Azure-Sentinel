@@ -8,51 +8,51 @@
 			"metadata": {
 				"description": "Specifies the name of the Function App."
 			}
-        },		
+        },
         "WorkspaceID": {
-            "type": "string",            
+            "type": "string",
 			"metadata": {
 				"description": "Specifies the Log Analytics Workspace Id."
 			}
         },
         "WorkspaceKey": {
-            "type": "securestring",            
+            "type": "securestring",
 			"metadata": {
 				"description": "Specifies the Log Analytics Workspace Key."
 			}
         },
         "AWSAccessKeyId": {
-            "type": "string",            
+            "type": "string",
 			"metadata": {
 				"description": "Specifies AWS Access Key Id."
 			}
         },
         "AWSSecretAccessKey": {
-            "type": "securestring",            
+            "type": "securestring",
 			"metadata": {
 				"description": "Specifies AWS Secret Access Key."
 			}
         },
         "AWSRegionName": {
-            "type": "string",            
+            "type": "string",
 			"metadata": {
 				"description": "Specifies AWS Region"
 			}
         },
 		"S3BucketURI": {
-            "type": "string",            
+            "type": "string",
 			"metadata": {
 				"description": "Specifies AWS Bucket URI. Ex: s3://<<S3 Bucket Name>>/AWSLogs/"
 			}
         },
 		"CloudTrailFolderName": {
-			"type": "string",            
+			"type": "string",
 			"metadata": {
 				"description": "Specifies CloudTrail Folder Name"
 			}
 		},
 		"LogAnalyticsCustomLogName": {
-            "type": "string",            
+            "type": "string",
 			"metadata": {
 				"description": "Specifies Azure Log Analytics Workspace Table Name."
 			}
@@ -175,7 +175,7 @@
             "dependsOn": [],
             "properties": {
                 "targetWorkerCount": "2",
-                "targetWorkerSizeId": "3",                
+                "targetWorkerSizeId": "3",
                 "reserved": true,
                 "maximumElasticWorkerCount": "20"
             },
@@ -209,7 +209,7 @@
                     "linuxFxVersion": "python|3.8"
                 }
             },
-            
+
             "resources": [
                 {
                     "apiVersion": "2018-11-01",
@@ -218,7 +218,7 @@
                     "dependsOn": [
                         "[concat('Microsoft.Web/sites/', variables('FunctionName'))]",
 						"[resourceId('Microsoft.KeyVault/vaults/', variables('KeyVaultName'))]",
-						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('AWSAccessKeyId'))]",            
+						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('AWSAccessKeyId'))]",
 						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('LogAnalyticsWorkspaceKey'))]",
 						"[resourceId('Microsoft.KeyVault/vaults/secrets', variables('KeyVaultName'), variables('AWSSecretAccessKey'))]"
                     ],
@@ -226,10 +226,10 @@
                         "FUNCTIONS_EXTENSION_VERSION": "~4",
                         "FUNCTIONS_WORKER_RUNTIME": "python",
                         "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(resourceId('Microsoft.insights/components', variables('FunctionName')), '2015-05-01').InstrumentationKey]",
-                        "APPLICATIONINSIGHTS_CONNECTION_STRING": "[reference(resourceId('microsoft.insights/components', variables('FunctionName')), '2015-05-01').ConnectionString]",                        
+                        "APPLICATIONINSIGHTS_CONNECTION_STRING": "[reference(resourceId('microsoft.insights/components', variables('FunctionName')), '2015-05-01').ConnectionString]",
                         "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=', toLower(variables('StorageAccountName')),';AccountKey=',listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('StorageAccountName')), '2019-06-01').keys[0].value, ';EndpointSuffix=',toLower(variables('StorageSuffix')))]",
 						"WorkspaceID": "[parameters('WorkspaceID')]",
-                        "WorkspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('LogAnalyticsWorkspaceKey')).secretUriWithVersion, ')')]",                        
+                        "WorkspaceKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('LogAnalyticsWorkspaceKey')).secretUriWithVersion, ')')]",
                         "AWSAccessKeyId": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('AWSAccessKeyId')).secretUriWithVersion, ')')]",
                         "AWSSecretAccessKey": "[concat('@Microsoft.KeyVault(SecretUri=', reference(variables('AWSSecretAccessKey')).secretUriWithVersion, ')')]",
                         "AWSRegionName": "[parameters('AWSRegionName')]",
@@ -306,7 +306,7 @@
 				  "enabled": true
 				}
 			  }
-			}, 
+			},
 			{
 			  "type": "secrets",
 			  "apiVersion": "2016-10-01",
@@ -323,7 +323,7 @@
 			  }
 			}
 		  ]
-		},        
+		},
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
             "apiVersion": "2019-06-01",

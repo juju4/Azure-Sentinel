@@ -8,7 +8,7 @@
         {
             "metricName": "Total data received",
             "legend": "AIShield_CL",
-            "baseQuery": "AIShield_CL"  
+            "baseQuery": "AIShield_CL"
         }
     ],
     "sampleQueries": [
@@ -27,7 +27,7 @@
             "lastDataReceivedQuery": "AIShield_CL\n            | summarize Time = max(TimeGenerated)\n| where isnotempty(Time)"
         }
     ],
-    
+
     "connectivityCriterias": [
         {
             "type": "IsConnectedQuery",
@@ -71,15 +71,15 @@
         ]
        },
     "instructionSteps": [
-        { 
-            "title": "", 
-            "description": ">**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected [**AIShield**](https://aka.ms/sentinel-boschaishield-parser) which is deployed with the Microsoft Sentinel Solution.",
-            "instructions": [ 
-            ]    
-        },   
         {
             "title": "",
-            "description": "\n>**IMPORTANT:** Before deploying the AIShield Connector, have the Workspace ID and Workspace Primary Key (can be copied from the following).", 
+            "description": ">**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected [**AIShield**](https://aka.ms/sentinel-boschaishield-parser) which is deployed with the Microsoft Sentinel Solution.",
+            "instructions": [
+            ]
+        },
+        {
+            "title": "",
+            "description": "\n>**IMPORTANT:** Before deploying the AIShield Connector, have the Workspace ID and Workspace Primary Key (can be copied from the following).",
             "instructions": [
                 {
                     "parameters": {

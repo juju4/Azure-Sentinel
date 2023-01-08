@@ -2,7 +2,7 @@
   "id": "BeyondSecuritybeSECURE",
   "title": "Beyond Security beSECURE",
   "publisher": "Beyond Security",
-  "descriptionMarkdown": 
+  "descriptionMarkdown":
   "The [Beyond Security beSECURE](https://beyondsecurity.com/) connector allows you to easily connect your Beyond Security beSECURE scan events, scan results and audit trail with Azure Sentinel, to view dashboards, create custom alerts, and improve investigation. This gives you more insight into your organization's network and improves your security operation capabilities.",
   "graphQueries": [
     {
@@ -85,14 +85,14 @@
   "permissions": {
     "resourceProvider": [
       {
-        "provider": "Microsoft.OperationalInsights/workspaces", 
-                       "permissionsDisplayText": "read and write permissions are required.", 
-                       "providerDisplayName": "Workspace", 
-                       "scope": "Workspace", 
-                       "requiredPermissions": { 
+        "provider": "Microsoft.OperationalInsights/workspaces",
+                       "permissionsDisplayText": "read and write permissions are required.",
+                       "providerDisplayName": "Workspace",
+                       "scope": "Workspace",
+                       "requiredPermissions": {
                        "write": true,
                        "read": true,
-                       "delete": true 
+                       "delete": true
 					}
       },
 			{
@@ -107,7 +107,7 @@
     ]
   },
   "instructionSteps": [
-    { 
+    {
       "title": "Configure beSECURE",
       "description" : "Follow the steps below to configure your beSECURE solution to send out scan results, scan status and audit trail to Azure Sentinel.",
       "innerSteps" : [

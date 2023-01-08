@@ -1,9 +1,9 @@
 id: 4759ddb4-2daf-43cb-b34e-d85b85b4e4a5
 name: DEV-0322 Serv-U related IOCs - July 2021
-description: | 
+description: |
   'Identifies a match across IOC's related to DEV-0322 targeting SolarWinds Serv-U software.'
-severity: High 
-requiredDataConnectors: 
+severity: High
+requiredDataConnectors:
   - connectorId: DNS
     dataTypes:
       - DnsEvents
@@ -14,20 +14,20 @@ requiredDataConnectors:
     dataTypes:
       - CommonSecurityLog
   - connectorId: CiscoASA
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: PaloAltoNetworks
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: Fortinet
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: CheckPoint
-    dataTypes: 
+    dataTypes:
       - CommonSecurityLog
   - connectorId: CEF
-    dataTypes: 
-      - CommonSecurityLog               
+    dataTypes:
+      - CommonSecurityLog
   - connectorId: MicrosoftThreatProtection
     dataTypes:
       - DeviceNetworkEvents
@@ -41,22 +41,22 @@ requiredDataConnectors:
     dataTypes:
       - OfficeActivity
   - connectorId: AzureFirewall
-    dataTypes: 
+    dataTypes:
       - AzureDiagnostics
   - connectorId: WindowsFirewall
     dataTypes:
-      - WindowsFirewall      
-queryFrequency: 6h 
-queryPeriod: 6h 
-triggerOperator: gt 
-triggerThreshold: 0 
-tactics: 
+      - WindowsFirewall
+queryFrequency: 6h
+queryPeriod: 6h
+triggerOperator: gt
+triggerThreshold: 0
+tactics:
   - InitialAccess
 relevantTechniques:
   - T1190
 tags:
-  - DEV-0322 
-query:  | 
+  - DEV-0322
+query:  |
   let iocs = externaldata(DateAdded:string,IoC:string,Type:string,TLP:string) [@"https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Sample%20Data/Feeds/DEV-0322_SolarWinds_Serv-U_IoC.csv"] with (format="csv", ignoreFirstRecord=True);
   let process = (iocs | where Type =~ "process" | project IoC);
   let parentprocess = (iocs | where Type =~ "parentprocess" | project IoC);
@@ -71,7 +71,7 @@ query:  |
   | extend timestamp = TimeGenerated, IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, IPMatch == "Message", MessageIP, IPMatch == "RequestUrl", RequestURL, "NoMatch"), AccountCustomEntity = SourceUserID
   ),
   (DnsEvents
-  | where IPAddresses in (IPList)  
+  | where IPAddresses in (IPList)
   | project TimeGenerated, Computer, IPAddresses, Name, ClientIP, Type
   | extend DestinationIPAddress = IPAddresses, DNSName = Name, Host = Computer , AlertDetail = 'Dev-0322 IOC match'
   | extend timestamp = TimeGenerated, IPCustomEntity = DestinationIPAddress, HostCustomEntity = Host
@@ -89,13 +89,13 @@ query:  |
   | extend EvData = parse_xml(EventData)
   | extend EventDetail = EvData.DataItem.EventData.Data
   | extend SourceIP = EventDetail.[9].["#text"], DestinationIP = EventDetail.[14].["#text"], Image = EventDetail.[4].["#text"]
-  | where SourceIP in (IPList) or DestinationIP in (IPList) 
+  | where SourceIP in (IPList) or DestinationIP in (IPList)
   | project TimeGenerated, SourceIP, DestinationIP, Image, UserName, Computer, Type
   | extend IPMatch = case( SourceIP in (IPList), "SourceIP", DestinationIP in (IPList), "DestinationIP", "None") , AlertDetail = 'Dev-0322 IOC match'
   | extend timestamp = TimeGenerated, AccountCustomEntity = UserName, ProcessCustomEntity = tostring(split(Image, '\\', -1)[-1]), HostCustomEntity = Computer , IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, "None")
-  ),  
+  ),
   (OfficeActivity
-  | where ClientIP in (IPList) 
+  | where ClientIP in (IPList)
   | project TimeGenerated, UserAgent, Operation, RecordType, UserId, ClientIP, AlertDetail = 'Dev-0322 IOC match', Type
   | extend timestamp = TimeGenerated, IPCustomEntity = ClientIP, AccountCustomEntity = UserId
   ),
@@ -105,7 +105,7 @@ query:  |
   | extend timestamp = TimeGenerated, IPCustomEntity = RemoteIP, HostCustomEntity = DeviceName,  AlertDetail = 'Dev-0322 IOC match', UrlCustomEntity =RemoteUrl, ProcessCustomEntity = InitiatingProcessFileName
   ),
   (WindowsFirewall
-  | where SourceIP in (IPList) or DestinationIP in (IPList) 
+  | where SourceIP in (IPList) or DestinationIP in (IPList)
   | project TimeGenerated, Computer, CommunicationDirection, SourceIP, DestinationIP, SourcePort, DestinationPort, Type
   | extend IPMatch = case( SourceIP in (IPList), "SourceIP", DestinationIP in (IPList), "DestinationIP", "None"), AlertDetail = 'Dev-0322 IOC match'
   | extend timestamp = TimeGenerated, HostCustomEntity = Computer , IPCustomEntity = case(IPMatch == "SourceIP", SourceIP, IPMatch == "DestinationIP", DestinationIP, "None")
@@ -118,7 +118,7 @@ query:  |
   | where  ClientIP in (IPList)
   | extend timestamp = TimeGenerated, DNSName = Request_Name, IPCustomEntity = ClientIP, AlertDetail = 'Dev-0322 IOC match'
   ),
-  (AzureDiagnostics 
+  (AzureDiagnostics
   | where ResourceType == "AZUREFIREWALLS"
   | where Category == "AzureFirewallApplicationRule"
   | project TimeGenerated,Resource, msg_s
@@ -134,7 +134,7 @@ query:  |
   | extend ParentImage = EventDetail.[20].["#text"], Image = EventDetail.[4].["#text"]
   | where ( ParentImage has_any (parentprocess) and Image has_any (process))
   | parse EventDetail with * 'SHA256=' SHA256 '",' *
-  | project TimeGenerated, EventDetail, UserName, Computer, Type, Source, SHA256,Image, ParentImage 
+  | project TimeGenerated, EventDetail, UserName, Computer, Type, Source, SHA256,Image, ParentImage
   | extend Type = strcat(Type, ": ", Source), Account = UserName, FileHash = SHA256, AlertDetail = 'Dev-0322 IOC match'
   | extend timestamp = TimeGenerated, HostCustomEntity = Computer , AccountCustomEntity = Account, ProcessCustomEntity = tostring(split(Image, '\\', -1)[-1]), AlgorithmCustomEntity = "SHA256", FileHashCustomEntity = FileHash
   ),
@@ -179,7 +179,7 @@ entityMappings:
   - entityType: IP
     fieldMappings:
       - identifier: Address
-        columnName: IPCustomEntity 
+        columnName: IPCustomEntity
   - entityType: Process
     fieldMappings:
       - identifier: ProcessId

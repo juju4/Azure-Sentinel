@@ -119,7 +119,7 @@
                     "packageUri": "[variables('packageURL')]"
                     }
                 }
-            ]         
+            ]
         },
         {
             "type": "Microsoft.Web/connections",
@@ -132,7 +132,7 @@
                     "username":"[parameters('workspaceID')]",
                     "password":"[parameters('workspaceKey')]"
                 },
-                
+
                 "api": {
                     "id": "[concat('/subscriptions/', subscription().subscriptionId, '/providers/Microsoft.Web/locations/', resourceGroup().location, '/managedApis/azureloganalyticsdatacollector')]"
                 }

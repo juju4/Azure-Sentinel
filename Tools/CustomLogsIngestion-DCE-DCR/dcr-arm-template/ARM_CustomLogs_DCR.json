@@ -7,7 +7,7 @@
             "metadata": {
                 "description": "Specifies the name of the Data Collection Rule to create."
             }
-        },        
+        },
         "workspaceResourceId": {
             "type": "string",
             "metadata": {
@@ -31,7 +31,7 @@
                 "dataCollectionEndpointId": "[parameters('endpointResourceId')]",
                 "streamDeclarations": {
                     "Custom-MyDcrIngestionRawData": {
-                        "columns": [						  
+                        "columns": [
 						  {
 							"name": "SourceSystem",
 							"type": "string"
@@ -74,7 +74,7 @@
                         ],
                         "destinations": [
                             "clv2ws1"
-                        ],                        
+                        ],
                         "outputStream": "Custom-MyDcrIngestion_CL"
                     }
                 ]
