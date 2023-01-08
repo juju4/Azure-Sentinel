@@ -44,3 +44,8 @@ repos:
     - id: detect-private-key
     - id: check-case-conflict
     - id: requirements-txt-fixer
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.2.2
+  hooks:
+    - id: codespell
+      args: [-I, .codespellignore]

@@ -1,0 +1,4 @@
+# https://learn.microsoft.com/fr-fr/azure/data-explorer/kusto/query/iiffunction
+iif
+# package-lock.json
+inflight
