@@ -3,7 +3,7 @@
     Language:       Python
     Version:        1.0
     Last Modified:  5/30/2020
-    Comment:        Inital Release
+    Comment:        Initial Release
 
     DESCRIPTION:    The following Python Function App code is a generic data connector to pull logs from your <PROVIDER NAME APPLIANCE NAME> API, transform the data logs into a Azure Sentinel acceptable format (JSON) and POST the logs to the
                      Azure Sentinel workspace using the Azure Log Analytics Data Collector API. Use this generic template and replace with specific code needed to authenticate to the <PROVIDER NAME APPLIANCE NAME> API and format the data received into JSON format.
@@ -69,7 +69,7 @@ json_data = response.text.encode('utf8')
 
 */
 
-/* Used this block to transform the data recieved from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
+/* Used this block to transform the data received from the <PROVIDER NAME APPLIANCE NAME> API into JSON format, which is acceptable format for the Azure Log Analytics Data Collector API
 
 For example:
 body = json.dumps(json_data)
@@ -115,7 +115,7 @@ def post_data(customer_id, shared_key, body, log_type):
         else:
             print("Error during sending logs to Azure Sentinel. Response code: {}".format(response.status_code))
 
-/* Use this block to post the JSON formated data into Azure Log Analytics via the Azure Log Analytics Data Collector API
+/* Use this block to post the JSON formatted data into Azure Log Analytics via the Azure Log Analytics Data Collector API
 
 For example:
 if (len(response) > 0):

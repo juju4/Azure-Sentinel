@@ -142,7 +142,7 @@ In your local repository, make sure you `cd` to your repository directory (for m
 
 Run : `git pull upstream master`
 
-You should see your content in an update and then in VS Code change to the *master* branch and you should see the updates there.  Again, you need to see your new content in the master branch, not the seperate branch you have been working on.
+You should see your content in an update and then in VS Code change to the *master* branch and you should see the updates there.  Again, you need to see your new content in the master branch, not the separate branch you have been working on.
 
 If you see those update (don’t delete the branch if you don’t!!!), then you can delete the branch you were working on.
 

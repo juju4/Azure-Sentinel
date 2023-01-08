@@ -343,7 +343,7 @@ def check_file_in_directory(file_name, path):
 def locate_check(process_name):
     '''
     Check if the process_name is installed using the locate command
-    :param process_name:onfiguration under the nam
+    :param process_name:onfiguration under the name
     :return: True if locate has returned a valid value else False
     '''
     try:
@@ -629,7 +629,7 @@ def handle_syslog_ng(workspace_id):
             netstat_open_port("0.0.0.0:" + daemon_port, "Daemon incoming port " + daemon_port + " is open",
                               "Error: daemon incoming port is not open, please check that the process is up and running and the port is configured correctly.")
             netstat_open_port(agent_port, "Omsagent is listening to incoming port " + agent_port,
-                              "Error: agent is not listening to incoming port " + agent_port + " please check that the process is up and running and the port is configured correctly.[Use netstat -an | grep [daemon port] to validate the connection or re-run ths script]")
+                              "Error: agent is not listening to incoming port " + agent_port + " please check that the process is up and running and the port is configured correctly.[Use netstat -an | grep [daemon port] to validate the connection or re-run this script]")
             print("Validating CEF into syslog-ng daemon")
             time.sleep(1)
             incoming_logs_validations(daemon_port,
@@ -665,7 +665,7 @@ def handle_rsyslog(workspace_id):
         netstat_open_port("0.0.0.0:" + daemon_port, "Daemon incoming port " + daemon_port + " is open",
                           "Error: daemon incoming port is not open, please check that the process is up and running and the port is configured correctly.\nAction: enable ports in \'/etc/rsyslog.conf\' file which contains daemon incoming ports.")
         netstat_open_port(agent_port, "Omsagent is listening to incoming port " + agent_port,
-                          "Error: agent is not listening to incoming port " + agent_port + " please check that the process is up and running and the port is configured correctly.[Use netstat -an | grep [daemon port] to validate the connection or re-run ths script]")
+                          "Error: agent is not listening to incoming port " + agent_port + " please check that the process is up and running and the port is configured correctly.[Use netstat -an | grep [daemon port] to validate the connection or re-run this script]")
         print("Validating CEF\\ASA into rsyslog daemon - port " + daemon_port)
         time.sleep(1)
         incoming_logs_validations(daemon_port,

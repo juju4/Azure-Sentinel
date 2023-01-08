@@ -120,7 +120,7 @@
                     "PlaybookName": {
                         "value": "Zscaler-Add-IP-To-Category"
                     },
-                    "Zscaler Authentation Playbook": {
+                    "Zscaler Authentication Playbook": {
                         "value": "[variables('Zscaler Authentication Playbook Name')]"
                     },
                     "Zscaler Admin Url": {
@@ -149,7 +149,7 @@
                     "PlaybookName": {
                         "value": "Zscaler-Add-Url-To-Category"
                     },
-                    "Zscaler Authentation Playbook": {
+                    "Zscaler Authentication Playbook": {
                         "value": "[variables('Zscaler Authentication Playbook Name')]"
                     },
                     "Zscaler Admin Url": {
@@ -178,7 +178,7 @@
                     "PlaybookName": {
                         "value": "Zscaler-Url-Category-Lookup"
                     },
-                    "Zscaler Authentation Playbook": {
+                    "Zscaler Authentication Playbook": {
                         "value": "[variables('Zscaler Authentication Playbook Name')]"
                     },
                     "Zscaler Admin Url": {
@@ -204,7 +204,7 @@
                     "PlaybookName": {
                         "value": "Zscaler-Get-Sandbox-Report-For-Hash"
                     },
-                    "Zscaler Authentation Playbook": {
+                    "Zscaler Authentication Playbook": {
                         "value": "[variables('Zscaler Authentication Playbook Name')]"
                     },
                     "Zscaler Admin Url": {

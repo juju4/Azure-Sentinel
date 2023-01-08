@@ -3,8 +3,8 @@
 //
 // Description:
 // This parser takes all Office 365 Activity data from the last 30 days, looks for entries that indicate the creation of a
-// new mailbox forwarding or redirect rule being created and then parses out relevent fields including:
-//      Email_Forwarded_To - the email address the maibox rule is fowarding
+// new mailbox forwarding or redirect rule being created and then parses out relevant fields including:
+//      Email_Forwarded_To - the email address the mailbox rule is forwarding
 //      RuleName - The name assigned to the mailbox rule when it was created
 //      RuleParameters - The first parameter set in the rule to decide if an email should be forwarded
 //            (further parameters are not parsed to aid readability)

@@ -403,7 +403,7 @@ Port,TCP,UDP,SCTP,DCCP,Description
 1764 ,Unofficial ,Unofficial , , ,KDE Connect
 1761 ,Unofficial ,Unofficial , , ,Novell ZENworks
 1776 ,Yes , , , ,Emergency management information system
-1783 ,Reserved , , , ,"Decomissioned [sic] Port 04/14/00 - ms"
+1783 ,Reserved , , , ,"Decommissioned [sic] Port 04/14/00 - ms"
 1801 ,Yes ,Yes , , ,Microsoft Message Queuing
 1812 ,Yes ,Yes , , ,RADIUS authentication protocol - radius
 1813 ,Yes ,Yes , , ,RADIUS accounting protocol - radius-acct

@@ -1,6 +1,6 @@
 # Deletes saved functions from a Log Analytics workspace
 
-This PowerShell script deletes saved functions from a Log Analytics workspace. It supports wildcards and enable batch cleaning the workspace from unneeded functions, especially when deploying a new function ARM tempalte such as those used by Microsoft Sentinel ASIM.
+This PowerShell script deletes saved functions from a Log Analytics workspace. It supports wildcards and enable batch cleaning the workspace from unneeded functions, especially when deploying a new function ARM template such as those used by Microsoft Sentinel ASIM.
 
 The script accepts the following parameters:
 

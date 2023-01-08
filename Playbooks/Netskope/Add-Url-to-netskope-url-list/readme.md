@@ -38,7 +38,7 @@ To deploy this template in Azure:
 | Tenant Name                  | Netskope Tenant Name e.g. if the URL that you use to access your Netskope tenant is https://example.goskope.com then the Tenant Name value will be `example`         |
 | URL List Name                | Netskope URL list name that will be updated to add malicious URL that is included in the Microsoft sentinel incident |
 | Netskope API Token           | Netskope REST API v2 Token value |
-| keyvault Name                | Azure Keyvault Name to create to store API token value as a keyvault secret. Provide a value that's 11 characters or less, a uniqueString function that returns 13 characters is used to append with your provided vault name value to make it globaly unique. The name must begin with a letter, end with a letter or digit, and not contain consecutive hyphens. |
+| keyvault Name                | Azure Keyvault Name to create to store API token value as a keyvault secret. Provide a value that's 11 characters or less, a uniqueString function that returns 13 characters is used to append with your provided vault name value to make it globally unique. The name must begin with a letter, end with a letter or digit, and not contain consecutive hyphens. |
 
 ## Post Deployment
 

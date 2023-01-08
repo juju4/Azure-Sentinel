@@ -15,7 +15,7 @@ In order to collected Audit events from an Office 365 subscription you first nee
 4. Click API Permissions Blade.
 5. Click Add a Permission.
 6. Click Office 365 Management APIs.
-7. Click Appplication Permissions
+7. Click Application Permissions
 8. Check all permissions for each category.  Click Add permissions.
 9. Click grant admin consent for domain.com
 10. Click Certificates and Secrets

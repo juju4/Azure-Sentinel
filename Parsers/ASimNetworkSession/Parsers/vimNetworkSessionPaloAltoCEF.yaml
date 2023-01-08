@@ -70,7 +70,7 @@ ParserQuery: |
     | where DeviceVendor == "Palo Alto Networks" and DeviceProduct == "PAN-OS" and Activity == "TRAFFIC"
     | where  (isnull(dstportnumber) or DestinationPort==dstportnumber)
       and (array_length(hostname_has_any)==0)
-        // dvcaction - post filterring
+        // dvcaction - post filtering
         and (eventresult=="*" or (DeviceAction=="allow" and eventresult=="Success") or (eventresult=="Failure"))
     | extend temp_SrcMatch=has_any_ipv4_prefix(SourceIP,src_or_any)
            , temp_DstMatch=has_any_ipv4_prefix(DestinationIP,dst_or_any)

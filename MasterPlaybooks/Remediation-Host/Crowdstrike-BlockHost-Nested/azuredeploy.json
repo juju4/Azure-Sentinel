@@ -129,7 +129,7 @@
                                             ]
                                         },
                                         "type": "Compose",
-                                        "inputs": "[concat('@{outputs(''Compose_Crowdstrike_Logo'')} ', parameters('Playbook_Name'), ' Playbook\n\nException occured while Quarantining the Device. Please find the below exception information:\n\n@{body(''Create_HTML_table_to_capture_error_information'')}')]"
+                                        "inputs": "[concat('@{outputs(''Compose_Crowdstrike_Logo'')} ', parameters('Playbook_Name'), ' Playbook\n\nException occurred while Quarantining the Device. Please find the below exception information:\n\n@{body(''Create_HTML_table_to_capture_error_information'')}')]"
                                     },
                                     "Create_HTML_table_to_capture_error_information": {
                                         "runAfter": {
@@ -912,7 +912,7 @@
                                                                             "inputs": {
                                                                                 "name": "CommentObjVar",
                                                                                 "value": {
-                                                                                    "action": "The playbook sucessfully contained the host",
+                                                                                    "action": "The playbook successfully contained the host",
                                                                                     "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                                                                     "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                                                                     "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",
@@ -965,7 +965,7 @@
                                                                                 "inputs": {
                                                                                     "name": "CommentObjVar",
                                                                                     "value": {
-                                                                                        "action": "The playbook sucessfully contained the host",
+                                                                                        "action": "The playbook successfully contained the host",
                                                                                         "device_id": "@{body('Parse_JSON_device_information_response')?['resources']?['device_id']}",
                                                                                         "external_ip": "@{body('Parse_JSON_device_information_response')?['resources']?['external_ip']}",
                                                                                         "first_seen": "@{body('Parse_JSON_device_information_response')?['resources']?['first_seen']}",

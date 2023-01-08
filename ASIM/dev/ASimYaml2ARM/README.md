@@ -45,7 +45,7 @@ Optional arguments:
 | Parameters | Description |
 | ---------------------------- | ----------- |
 | -h, --help | Show a help message and exit |
-| -m, --mode | Select the mode:<br> - "files" to translate each input YAML files to an ARM template.<br> - "package" to create a full deployment package including readme files and a full deployment template.<br> -"asim" to create a full package using ASIM specific templates.<br> -"asimdev" is simliar to `asim` but does not use `aka.ms` links.<br><br> Defaults to "files". |
+| -m, --mode | Select the mode:<br> - "files" to translate each input YAML files to an ARM template.<br> - "package" to create a full deployment package including readme files and a full deployment template.<br> -"asim" to create a full package using ASIM specific templates.<br> -"asimdev" is similar to `asim` but does not use `aka.ms` links.<br><br> Defaults to "files". |
 | -d, --dest | The output folder. Defaults to the ARM subdirectory of the current working directory. |
 | -t,--templates | The path of the templates for ARM templates and readme files. Defaults to the script directory. |
 | -b, --branch | For `asim` and `asimdev` modes, the ARM templates links in the full deployment and readme files point to this github branch. The Github repository itself is embedded in the template files. Defaults to "master". |
@@ -55,7 +55,7 @@ Optional arguments:
 
 ### Examples
 
-To convert a single file, and keep the resuling template in the same directory, change the working directory to the folder in which the file resides and use
+To convert a single file, and keep the resulting template in the same directory, change the working directory to the folder in which the file resides and use
 
 ``` cmd
 cd <folder in which the file resides>

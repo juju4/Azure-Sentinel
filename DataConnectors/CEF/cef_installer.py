@@ -207,7 +207,7 @@ def create_daemon_forwarding_configuration(omsagent_incoming_port, daemon_config
     print("Path:")
     print_notice(daemon_configuration_path)
     file_content = get_daemon_configuration_content(daemon_name, omsagent_incoming_port)
-    append_content_to_file(file_content, daemon_configuration_path, overide=True)
+    append_content_to_file(file_content, daemon_configuration_path, override=True)
     print_ok("Configuration for " + daemon_name + " daemon was changed successfully.")
     return True
 
@@ -295,8 +295,8 @@ def set_rsyslog_new_configuration():
     return True
 
 
-def append_content_to_file(line, file_path, overide = False):
-    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not overide else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
+def append_content_to_file(line, file_path, override = False):
+    command_tokens = ["sudo", "bash", "-c", "printf '" + "\n" + line + "' >> " + file_path] if not override else ["sudo", "bash", "-c", "printf '" + "\n" + line + "' > " + file_path]
     write_new_content = subprocess.Popen(command_tokens, stdout=subprocess.PIPE)
     time.sleep(3)
     o, e = write_new_content.communicate()
@@ -527,7 +527,7 @@ def get_rsyslog_daemon_configuration_content(omsagent_incoming_port):
 
 
 def get_syslog_ng_damon_configuration_content(omsagent_incoming_port):
-    # we can sepcify the part searched with MESSAGE or MSGHDR (for the header) "filter f_oms_filter {match(\"CEF\" value(\"MESSAGE\"));};\n"
+    # we can specify the part searched with MESSAGE or MSGHDR (for the header) "filter f_oms_filter {match(\"CEF\" value(\"MESSAGE\"));};\n"
     oms_filter = "filter f_oms_filter {match(\"CEF\|ASA\" ) ;};"
     oms_destination = "destination oms_destination {tcp(\"127.0.0.1\" port(" + omsagent_incoming_port + "));};\n"
     log = "log {source(s_src);filter(f_oms_filter);destination(oms_destination);};\n"
@@ -564,7 +564,7 @@ def set_syslog_ng_configuration():
     with open(syslog_ng_conf_path, "rt") as fin:
         with open("tmp.txt", "wt") as fout:
             for line in fin:
-                # fount snet
+                # found snet
                 if "s_net" in line and not "#":
                     snet_found = True
                 # found source that is not s_net - should remove it

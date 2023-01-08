@@ -923,7 +923,7 @@ DstUserIdType,string,Conditional,WebSession,Enumerated,SID|UID|AADID|OktaId|AWSI
 DstUsername,string,Optional,WebSession,Username,,
 DstUsernameType,string,Conditional,WebSession,Enumerated,UPN|Windows|DN|Simple,DstUsername
 DstUserType,string,Optional,WebSession,Enumerated,Regular|Machine|Admin|System|Application| Service Principal|Other,
-DstVlanId,sting,Optional,WebSession,,,
+DstVlanId,string,Optional,WebSession,,,
 DstZone,string,Optional,WebSession,,,
 Duration,int,Alias,WebSession,,,NetworkDuration
 Dvc,string,Mandatory,WebSession,,,
@@ -1043,7 +1043,7 @@ SrcUserIdType,string,Conditional,WebSession,Enumerated,SID|UID|AADID|OktaId|AWSI
 SrcUsername,string,Optional,WebSession,Username,,
 SrcUsernameType,string,Conditional,WebSession,Enumerated,UPN|Windows|DN|Simple,SrcUsername
 SrcUserType,string,Optional,WebSession,Enumerated,Regular|Machine|Admin|System|Application| Service Principal|Other,
-SrcVlanId,sting,Optional,WebSession,,,
+SrcVlanId,string,Optional,WebSession,,,
 SrcZone,string,Optional,WebSession,,,
 ThreatCategory,string,Optional,WebSession,,,
 ThreatConfidence,int,Optional,WebSession,,,

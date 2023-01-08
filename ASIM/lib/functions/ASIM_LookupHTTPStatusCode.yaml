@@ -193,7 +193,7 @@ FunctionQuery: |
         "450":"Blocked by Windows Parental Controls",
         "498":"Invalid Token",
         "499":"Token Required(Esri)/Client Closed Request(nginx)",
-        "509":"Bandwith Limit Exceeded",
+        "509":"Bandwidth Limit Exceeded",
         "529":"Site is overloaded",
         "530":"Site is frozen/Cloudflare HTTP error 530 is returned with an accompanying 1XXX error displayed",
         "598":"Network read timeout error",

@@ -1,7 +1,7 @@
 # Ingest and Reference Nobelium Threat Intelligence
 Author: Matt Lowe
 
-This Watchlist is meant to host IoC's from the recent NOBELIUM hack. This data can be refernced for threat hunting and analytic rules to ensure that malicious activity has not taken place within the environment. These IoCs were published by the Microsoft Threat Intelligence Center (MSTIC).
+This Watchlist is meant to host IoC's from the recent NOBELIUM hack. This data can be referenced for threat hunting and analytic rules to ensure that malicious activity has not taken place within the environment. These IoCs were published by the Microsoft Threat Intelligence Center (MSTIC).
 
 https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/
 

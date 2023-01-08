@@ -65,7 +65,7 @@ query: |
   | summarize count() by SourceIP
   | where count_ > signin_threshold
   | summarize make_list(SourceIP);
-  //See if any of the IPs with failed host logins hve had a sucessful Azure AD login
+  //See if any of the IPs with failed host logins have had a successful Azure AD login
   let aadFunc = (tableName:string){
   table(tableName)
   | where ResultType in ("0", "50125", "50140")

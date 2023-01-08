@@ -45,7 +45,7 @@ query: |
   | summarize count() by IPAddress
   | where count_ > signin_threshold
   | summarize make_set(IPAddress);
-  //See if any of these IPs have sucessfully logged into *nix hosts
+  //See if any of these IPs have successfully logged into *nix hosts
   let linux_logons =
   Syslog
   | where Facility contains "auth" and ProcessName != "sudo"
@@ -54,7 +54,7 @@ query: |
   | where SourceIP in (suspicious_signins)
   | extend Reason = "Multiple failed AAD logins from IP address"
   | project TimeGenerated, Computer, HostIP, IpAddress = SourceIP, SyslogMessage, Facility, ProcessName, Reason;
-  //See if any of these IPs have sucessfully logged into Windows hosts
+  //See if any of these IPs have successfully logged into Windows hosts
   let win_logons = (union isfuzzy=true
   (SecurityEvent
   | where EventID == 4624

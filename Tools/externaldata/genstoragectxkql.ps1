@@ -9,7 +9,7 @@
 
 1. rewrite into Functions with Parameter inputs
 2. logic checks on the string inputs
-3. Bug: fix output file there is an extra line seperator between externaldata() and open array
+3. Bug: fix output file there is an extra line separator between externaldata() and open array
 
 #>
 

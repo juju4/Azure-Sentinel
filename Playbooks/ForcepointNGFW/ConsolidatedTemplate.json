@@ -3296,7 +3296,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -3470,7 +3470,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -4177,7 +4177,7 @@
                                         },
                                         "Get_IP_Address_by_Domain_and_Username_-_Forcepoint_FUID": {
                                             "runAfter": {
-                                                "Seperator": [
+                                                "Separator": [
                                                     "Succeeded"
                                                 ]
                                             },
@@ -4193,10 +4193,10 @@
                                                     }
                                                 },
                                                 "method": "get",
-                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Seperator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
+                                                "path": "/api/uid/@{encodeURIComponent(variables('FUID Version'))}/user/ntlm-identity/@{encodeURIComponent(split(last(split(items('Appending_Usernames')?['AadUserId'],'@')),'.')[0],outputs('Separator'),split(items('Appending_Usernames')?['AadUserId'],'@')[0])}"
                                             }
                                         },
-                                        "Seperator": {
+                                        "Separator": {
                                             "runAfter": {},
                                             "type": "Compose",
                                             "inputs": "\\"
@@ -4471,7 +4471,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -4570,7 +4570,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -5177,7 +5177,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -5288,7 +5288,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -5842,7 +5842,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -5968,7 +5968,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -6557,7 +6557,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result ouput is having some information related to IP Address then there is a policy with respect to IP"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on IP Address. And If result output is having some information related to IP Address then there is a policy with respect to IP"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -6869,7 +6869,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {
@@ -7365,7 +7365,7 @@
                                                                         ]
                                                                     },
                                                                     "type": "If",
-                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result ouput is having some information related to URL then there is a policy with respect to URL"
+                                                                    "description": "We will check for the result output is empty or exist in the policy rule. If result output is empty ,then there is no policy based on  URL. And If result output is having some information related to URL then there is a policy with respect to URL"
                                                                 }
                                                             },
                                                             "runAfter": {
@@ -7676,7 +7676,7 @@
                                                     "name": "Error",
                                                     "value": "Error status code @{outputs('Login')['statusCode']}Unsuccessful login attempt."
                                                 },
-                                                "description": "When unsuccessful login atempt has done then we can bind the error to \"Error\" variable."
+                                                "description": "When unsuccessful login attempt has done then we can bind the error to \"Error\" variable."
                                             },
                                             "Terminate_if_login_is_unsuccessful": {
                                                 "runAfter": {

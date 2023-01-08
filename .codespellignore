@@ -2,15 +2,31 @@
 iif
 # package-lock.json
 inflight
-# Solutions/Google*/Package/mainTemplate.json: `\te`
-te
-# Solutions/SOC Handbook/Workbooks/AzureSentinelCost.json: `\nIn`
-nIn
 # Solutions/SOC-Process-Framework/Package/mainTemplate.json: last name
-Ure
+ure
 # Solutions/HYAS/Playbooks/Enrich-Sentinel-Incident-HYAS-Insight-IP-Sinkhole/readme.md: last name
-Gool
-# Tools/Sample Code/AzureSentinel-ManagementAPICsharp/AzureSentinel_ManagementAPI/Hunting/SavedSearchController.cs
+gool
+# Tools/Sample Code/AzureSentinel-ManagementAPICsharp/AzureSentinel_ManagementAPI/Hunting/SavedSearchController.cs and others
 insId
 # Solutions/Amazon Web Services/Workbooks/AmazonWebServicesNetworkActivities.json: KQL
 KeyPair
+# Workbooks/AksSecurity.json
+AKS
+aks
+# Tools/MITREATT&CK-LayerGeneration-Notebook/MITRE ATT&CK for Microsoft Sentinel.ipynb
+ot
+te
+leapYear
+# DataConnectors/Qualys VM/AzureFunctionQualysVM/run.ps1
+fo
+# Hunting Queries/Microsoft 365 Defender/Persistence/CredentialsAddAfterAdminConsentedToApp[Nobelium].yaml
+usera
+# Watchlists/ListofTCPUDPPorts/ListofTCPandUDPportnumbers.csv
+ACN
+Elipse
+VISE
+acn
+elipse
+vise
+# Playbooks/HaveIBeenPwned/azuredeploy.json
+ue

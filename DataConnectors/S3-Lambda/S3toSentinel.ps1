@@ -35,7 +35,7 @@ foreach ($record in $LambdaInput.Records) {
         Name of the logfile or Log Analytics "Type".  Log Analytics will append _CL at the end of custom logs  String Value
         .PARAMETER LogData
         A series of key, value pairs that will be written to the log.  Log file are unstructured but the key should be consistent
-        withing each source.
+        within each source.
         .INPUTS
         The parameters of data and time, type and logdata.  Logdata is converted to JSON to submit to Log Analytics.
         .OUTPUTS
@@ -196,8 +196,8 @@ foreach ($record in $LambdaInput.Records) {
                 $CEFName = $line.split("|")[5]
                 $CEFSeverity = $line.split("|")[6]
                 $CEFExtension = $line.split("|")[7] -split '([^=\s]+=(?:[\\]=|[^=])+)(?:\s|$)'
-                foreach ($extenstion in $CEFExtension) {
-                    if ($extenstion -like "*=*") { $cefmsg += @{$extenstion.Split("=")[0] = $extenstion.Split("=")[1] } }
+                foreach ($extension in $CEFExtension) {
+                    if ($extension -like "*=*") { $cefmsg += @{$extension.Split("=")[0] = $extension.Split("=")[1] } }
                 }
                 $CEFmsg += @{TimeGenerated = $CEFtimegenerated }
                 $CEFmsg += @{DeviceVendor = $CEFDeviceVendor }

@@ -188,7 +188,7 @@ Below is the structure of the orchestration Logic App that triggers the runbook 
 
 ### High-Level structure of the Playbook
 
-![structre](../Block-OnPremADUser/images/HLstructre.png)
+![structure](../Block-OnPremADUser/images/HLstructre.png)
 
 
 ## Detailed structure of the Playbook:

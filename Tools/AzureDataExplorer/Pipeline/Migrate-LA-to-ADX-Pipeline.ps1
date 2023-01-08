@@ -146,7 +146,7 @@ function Get-RequiredModules {
     Get-Required is used to install and then import a specified PowerShell module.
 
     .PARAMETER Module
-    parameter specifices the PowerShell module to install.
+    parameter specifies the PowerShell module to install.
     #>
 
     [CmdletBinding()]
@@ -158,7 +158,7 @@ function Get-RequiredModules {
         $installedModule = Get-InstalledModule -Name $Module -ErrorAction SilentlyContinue
         if ($null -eq $installedModule) {
             Write-Log -Message "The $Module PowerShell module was not found" -LogFileName $LogFileName -Severity Warning
-            #check for Admin Privleges
+            #check for Admin Privileges
             $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 
             if (-not ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
@@ -225,7 +225,7 @@ function Start-SleepMessage {
     Start-SleepMessage is used to display a progress bar.
 
     .PARAMETER Seconds
-    Specifices the path the the file that includes the commands to execute
+    Specifies the path the the file that includes the commands to execute
 
     .PARAMETER WaitMessage
     Specifies the message to display with the progress bar.
@@ -260,7 +260,7 @@ function Invoke-KustoCLI {
     Invoke-KustoCLI is used to execute the KustoCLI with the specified AdxCommandsFile.
 
     .PARAMETER AdxCommandsFile
-    parameter specifices the path the the file that includes the commands to execute
+    parameter specifies the path the the file that includes the commands to execute
     #>
 
     [CmdletBinding()]
@@ -309,7 +309,7 @@ function New-AdxRawMappingTables {
     New-AdxRawMappingTables is used to create raw mapping tables
 
     .PARAMETER LaTables
-    Parameter specifices the Log Analytics tables to create
+    Parameter specifies the Log Analytics tables to create
     #>
     [CmdletBinding()]
     param (
@@ -419,7 +419,7 @@ function New-EventHubNamespace {
     New-EventHubNamespace is used to create an Event Hub namespace.
 
     .PARAMETER ArraysObject
-    Parameter specifices the Event Hub namespace.
+    Parameter specifies the Event Hub namespace.
     #>
     [CmdletBinding()]
     param (
@@ -473,7 +473,7 @@ function New-LaDataExportRule {
     New-LaDataExportRule is used to create the Log Analytics export rule,
 
     .PARAMETER AdxEventHubs
-    Parameter specifices Azure Data Explorer Event Hub to create export rule.
+    Parameter specifies Azure Data Explorer Event Hub to create export rule.
 
     .PARAMETER TablesArrayCollection
     Parameter specifies the table names used to create the export rule.

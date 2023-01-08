@@ -685,7 +685,7 @@
                                                 },
                                                 "expression": "@int(body('Parse_verdict_JSON')?['get-verdict-info']?['verdict'])",
                                                 "type": "Switch",
-                                                "description": "Conditon for vedict value"
+                                                "description": "Condition for verdict value"
                                             }
                                         }
                                     },
@@ -741,7 +741,7 @@
                                         "method": "post",
                                         "path": "/get/verdict"
                                     },
-                                    "description": " Get verdict infomation for the URL "
+                                    "description": " Get verdict information for the URL "
                                 },
                                 "Parse_verdict_JSON": {
                                     "runAfter": {
@@ -765,7 +765,7 @@
                                                             "type": "string"
                                                         },
                                                         "valid": {
-                                                            "description": "Valid Infomation of the URL",
+                                                            "description": "Valid information of the URL",
                                                             "type": "string"
                                                         },
                                                         "verdict": {

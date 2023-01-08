@@ -27,7 +27,7 @@ namespace Kqlvalidations.Tests.FunctionSchemasLoaders
         }
 
         /// <summary>
-        /// Extract fuction parameters from ymal file
+        /// Extract function parameters from ymal file
         /// </summary>
         /// <param name="yaml">The yaml file</param>
         /// <returns>The function parameters</returns>

@@ -33,7 +33,7 @@ The playbook is used to respond to an incident in Azure Sentinel and uses the Zs
 
 ## Deployment instructions
 
-You can choose to deploy one ore more playbooks.
+You can choose to deploy one or more playbooks.
 
 1. Deploy a playbook by clicking on "Deploy to Azure" button. This will take you to deplyoing an ARM Template wizard.
 2. Fill in the required parameters:

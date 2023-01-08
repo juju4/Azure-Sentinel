@@ -38,7 +38,7 @@ ParserParams:
     Type: string
     Default: '*'
   - Name: eventresultdetils_has_any
-    Type: dyanmic
+    Type: dynamic
     Default: dynamic([])
 ParserQuery: |
   let parser = (

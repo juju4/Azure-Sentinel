@@ -28,5 +28,5 @@ query: |
   | project DeviceName, Timestamp, LoggedOnUsers
   | join kind=inner (matchingMachines) on DeviceName, Timestamp
   | project Timestamp, DeviceName, LoggedOnUsers, TimeDifference, IPAddresses
-  // In case multiple machines have reported from that IP address arround that time, start with the ones reporting closest to pivotTimeParam
+  // In case multiple machines have reported from that IP address around that time, start with the ones reporting closest to pivotTimeParam
   | sort by TimeDifference asc

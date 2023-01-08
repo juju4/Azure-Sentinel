@@ -3,7 +3,7 @@
         Deletes saved functions from a Log Analytics workspace.
 
         .DESCRIPTION
-        This PowerShell script deletes saved functions from a Log Analytics workspace. It supports wildcards and enable batch cleaning the workspace from unneeded functions, especially when deploying a new function ARM tempalte such as those used by Microsoft Sentinel ASIM.
+        This PowerShell script deletes saved functions from a Log Analytics workspace. It supports wildcards and enable batch cleaning the workspace from unneeded functions, especially when deploying a new function ARM template such as those used by Microsoft Sentinel ASIM.
 
         .PARAMETER FunctionName
         A comma delimited list of names or wildcard patterns of the function to be delete.
@@ -70,7 +70,7 @@
 
     if ((Get-AzContext) -eq $null)
     {
-       $supress= Connect-AzAccount
+       $suppress= Connect-AzAccount
     }
 
     $default_subscription = (Get-AzContext).Subscription.Name

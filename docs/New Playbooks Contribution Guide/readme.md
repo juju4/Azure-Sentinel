@@ -7,7 +7,7 @@ This document guides how to contirubte a playbook template to a **Microsoft Sent
 
 Once you have created a playbook that you want to export to share, please follow the following guidelines:
 
-1. [Playbook conventions and guidlines](#playbook-conventions-and-guidlines)
+1. [Playbook conventions and guidelines](#playbook-conventions-and-guidelines)
 2. [Create ARM Template](#create-arm-template)
 3. [Add metadata to the ARM Template](#add-metadata)
 4. [Create Screenshots](#create-screenshots)
@@ -15,7 +15,7 @@ Once you have created a playbook that you want to export to share, please follow
 6. [Create a Pull Request](#create-a-pull-request) (For GitHub/Playbook templates tab contribution)
 
 
-## Playbook conventions and guidlines
+## Playbook conventions and guidelines
 
 * **Trigger choice:** please use **Microsoft Sentinel Incident** trigger, unless there is a strong use case for the alert trigger. [Learn more](https://docs.microsoft.com/azure/sentinel/playbook-triggers-actions#microsoft-sentinel-triggers-summary)
 * **Use parameters**<br> For example, if playbook sends an email to the SOC shared inbox, this field should be supplied as a parameter to the playbook.To do so:
@@ -271,12 +271,12 @@ Templates tab only:
 * ***lastUpdateTime**:  (string, UTC)<br>
     UTC time when author created/updated the template (version of the template is described in the Workflow resource)
 * **prerequisitesDeployTemplateFile:** (string, relative path)<br>
-    If playbook has a deployment prerequisite in form of an ARM template located in GitHub, this path will provide a link to it. Ths link should be relative to the folder of this playbook in GitHub.
+    If playbook has a deployment prerequisite in form of an ARM template located in GitHub, this path will provide a link to it. This link should be relative to the folder of this playbook in GitHub.
 * ***support**
     * **tier**: (string) <br>
     The support expectation for this playbook. "microsoft", "community" or "developer" (for ISV or vendor)
     * **link** (string)<br>
-    The playbooks gallery need this fiels only in case the support->tier is "developer".
+    The playbooks gallery need this fields only in case the support->tier is "developer".
 * ***author**: (string) <br>
     Name of the person who contributed the playbook.
 

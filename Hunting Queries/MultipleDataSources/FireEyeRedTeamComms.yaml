@@ -14,7 +14,7 @@ relevantTechniques:
   - T1071.001
 query: |
 
-  let domainCountThreshold = 100; //Maxiumum number of times a domain ahs been visited
+  let domainCountThreshold = 100; //Maximum number of times a domain has been visited
   //Backdoor.HTTP.BEACON.[Yelp GET]
   let FEQuery1 = CommonSecurityLog
   | where RequestMethod == "GET"

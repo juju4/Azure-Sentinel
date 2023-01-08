@@ -9,7 +9,7 @@ Utilizing the publicly available [DeHashed API](https://www.dehashed.com/pricing
 [![Note](./media/note.png)](https://docs.microsoft.com/azure/active-directory/authentication/concept-password-ban-bad#custom-banned-password-list)
 
 ## Example:
-`The following compromised passwords 7seas:okaydokay:table36072:kachra:p4ssword:apple05:Steve:chipmunk89:Stevencity:Godye were found for steve.jobs@apple.com. These passwords have been succesfully added to the Azure AD Banned Password list.`
+`The following compromised passwords 7seas:okaydokay:table36072:kachra:p4ssword:apple05:Steve:chipmunk89:Stevencity:Godye were found for steve.jobs@apple.com. These passwords have been successfully added to the Azure AD Banned Password list.`
 
    ![Dehashed](./media/dehashed.png)
    ![BannedPasswords](./media/bannedpasswords.png)

@@ -266,7 +266,7 @@ print IsItEqual = 'TEST' =~ 'test'
 // |   hasprefix_cs |       hasprefix  | Term prefix comparison (any) |
 // |  !hasprefix_cs |       !hasprefix | Term prefix comparison (any) |
 // |  hassuffix_cs  |      hassuffix   | Term suffix comparison (any) |
-// |  !hassuffix_cs |      !hassuffix  | Term suffix comaprison (any) |
+// |  !hassuffix_cs |      !hassuffix  | Term suffix comparison (any) |
 // |   contains_cs  |       contains   | Substring                    |
 // |   !contains_cs |       !contains  | Substring                    |
 // |  startswith_cs |      startswith  | String prefix                |

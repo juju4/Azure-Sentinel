@@ -38,7 +38,7 @@ DeviceFileEvents
 // Functions are a special sort of join which let you pull more static data about a file (more are
 // planned in the future, stay tuned!). This is really helpful when you want to get information about
 // file prevalence or antimalware detections.
-// Get more details on the malicous files using FileProfile function enrichment
+// Get more details on the malicious files using FileProfile function enrichment
 let MaliciousSender = dynamic(["mtpdemos@juno.com"]);
 EmailAttachmentInfo
 | where SenderFromAddress in~ (MaliciousSender)
@@ -92,7 +92,7 @@ DeviceNetworkEvents
 
 
 // In practice, you're likely to encounter a bunch of false positives
-// due to common domains being mixed with phish domains. To accommodateTo accomodate that
+// due to common domains being mixed with phish domains. To accommodate that
 // we can just reduce the dataset based on a threshold
 
 

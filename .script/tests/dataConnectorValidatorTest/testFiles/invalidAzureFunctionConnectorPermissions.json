@@ -107,7 +107,7 @@
         },
         {
             "title": "STEP 2 - (Optional) Enable the Security Graph API",
-            "description": "Follow the instrcutions found on article [Connect Azure Sentinel to your threat intelligence platform](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence#connect-azure-sentinel-to-your-threat-intelligence-platform). Once the application is created you will need to record the Tenant ID, Client ID and Client Secret."
+            "description": "Follow the instructions found on article [Connect Azure Sentinel to your threat intelligence platform](https://docs.microsoft.com/azure/sentinel/connect-threat-intelligence#connect-azure-sentinel-to-your-threat-intelligence-platform). Once the application is created you will need to record the Tenant ID, Client ID and Client Secret."
         },
         {
             "title": "STEP 3 - Deploy the connector and the associated Azure Function",
@@ -134,16 +134,16 @@
             ]
         },
         {
-            "title": "Choose a deployement option",
+            "title": "Choose a deployment option",
             "description": ""
         },
         {
             "title": "Option 1: Deploy using the Azure Resource Manager (ARM) Template",
-            "description": "1. Click the **Deploy to Azure** button below. \t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-agari-azuredeploy) 2. Select the preferred **Subscription**, **Resource Group** and **Location**. 3. Enter the **Workspace ID**, **Workspace Key**, **Agari Client ID**, **Agari Client Secret**, select `True` or `False` for the products you subscribe to, and if you wish to share IoCs with Sentinel, select `True` For **Enable Security Graph Sharing**, and enter the required IDs from the Azure Application.> - The Function App will request data from the Agari APIs every 5 minutes, corresponding to the Funciton App Timer.> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. 4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. 5. Click **Purchase** to deploy.6. **NOTE:** Due to the use of Environment Variables to store log access times, the App requires 1 additonal manual step. In the Function App, select the Function App Name and select Click on **Identity** and for System assigned Identity, click on **Azure role assignments** and **Add Role assignment**. Select **Subscription** as the scope, select your subscription and set the Role to **Contributor**. Click on **Save**."
+            "description": "1. Click the **Deploy to Azure** button below. \t[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://aka.ms/sentinel-agari-azuredeploy) 2. Select the preferred **Subscription**, **Resource Group** and **Location**. 3. Enter the **Workspace ID**, **Workspace Key**, **Agari Client ID**, **Agari Client Secret**, select `True` or `False` for the products you subscribe to, and if you wish to share IoCs with Sentinel, select `True` For **Enable Security Graph Sharing**, and enter the required IDs from the Azure Application.> - The Function App will request data from the Agari APIs every 5 minutes, corresponding to the Function App Timer.> - Note: If using Azure Key Vault secrets for any of the values above, use the`@Microsoft.KeyVault(SecretUri={Security Identifier})`schema in place of the string values. Refer to [Key Vault references documentation](https://docs.microsoft.com/azure/app-service/app-service-key-vault-references) for further details. 4. Mark the checkbox labeled **I agree to the terms and conditions stated above**. 5. Click **Purchase** to deploy.6. **NOTE:** Due to the use of Environment Variables to store log access times, the App requires 1 additional manual step. In the Function App, select the Function App Name and select Click on **Identity** and for System assigned Identity, click on **Azure role assignments** and **Add Role assignment**. Select **Subscription** as the scope, select your subscription and set the Role to **Contributor**. Click on **Save**."
         },
         {
             "title": "Option 2: Manual Deployment of Azure Functions",
-            "description": "**1. Create a Function App**1.  From the Azure Portal, navigate to [Function App](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Web%2Fsites/kind/functionapp), and select **+ Add**.2. In the **Basics** tab, ensure Runtime stack is set to **Powershell Core**. 3. In the **Hosting** tab, ensure the **Consumption (Serverless)** plan type is selected.4. Make other preferrable configuration changes, if needed, then click **Create**."
+            "description": "**1. Create a Function App**1.  From the Azure Portal, navigate to [Function App](https://portal.azure.com/#blade/HubsExtension/BrowseResource/resourceType/Microsoft.Web%2Fsites/kind/functionapp), and select **+ Add**.2. In the **Basics** tab, ensure Runtime stack is set to **Powershell Core**. 3. In the **Hosting** tab, ensure the **Consumption (Serverless)** plan type is selected.4. Make other preferable configuration changes, if needed, then click **Create**."
         },
         {
             "title": "",
@@ -159,7 +159,7 @@
         },
         {
             "title": "",
-            "description": "**5. Complete Setup.**1. Once all application settings have been entered, click **Save**. Note that it will take some time to have the required dependencies download, so you may see some inital failure messages."
+            "description": "**5. Complete Setup.**1. Once all application settings have been entered, click **Save**. Note that it will take some time to have the required dependencies download, so you may see some initial failure messages."
         }
     ]
 }

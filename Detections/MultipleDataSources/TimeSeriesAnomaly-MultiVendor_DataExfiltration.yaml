@@ -5,7 +5,7 @@ description: |
   A sudden increase in data transferred to unknown public networks is an indication of data exfiltration attempts and should be investigated.
   The higher the score, the further it is from the baseline value.
   The output is aggregated to provide summary view of unique source IP to destination IP address and port bytes sent traffic observed in the flagged anomaly hour.
-  The source IP addresses which were sending less than bytessentperhourthreshold have been exluded whose value can be adjusted as needed .
+  The source IP addresses which were sending less than bytessentperhourthreshold have been excluded whose value can be adjusted as needed .
   You may have to run queries for individual source IP addresses from SourceIPlist to determine if anything looks suspicious'
 severity: Medium
 requiredDataConnectors:
@@ -54,7 +54,7 @@ query: |
   | make-series TotalBytesSent=sum(SentBytes) on TimeGenerated from startofday(ago(starttime)) to startofday(ago(endtime)) step timeframe by DeviceVendor
   )
   );
-  //Filter anomolies against TimeSeriesData
+  //Filter anomalies against TimeSeriesData
   let TimeSeriesAlerts = materialize(TimeSeriesData
   | extend (anomalies, score, baseline) = series_decompose_anomalies(TotalBytesSent, scorethreshold, -1, 'linefit')
   | mv-expand TotalBytesSent to typeof(double), TimeGenerated to typeof(datetime), anomalies to typeof(double),score to typeof(double), baseline to typeof(long)
@@ -96,7 +96,7 @@ query: |
   | project DeviceVendor, TimeGeneratedHour, TimeGeneratedMax, SourceIP, DestinationIPList, DestinationPortList, TotalSentBytesinMB, TotalReceivedBytesinMB, Rank
   )
   );
-  // Join against base logs to retrive records associated with the hour of anomoly
+  // Join against base logs to retrieve records associated with the hour of anomaly
   TimeSeriesAlerts
   | where TimeGenerated > ago(2d)
   | join (

@@ -1498,7 +1498,7 @@
     {
         "workbookKey": "OrcaAlertsOverviewWorkbook",
         "logoFileName": "Orca_logo.svg",
-        "description": "A visualized overview of Orca security alerts.\nExplore, analize and learn about your security posture using Orca alerts Overview",
+        "description": "A visualized overview of Orca security alerts.\nExplore, analyze and learn about your security posture using Orca alerts Overview",
         "dataTypesDependencies": [
             "OrcaAlerts_CL"
         ],
@@ -2209,7 +2209,7 @@
     {
         "workbookKey": "ExchangeCompromiseHunting",
         "logoFileName": "MSTIC-Logo.svg",
-        "description": "This workbook is intended to help defenders in responding to the Exchange Server vulnerabilities disclosed in March 2021, as well as hunting for potential compromise activity. More details on these vulnearbilities can be found at: https://aka.ms/exchangevulns",
+        "description": "This workbook is intended to help defenders in responding to the Exchange Server vulnerabilities disclosed in March 2021, as well as hunting for potential compromise activity. More details on these vulnerabilities can be found at: https://aka.ms/exchangevulns",
         "dataTypesDependencies": [
             "SecurityEvent",
             "W3CIISLog"

@@ -18,7 +18,7 @@ function Write-OMSLogfile {
     Name of the logfile or Log Analytics "Type".  Log Analytics will append _CL at the end of custom logs  String Value
     .PARAMETER LogData
     A series of key, value pairs that will be written to the log.  Log file are unstructured but the key should be consistent
-    withing each source.
+    within each source.
     .INPUTS
     The parameters of data and time, type and logdata.  Logdata is converted to JSON to submit to Log Analytics.
     .OUTPUTS

@@ -49,3 +49,19 @@ repos:
   hooks:
     - id: codespell
       args: [-I, .codespellignore, --ignore-regex, '\\[fnrstv]']
+      exclude: |
+        (?x)(
+          ^BYOML/|
+          ^DataConnectors/|
+          ^Detections/|
+          ^Hunting\sQueries/|
+          ^MasterPlaybooks/|
+          ^Parsers/|
+          ^Playbooks/|
+          ^Sample\sData|
+          ^Solutions/|
+          ^Tools/|
+          ^Tools/MITREATT&CK-LayerGeneration-Notebook/|
+          ^Tools/Sample\sCode/|
+          ^Workbooks/
+        )
