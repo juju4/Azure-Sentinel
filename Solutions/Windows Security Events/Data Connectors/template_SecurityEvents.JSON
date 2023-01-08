@@ -2,7 +2,7 @@
     "id": "SecurityEvents",
     "title": "Security Events via Legacy Agent",
     "publisher": "Microsoft",
-    "descriptionMarkdown": "You can stream all security events from the Windows machines connected to your Microsoft Sentinel workspace using the Windows agent. This connection enables you to view dashboards, create custom alerts, and improve investigation. This gives you more insight into your organization’s network and improves your security operation capabilities.",
+    "descriptionMarkdown": "You can stream all security events from the Windows machines connected to your Microsoft Sentinel workspace using the Windows agent. This connection enables you to view dashboards, create custom alerts, and improve investigation. This gives you more insight into your organization\u2019s network and improves your security operation capabilities.",
     "graphQueries": [
         {
             "metricName": "Total data received",

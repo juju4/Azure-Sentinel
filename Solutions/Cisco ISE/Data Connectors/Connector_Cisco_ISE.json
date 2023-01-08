@@ -13,7 +13,7 @@
     ],
     "sampleQueries": [
         {
-            "description" : "Top 10 Reporting Devices",
+            "description": "Top 10 Reporting Devices",
             "query": "CiscoISEEvent\n | summarize count() by DvcHostname\n | top 10 by count_"
         }
     ],
@@ -53,8 +53,7 @@
         {
             "title": "",
             "description": ">**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected. [Follow these steps](https://aka.ms/sentinel-ciscoise-parser) to create the Kusto Functions alias, **CiscoISEEvent**",
-            "instructions": [
-            ]
+            "instructions": []
         },
         {
             "title": "1. Install and onboard the agent for Linux",

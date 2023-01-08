@@ -69,7 +69,10 @@
         },
         "tactics": {
             "type": "array",
-            "defaultValue": ["InitialAccess", "Persistence"],
+            "defaultValue": [
+                "InitialAccess",
+                "Persistence"
+            ],
             "metadata": {
                 "description": "The tactics of the alert rule"
             }

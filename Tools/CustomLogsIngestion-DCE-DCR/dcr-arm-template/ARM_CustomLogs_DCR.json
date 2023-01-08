@@ -32,31 +32,31 @@
                 "streamDeclarations": {
                     "Custom-MyDcrIngestionRawData": {
                         "columns": [
-						  {
-							"name": "SourceSystem",
-							"type": "string"
-						  },
-						  {
-							"name": "MG",
-							"type": "string"
-						  },
-						  {
-							"name": "ManagementGroupName",
-							"type": "string"
-						  },
-						  {
-							"name": "TimeGenerated",
-							"type": "datetime"
-						  },
-						  {
-							"name": "Computer",
-							"type": "string"
-						  },
-						  {
-							"name": "RawData",
-							"type": "string"
-						  }
-						]
+                            {
+                                "name": "SourceSystem",
+                                "type": "string"
+                            },
+                            {
+                                "name": "MG",
+                                "type": "string"
+                            },
+                            {
+                                "name": "ManagementGroupName",
+                                "type": "string"
+                            },
+                            {
+                                "name": "TimeGenerated",
+                                "type": "datetime"
+                            },
+                            {
+                                "name": "Computer",
+                                "type": "string"
+                            },
+                            {
+                                "name": "RawData",
+                                "type": "string"
+                            }
+                        ]
                     }
                 },
                 "destinations": {

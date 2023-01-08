@@ -24,19 +24,19 @@
             "type": "string",
             "defaultValue": "<workspaceKey>"
         },
-		"enableBrandProtectionAPI": {
+        "enableBrandProtectionAPI": {
             "type": "bool"
-		},
-		"enablePhishingDefenseAPI": {
+        },
+        "enablePhishingDefenseAPI": {
             "type": "bool"
         },
         "enablePhishingResponseAPI": {
             "type": "bool"
         },
-		"enableSecurityGraphSharing": {
+        "enableSecurityGraphSharing": {
             "type": "bool"
-		},
-	 	"GraphTenantID": {
+        },
+        "GraphTenantID": {
             "type": "string",
             "defaultValue": "Enter MS Graph Tenant ID"
         },
@@ -44,18 +44,16 @@
             "type": "string",
             "defaultValue": "Enter MS Graph Client ID"
         },
-		"GraphClientSecret": {
+        "GraphClientSecret": {
             "type": "string",
             "defaultValue": "Enter MS Graph Client Secret"
         }
-
     },
     "variables": {
         "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
-        "StorageSuffix":"[environment().suffixes.storage]",
-        "LogAnaltyicsUri":"[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
-        },
-
+        "StorageSuffix": "[environment().suffixes.storage]",
+        "LogAnaltyicsUri": "[replace(environment().portal, 'https://portal', concat('https://', toLower(parameters('WorkspaceID')), '.ods.opinsights'))]"
+    },
     "resources": [
         {
             "type": "Microsoft.Insights/components",
@@ -83,8 +81,7 @@
                 "enabledForDiskEncryption": false,
                 "enabledForTemplateDeployment": true,
                 "enableSoftDelete": true,
-                "accessPolicies": [
-                ]
+                "accessPolicies": []
             }
         },
         {
@@ -115,10 +112,8 @@
             "properties": {
                 "networkAcls": {
                     "bypass": "AzureServices",
-                    "virtualNetworkRules": [
-                    ],
-                    "ipRules": [
-                    ],
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
                     "defaultAction": "Allow"
                 },
                 "supportsHttpsTrafficOnly": true,
@@ -167,8 +162,7 @@
             },
             "properties": {
                 "cors": {
-                    "corsRules": [
-                    ]
+                    "corsRules": []
                 },
                 "deleteRetentionPolicy": {
                     "enabled": false
@@ -188,8 +182,7 @@
             },
             "properties": {
                 "cors": {
-                    "corsRules": [
-                    ]
+                    "corsRules": []
                 }
             }
         },
@@ -252,7 +245,6 @@
                         "BPlastLogTime": "",
                         "logAnalyticsUri": "[variables('LogAnaltyicsUri')]",
                         "WEBSITE_RUN_FROM_PACKAGE": "https://aka.ms/sentinel-agari-functionapp"
-
                     }
                 }
             ]

@@ -13,7 +13,7 @@
     ],
     "sampleQueries": [
         {
-            "description" : "Top 10 Destinations",
+            "description": "Top 10 Destinations",
             "query": "KasperskySCEvent\n | where isnotempty(DstIpAddr)\n    | summarize count() by DstIpAddr\n | top 10 by count_"
         }
     ],
@@ -63,14 +63,12 @@
         {
             "title": "",
             "description": ">**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected [**KasperskySCEvent**](https://aka.ms/sentinel-kasperskysc-parser) which is deployed with the Microsoft Sentinel Solution.",
-            "instructions": [
-            ]
+            "instructions": []
         },
         {
             "title": "",
             "description": ">**NOTE:** This data connector has been developed using Kaspersky Security Center 13.1.",
-            "instructions": [
-            ]
+            "instructions": []
         },
         {
             "title": "1. Linux Syslog agent configuration",

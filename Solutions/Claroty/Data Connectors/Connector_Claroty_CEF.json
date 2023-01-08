@@ -13,7 +13,7 @@
     ],
     "sampleQueries": [
         {
-            "description" : "Top 10 Destinations",
+            "description": "Top 10 Destinations",
             "query": "ClarotyEvent\n | where isnotempty(DstIpAddr)\n    | summarize count() by DstIpAddr\n | top 10 by count_"
         }
     ],
@@ -63,8 +63,7 @@
         {
             "title": "",
             "description": ">**NOTE:** This data connector depends on a parser based on a Kusto Function to work as expected [**ClarotyEvent**](https://aka.ms/sentinel-claroty-parser) which is deployed with the Microsoft Sentinel Solution.",
-            "instructions": [
-            ]
+            "instructions": []
         },
         {
             "title": "1. Linux Syslog agent configuration",

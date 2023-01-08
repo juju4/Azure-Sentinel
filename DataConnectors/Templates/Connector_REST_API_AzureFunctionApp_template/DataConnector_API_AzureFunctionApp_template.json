@@ -12,7 +12,7 @@
     ],
     "sampleQueries": [
         {
-            "description" : "One-line title for your sample query 1",
+            "description": "One-line title for your sample query 1",
             "query": "Kusto Query 1"
         }
     ],
@@ -47,15 +47,15 @@
                     "delete": true
                 }
             },
-			{
-				"provider": "Microsoft.OperationalInsights/workspaces/sharedKeys",
-				"permissionsDisplayText": "read permissions to shared keys for the workspace are required. [See the documentation to learn more about workspace keys](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows#obtain-workspace-id-and-key).",
-				"providerDisplayName": "Keys",
-				"scope": "Workspace",
-				"requiredPermissions": {
-					"action": true
-				}
-			}
+            {
+                "provider": "Microsoft.OperationalInsights/workspaces/sharedKeys",
+                "permissionsDisplayText": "read permissions to shared keys for the workspace are required. [See the documentation to learn more about workspace keys](https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows#obtain-workspace-id-and-key).",
+                "providerDisplayName": "Keys",
+                "scope": "Workspace",
+                "requiredPermissions": {
+                    "action": true
+                }
+            }
         ],
         "customs": [
             {
@@ -141,7 +141,7 @@
             "tier": "Type of support for content item: microsoft | developer | community",
             "name": "Name of support contact or company",
             "email": "Optional: Email of support contact",
-            "link":"Optional: Link for support help, like to support page to open a ticket etc"
+            "link": "Optional: Link for support help, like to support page to open a ticket etc"
         }
     }
 }

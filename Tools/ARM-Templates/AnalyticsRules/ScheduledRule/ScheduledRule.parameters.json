@@ -30,7 +30,11 @@
             "value": false
         },
         "tactics": {
-            "value": ["LateralMovement", "Persistence", "Collection"]
+            "value": [
+                "LateralMovement",
+                "Persistence",
+                "Collection"
+            ]
         },
         "triggerOperator": {
             "value": "GreaterThan"

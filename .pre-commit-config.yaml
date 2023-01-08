@@ -25,7 +25,15 @@ repos:
           - "--autofix"
           - "--indent=4"
           - "--no-sort-keys"
-      exclude: '(invalidFile.json|SkipValidationsTemplates.json|tsconfig.json)$'
+      exclude: |
+        (?x)(
+          invalidFile.json$|
+          SkipValidationsTemplates.json$|
+          tsconfig.json$|
+          ^Solutions/Templates/mainTemplate.json$|
+          ^Solutions/Templates/createUIDefinition.json$|
+          ^Solutions/Templates/Example/EXAMPLE-mainTemplate.json$
+        )
     - id: detect-private-key
     - id: check-case-conflict
     - id: requirements-txt-fixer

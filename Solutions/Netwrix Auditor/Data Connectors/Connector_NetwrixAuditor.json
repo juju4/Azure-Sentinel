@@ -11,10 +11,11 @@
             "baseQuery": "NetwrixAuditor"
         }
     ],
-    "sampleQueries": [{
-		"description": "Netwrix Auditor Events - All Activities.",
-		"query": "NetwrixAuditor\n | sort by TimeGenerated desc"
-	}
+    "sampleQueries": [
+        {
+            "description": "Netwrix Auditor Events - All Activities.",
+            "query": "NetwrixAuditor\n | sort by TimeGenerated desc"
+        }
     ],
     "dataTypes": [
         {
@@ -62,8 +63,7 @@
         {
             "title": "",
             "description": ">**NOTE:** This data connector depends on NetwrixAuditor parser based on a Kusto Function to work as expected. This parser is installed along with solution installation.",
-            "instructions": [
-            ]
+            "instructions": []
         },
         {
             "title": "1. Linux Syslog agent configuration",
@@ -130,7 +130,7 @@
         "support": {
             "tier": "community",
             "name": "Microsoft",
-            "link":"https://github.com/Azure/Azure-Sentinel/issues"
+            "link": "https://github.com/Azure/Azure-Sentinel/issues"
         }
     }
 }

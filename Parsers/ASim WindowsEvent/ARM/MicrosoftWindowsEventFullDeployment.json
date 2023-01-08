@@ -91,11 +91,11 @@
                 }
             }
         },
-            {
-                "type": "Microsoft.Resources/deployments",
-                "apiVersion": "2020-10-01",
-                "name": "linkedASimNetworkSessionMicrosoftWindowsEventFirewall",
-                "properties": {
+        {
+            "type": "Microsoft.Resources/deployments",
+            "apiVersion": "2020-10-01",
+            "name": "linkedASimNetworkSessionMicrosoftWindowsEventFirewall",
+            "properties": {
                 "mode": "Incremental",
                 "templateLink": {
                     "uri": "https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Parsers/ASimNetworkSession/ARM/ASimNetworkSessionMicrosoftWindowsEventFirewall/ASimNetworkSessionMicrosoftWindowsEventFirewall.json",
@@ -109,9 +109,8 @@
                         "value": "[parameters('location')]"
                     }
                 }
-                }
+            }
         }
     ],
-    "outputs": {
-    }
+    "outputs": {}
 }
