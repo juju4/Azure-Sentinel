@@ -24,7 +24,7 @@ query: |
   | extend SettingChanged = case(EnforceLogin == 'false' and EnforceLoginDomain == 'false' and GuestAlerts == 'false', "All settings changed",
                               EnforceLogin == 'false' and EnforceLoginDomain == 'false', "Enforced Logons and Restricted Domains Changed",
                               EnforceLoginDomain == 'false' and GuestAlerts == 'false', "Enforced Domains Changed",
-                              EnforceLoginDomain == 'false', "Enfored Domains Changed",
+                              EnforceLoginDomain == 'false', "Enforced Domains Changed",
                               GuestAlerts == 'false', "Guest Join Alerts Changed",
                               EnforceLogin == 'false', "Enforced Logins Changed",
                               "No Changes")

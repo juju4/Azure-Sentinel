@@ -33,7 +33,7 @@ query: |
   | join (
       // Successful signins from IPs blocked by the firewall solution are suspect
       // Include fully successful sign-ins, but also ones that failed only at MFA stage
-      // as that supposes the password was sucessfully guessed.
+      // as that supposes the password was successfully guessed.
     table(tableName)
     | where ResultType in ("0", "50074", "50076")
   ) on $left.SourceIP == $right.IPAddress

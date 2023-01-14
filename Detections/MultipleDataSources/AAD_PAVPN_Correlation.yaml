@@ -46,9 +46,9 @@ query: |
   let suspicious_signins =
   union isfuzzy=true aadSignin, aadNonInt
   | summarize make_set(set_IPAddress);
-  //See if any of those IPs have sucessfully logged into PA VPNs during the same timeperiod
+  //See if any of those IPs have successfully logged into PA VPNs during the same timeperiod
   CommonSecurityLog
-      //Select only PA VPN sucessful logons
+      //Select only PA VPN successful logons
       | where DeviceVendor == "Palo Alto Networks" and DeviceEventClassID == "globalprotect"
       | where Message has "GlobalProtect gateway user authentication succeeded"
       //Parse out the logon source IP from the Message field to match on

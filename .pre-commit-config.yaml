@@ -53,7 +53,6 @@ repos:
         (?x)(
           ^BYOML/|
           ^DataConnectors/|
-          ^Detections/|
           ^Hunting\sQueries/|
           ^MasterPlaybooks/|
           ^Parsers/|

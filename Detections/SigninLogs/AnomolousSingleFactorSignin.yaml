@@ -1,5 +1,5 @@
 id: f7c3f5c8-71ea-49ff-b8b3-148f0e346291
-name: Anomolous Single Factor Signin
+name: Anomalous Single Factor Signin
 description: |
   'Detects successful signins using single factor authentication where the device, location, and ASN are abnormal.
     Single factor authentications pose an opportunity to access compromised accounts, investigate these for anomalous occurrencess.

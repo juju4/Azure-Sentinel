@@ -87,7 +87,7 @@ query: |
               SuspiciousCountryPrevalence = CountryPrevalence,
               EventTimes = ListSigninTimeGenerated
       ) on $left.UserId == $right.UserPrincipalName
-      // Check the signins occured 60 min before the Teams operations
+      // Check the signins occurred 60 min before the Teams operations
       | mv-expand SigninTimeGenerated = EventTimes
       | extend SigninTimeGenerated = todatetime(SigninTimeGenerated)
       | where OperationTimeGenerated between (SigninTimeGenerated .. (SigninTimeGenerated + projectedEndTime))
