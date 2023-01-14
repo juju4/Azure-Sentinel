@@ -99,7 +99,7 @@ ParserQuery: |
                                             //";PanOSTunnelType="TunnelType
                                             ";PanOSThreatCategory="ThreatCategory
                                             ";PanOSContentVer="ContentVer
-  // for EventClassIds=="url" it parses theses additional fields
+  // for EventClassIds=="url" it parses these additional fields
   | parse temp with "PanOSXForwarderfor="HttpRequestXff";PanOSReferer="HttpReferrerOriginal	";" *
   | extend UrlOriginal=coalesce(UrlOriginal, unparsedURL)
   | project-away temp, temp2, temp3, unparsedURL

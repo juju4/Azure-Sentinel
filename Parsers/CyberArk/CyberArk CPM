@@ -1,4 +1,4 @@
-// This is a Query Parser that is used to map Syslog messsages sent from a CyberArk Digital Vault for creating Dashboards and Alerts.
+// This is a Query Parser that is used to map Syslog messages sent from a CyberArk Digital Vault for creating Dashboards and Alerts.
 //
 // This specific query leverages the Audit Codes for CPM Actions (successful/unsuccessful verify, change, reconcile)
 //

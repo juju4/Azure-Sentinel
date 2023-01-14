@@ -116,7 +116,7 @@ ParserQuery: |
           SrcProcessName = Image,
           SrcUsername = User
       | project-away EventData
-      // -- Post-filtering tests differnt for Event and WindowsEvent
+      // -- Post-filtering tests different for Event and WindowsEvent
       | lookup RCodeTable on DnsResponseCode
       | where  (responsecodename=="*" or DnsResponseCodeName has responsecodename) // -- filter is not optimized
       // --

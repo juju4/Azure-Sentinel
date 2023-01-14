@@ -9,7 +9,7 @@
 //
 // USAGE:
 // 1. Open Log Analytics/Azure Sentinel Logs blade. Copy the query below and paste into the Logs query window.
-// 2. In the query window, on the 2nd line of the query, confirm the Facility of the logstream (usually "daemon", but check your BIND conf files). Run the query to validate data is being recieved and parsed.
+// 2. In the query window, on the 2nd line of the query, confirm the Facility of the logstream (usually "daemon", but check your BIND conf files). Run the query to validate data is being received and parsed.
 // 3. Click the Save button above the query. A pane will appear on the right, select "as Function" from the drop down. Enter a Function Name.
 //
 // REFERENCES:

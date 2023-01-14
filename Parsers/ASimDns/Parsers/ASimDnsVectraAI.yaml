@@ -1,5 +1,5 @@
 Parser:
-  Title: DNS ASIM parser for Vectra AI Steams
+  Title: DNS ASIM parser for Vectra AI Streams
   Version: '0.1.1'
   LastUpdated: Dec 26 2022
 Product:
@@ -26,7 +26,7 @@ Exceptions:
 - Field: DnsSessionId
   Exception: Is empty for events of subtype request.
 Description: |
-  This ASIM parser supports normalizing Vectra AI Steams logs to the ASIM DNS normalized schema.
+  This ASIM parser supports normalizing Vectra AI Streams logs to the ASIM DNS normalized schema.
 ParserName: ASimDnsVectraAI
 EquivalentBuiltInParser: _ASim_Dns_VectraAI
 ParserParams:

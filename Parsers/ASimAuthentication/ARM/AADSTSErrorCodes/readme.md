@@ -1,4 +1,4 @@
-# Azure Active Directoty STS Error Codes
+# Azure Active Directory STS Error Codes
 
 This template deploys a table for conversion of AAD numeric error codes to descriptive error message.
 

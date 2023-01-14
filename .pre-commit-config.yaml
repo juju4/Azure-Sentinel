@@ -55,7 +55,6 @@ repos:
           ^DataConnectors/|
           ^Hunting\sQueries/|
           ^MasterPlaybooks/|
-          ^Parsers/|
           ^Playbooks/|
           ^Sample\sData|
           ^Solutions/|

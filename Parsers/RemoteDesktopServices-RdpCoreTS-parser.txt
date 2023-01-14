@@ -3,7 +3,7 @@
 //
 // Purpose :
 // This parser aims to help collecting data from Windows VM through the Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational events channel.
-// This might be usefull to detect success bruteforce attacks on RDP.
+// This might be useful to detect success bruteforce attacks on RDP.
 // Note that this parser was initially created to monitor EventID 140 (RDP failed auth.). Thus, at the moment, not all EventID are supported.
 // Don't hesitate to update it or to ask for an update.
 //

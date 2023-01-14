@@ -1,8 +1,8 @@
 //
-// This parser with pars string messages in the "msg_s" colomn provided by Azure Firewall diagnostics logs.
+// This parser with pars string messages in the "msg_s" column provided by Azure Firewall diagnostics logs.
 // Due to the native of these logs it's impossible to parse all data with a single "parse" statement
 // Because there are six different parsers needed all data is deviced into their respective parser type by
-// using parse-where sometime in conjuction with an addition "where" statement to prevent duplicates
+// using parse-where sometime in conjunction with an addition "where" statement to prevent duplicates
 //
 let AzureFirewallApplicationRuleLogs = AzureDiagnostics
     | where OperationName == "AzureFirewallApplicationRuleLog";
@@ -37,7 +37,7 @@ let parseLogsWithoutUrls = AzureFirewallApplicationRuleLogs
         ". Rule: "                  rule:string
     // Since web category is not always specified it can't be part of the parse statement above
     // otherwise lines without a web category will not be parsed at all.
-    // Therefore the web categories is distilled from the "rule" colomn if applicable:
+    // Therefore the web categories is distilled from the "rule" column if applicable:
     | extend ruleName = tostring(split(rule, " Webcategories. Web Category: ")[0])
     | extend webCategory = tostring(split(rule, " Webcategories. Web Category: ")[1])
     | project-away msg_s;

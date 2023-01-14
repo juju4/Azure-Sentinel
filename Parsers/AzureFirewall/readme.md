@@ -29,7 +29,7 @@ And each of the three categories is divided by the `Category` column:
 | where Category == "AzureFirewallNetworkRule"
 ```
 
-Unfortunately the all of the details withing these logs are put into a single column "msg_s" as one string. To make these logs better readable you can use these three parsers to split everything up into separate columns.
+Unfortunately the all of the details within these logs are put into a single column "msg_s" as one string. To make these logs better readable you can use these three parsers to split everything up into separate columns.
 
 I've also added sample datasets for `ApplicationRule` and `NetworkRule` events. These dataset contains all variations of "msg_s" which led to creating the different parse statements within each parser.
 
@@ -37,7 +37,7 @@ I've also added sample datasets for `ApplicationRule` and `NetworkRule` events. 
 
 ### Automatic deployment
 
-There's currently some confusion about the proper way to deploy "saved queries" to you Sentinel/Log Analytics workspaces. These can be stored directly inside the workspace (savedQueries) but apparantly this is considered _"legacy"_ now since [Microsoft introduced Query Packs @ Build 2021](https://techcommunity.microsoft.com/t5/azure-monitor-blog/what-s-new-in-azure-monitor-build-2021/ba-p/2366286).
+There's currently some confusion about the proper way to deploy "saved queries" to you Sentinel/Log Analytics workspaces. These can be stored directly inside the workspace (savedQueries) but apparently this is considered _"legacy"_ now since [Microsoft introduced Query Packs @ Build 2021](https://techcommunity.microsoft.com/t5/azure-monitor-blog/what-s-new-in-azure-monitor-build-2021/ba-p/2366286).
 Query Packs are a new type of Azure resource in where you can store KQL queries. Query Packs can be shared across multiple workspaces and even across multiple subscriptions.
 
 BUT! Query Packs **cannot** facilitate the automated deployments of functions! So for this use (like with parsers) the _tried-and-true_ method is this advised.

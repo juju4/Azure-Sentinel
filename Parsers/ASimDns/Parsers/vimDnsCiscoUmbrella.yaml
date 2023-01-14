@@ -56,7 +56,7 @@ ParserQuery: |
       ){
         Cisco_Umbrella_dns_CL | where not(disabled)
         // ******************************************************************
-        //  Pre-parsing filterring:
+        //  Pre-parsing filtering:
           | where
           // Return empty list if response IPs are passed
             (eventtype in~ ('lookup','Query'))

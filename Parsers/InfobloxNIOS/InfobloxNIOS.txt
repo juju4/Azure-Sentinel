@@ -9,7 +9,7 @@
 //
 // USAGE:
 // 1. Open Log Analytics/Azure Sentinel Logs blade. Copy the query below and paste into the Logs query window.
-// 2. In the query window, on the 2nd line of the query, enter the hostname(s) of your Infoblox NIOS device(s) and the Facility of the logstream. Run the query to validate data is being recieved and parsed.
+// 2. In the query window, on the 2nd line of the query, enter the hostname(s) of your Infoblox NIOS device(s) and the Facility of the logstream. Run the query to validate data is being received and parsed.
 // 3. Click the Save button above the query. A pane will appear on the right, select "as Function" from the drop down. Enter a Function Name.
 //    In order for the Infoblox NIOS logs to work with pre-built queries and workbooks the Function Alias must be set to - InfobloxNIOS
 // 4. Function App usually take 10-15 minutes to activate. You can then use Function Alias for other queries

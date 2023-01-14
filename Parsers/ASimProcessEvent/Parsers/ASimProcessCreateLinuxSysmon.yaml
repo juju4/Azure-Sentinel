@@ -40,7 +40,7 @@ ParserQuery: |
                 '</Data><Data Name="Description">'Description
                 '</Data><Data Name="Product">'Product
                 '</Data><Data Name="Company">'Company'</Data>' *
-        | extend  OriginalFileName = extract (@'"OriginalFileName">([^<]+)<',1,SyslogMessage) // this field exists in sysmon version 10.42 and above - using extact to avoid parsing failure
+        | extend  OriginalFileName = extract (@'"OriginalFileName">([^<]+)<',1,SyslogMessage) // this field exists in sysmon version 10.42 and above - using extract to avoid parsing failure
         | parse SyslogMessage with *
                 '<Data Name="CommandLine">'CommandLine'</Data>'
                 '<Data Name="CurrentDirectory">'CurrentDirectory

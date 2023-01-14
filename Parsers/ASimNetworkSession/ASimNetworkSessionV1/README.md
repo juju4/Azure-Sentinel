@@ -1,6 +1,6 @@
 # NetworkSessions - Advanced Security Information Model
 
-**Note: this folder contains ASIM V1 Netwrok Session parsers**
+**Note: this folder contains ASIM V1 Network Session parsers**
 
 This template deploys the following:
 * imNetworkSessions - Network Session events from all normalized network providers

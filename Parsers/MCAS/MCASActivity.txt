@@ -1,7 +1,7 @@
 // Microsoft Cloud App Security Activities
 // Last Updated Date: May 6, 2021
 //
-//This parser parses MCAS Activities to extract the infromation from their various components. It is assumed that the playbook to ingest activities data into Sentinel is enabled
+//This parser parses MCAS Activities to extract the information from their various components. It is assumed that the playbook to ingest activities data into Sentinel is enabled
 //
 // Parser Notes:
 // 1. This parser assumes logs are collected into a custom log table entitled MCASActivity_CL

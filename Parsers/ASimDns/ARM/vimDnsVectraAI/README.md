@@ -2,7 +2,7 @@
 
 ARM template for ASIM Dns schema parser for Vectra AI Streams.
 
-This ASIM parser supports normalizing Vectra AI Steams logs to the ASIM DNS normalized schema.
+This ASIM parser supports normalizing Vectra AI Streams logs to the ASIM DNS normalized schema.
 
 
 The Advanced Security Information Model (ASIM) enables you to use and create source-agnostic content, simplifying your analysis of the data in your Microsoft Sentinel workspace.

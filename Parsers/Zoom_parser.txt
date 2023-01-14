@@ -1,7 +1,7 @@
 // Zoom Data Parser
 // Last Updated Date: April 24, 2020
 //
-// This parser takes raw Zoom events provider by the Zoom API and parses them into a standarized schema.
+// This parser takes raw Zoom events provider by the Zoom API and parses them into a standardized schema.
 //
 // Parser Notes:
 // 1. This parser assumes logs are collected into a custom log table entitled Zoom_CL.

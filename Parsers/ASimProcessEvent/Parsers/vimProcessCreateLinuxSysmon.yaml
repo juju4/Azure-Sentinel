@@ -96,7 +96,7 @@ ParserQuery: |
             (array_length(dvcname_has_any)==0 or SysmonComputer has_any (dvcname_has_any))
             and (array_length(targetprocess_has_any)==0 or Image has_any (targetprocess_has_any))
         // --------------------------------------------------------------------------------------
-        | extend  OriginalFileName = extract (@'"OriginalFileName">([^<]+)<',1,SyslogMessage) // this field exists in sysmon version 10.42 and above - using extact to avoid parsing failure
+        | extend  OriginalFileName = extract (@'"OriginalFileName">([^<]+)<',1,SyslogMessage) // this field exists in sysmon version 10.42 and above - using extract to avoid parsing failure
         | parse SyslogMessage with *
                 '<Data Name="CommandLine">'CommandLine'</Data>'
                 '<Data Name="CurrentDirectory">'CurrentDirectory

@@ -1,7 +1,7 @@
 // GitHub Enterprise Audit Entry Data Parser
 // Last Updated Date: Feb 9, 2021
 //
-//This parser parses GitHub Enterprise Audit Entry extract the infromation from their various components. It is assumed that the playbook to ingest audit entry data into Sentinel is enabled
+//This parser parses GitHub Enterprise Audit Entry extract the information from their various components. It is assumed that the playbook to ingest audit entry data into Sentinel is enabled
 //
 // Parser Notes:
 // 1. This parser assumes logs are collected into a custom log table entitled GitHub_CL
