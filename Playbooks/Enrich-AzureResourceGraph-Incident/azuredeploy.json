@@ -130,6 +130,27 @@
                         }
                     },
                     "actions": {
+                        "Add_comment_to_incident_(V3)": {
+                            "runAfter": {
+                                "For_each_Host": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "incidentArmId": "@triggerBody()?['object']?['id']",
+                                    "message": "[concat('<p><span style=\"font-size: 14px\"><strong>', parameters('PlaybookName'), ' playbook:</strong></span><br>\n@{variables(''comment'')}</p>')]"
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                                    }
+                                },
+                                "method": "post",
+                                "path": "/Incidents/Comment"
+                            }
+                        },
                         "Condition_-_No_entities": {
                             "actions": {
                                 "Terminate": {
@@ -157,110 +178,9 @@
                             },
                             "type": "If"
                         },
-                        "Condition_comment_string_is_not_empty": {
-                            "actions": {
-                                "Add_comment_to_incident_(V3)": {
-                                    "runAfter": {},
-                                    "type": "ApiConnection",
-                                    "inputs": {
-                                        "body": {
-                                            "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "message": "[concat('<p><span style=\"font-size: 14px\"><strong>', parameters('PlaybookName'), ' playbook:</strong></span><br>\n@{variables(''comment'')}</p>')]"
-                                        },
-                                        "host": {
-                                            "connection": {
-                                                "name": "@parameters('$connections')['azuresentinel']['connectionId']"
-                                            }
-                                        },
-                                        "method": "post",
-                                        "path": "/Incidents/Comment"
-                                    }
-                                },
-                                "Update_incident_-_tag_found": {
-                                    "runAfter": {
-                                        "Add_comment_to_incident_(V3)": [
-                                            "Succeeded"
-                                        ]
-                                    },
-                                    "type": "ApiConnection",
-                                    "inputs": {
-                                        "body": {
-                                            "incidentArmId": "@triggerBody()?['object']?['id']",
-                                            "tagsToAdd": {
-                                                "TagsToAdd": [
-                                                    {
-                                                        "Tag": "Found-AzureResourceGraph"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        "host": {
-                                            "connection": {
-                                                "name": "@parameters('$connections')['azuresentinel']['connectionId']"
-                                            }
-                                        },
-                                        "method": "put",
-                                        "path": "/Incidents"
-                                    }
-                                }
-                            },
-                            "runAfter": {
-                                "For_each_Host": [
-                                    "Succeeded"
-                                ]
-                            },
-                            "else": {
-                                "actions": {
-                                    "Update_incident_-_tag_notfound": {
-                                        "runAfter": {},
-                                        "type": "ApiConnection",
-                                        "inputs": {
-                                            "body": {
-                                                "incidentArmId": "@triggerBody()?['object']?['id']",
-                                                "tagsToAdd": {
-                                                    "TagsToAdd": [
-                                                        {
-                                                            "Tag": "NotFound-AzureResourceGraph"
-                                                        }
-                                                    ]
-                                                }
-                                            },
-                                            "host": {
-                                                "connection": {
-                                                    "name": "@parameters('$connections')['azuresentinel']['connectionId']"
-                                                }
-                                            },
-                                            "method": "put",
-                                            "path": "/Incidents"
-                                        }
-                                    }
-                                }
-                            },
-                            "expression": {
-                                "and": [
-                                    {
-                                        "not": {
-                                            "equals": [
-                                                "@variables('comment')",
-                                                ""
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "not": {
-                                            "equals": [
-                                                "@string(variables('comment'))",
-                                                "[[]"
-                                            ]
-                                        }
-                                    }
-                                ]
-                            },
-                            "type": "If"
-                        },
                         "Entities_-_Get_Hosts": {
                             "runAfter": {
-                                "Initialize_variable": [
+                                "Initialize_variable_tag": [
                                     "Succeeded"
                                 ]
                             },
@@ -286,7 +206,19 @@
                                             "type": "AppendToStringVariable",
                                             "inputs": {
                                                 "name": "comment",
-                                                "value": "resource @{body('Parse_JSON_Host')?['friendlyName']}: @{body('Parse_JSON_output_Enrich-AzureResourceGraph')?['azureresourcegraph']}"
+                                                "value": "Resource found @{body('Parse_JSON_Host')?['friendlyName']}: @{body('Parse_JSON_output_Enrich-AzureResourceGraph')?['azureresourcegraph']}"
+                                            }
+                                        },
+                                        "Set_variable_tag": {
+                                            "runAfter": {
+                                                "Append_to_string_variable_comment": [
+                                                    "Succeeded"
+                                                ]
+                                            },
+                                            "type": "SetVariable",
+                                            "inputs": {
+                                                "name": "tag",
+                                                "value": "Found-AzureResourceGraph"
                                             }
                                         }
                                     },
@@ -294,6 +226,18 @@
                                         "Parse_JSON_output_Enrich-AzureResourceGraph": [
                                             "Succeeded"
                                         ]
+                                    },
+                                    "else": {
+                                        "actions": {
+                                            "Append_to_string_variable_comment_-_notfound": {
+                                                "runAfter": {},
+                                                "type": "AppendToStringVariable",
+                                                "inputs": {
+                                                    "name": "comment",
+                                                    "value": "Resource not found @{body('Parse_JSON_Host')?['friendlyName']}"
+                                                }
+                                            }
+                                        }
                                     },
                                     "expression": {
                                         "and": [
@@ -434,7 +378,7 @@
                             },
                             "type": "Foreach"
                         },
-                        "Initialize_variable": {
+                        "Initialize_variable_comment": {
                             "runAfter": {},
                             "type": "InitializeVariable",
                             "inputs": {
@@ -444,6 +388,50 @@
                                         "type": "string"
                                     }
                                 ]
+                            }
+                        },
+                        "Initialize_variable_tag": {
+                            "runAfter": {
+                                "Initialize_variable_comment": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "InitializeVariable",
+                            "inputs": {
+                                "variables": [
+                                    {
+                                        "name": "tag",
+                                        "type": "string",
+                                        "value": "NotFound-AzureResourceGraph"
+                                    }
+                                ]
+                            }
+                        },
+                        "Update_incident_-_tag": {
+                            "runAfter": {
+                                "Add_comment_to_incident_(V3)": [
+                                    "Succeeded"
+                                ]
+                            },
+                            "type": "ApiConnection",
+                            "inputs": {
+                                "body": {
+                                    "incidentArmId": "@triggerBody()?['object']?['id']",
+                                    "tagsToAdd": {
+                                        "TagsToAdd": [
+                                            {
+                                                "Tag": "@variables('tag')"
+                                            }
+                                        ]
+                                    }
+                                },
+                                "host": {
+                                    "connection": {
+                                        "name": "@parameters('$connections')['azuresentinel']['connectionId']"
+                                    }
+                                },
+                                "method": "put",
+                                "path": "/Incidents"
                             }
                         }
                     },
